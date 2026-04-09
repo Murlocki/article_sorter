@@ -1,0 +1,1265 @@
+00:10:44  INFO     pipeline — ▶ [pubmed] старт (max=20)
+00:10:47  INFO     scrapers.pubmed — [pubmed] query='PDF table extraction medical laboratory' → 4 IDs
+00:10:48  INFO     pipeline — [pubmed] ✓ Phytochemical characterization and antimicrobial activity ofNigella sa
+00:10:49  INFO     pipeline — [pubmed] ✓ Assessment of phytochemical screening, antibacterial, analgesic, and a
+00:10:50  INFO     pipeline — [pubmed] ✓ Using Diglycolamide
+Extractants in an Imidazolium-Based
+Ionic Liquid f
+00:10:51  INFO     pipeline — [pubmed] ✓ Bioactive Compounds Extraction FromMoringa oleiferaLeaves: A Comparati
+00:10:52  INFO     scrapers.pubmed — [pubmed] query='lab results extraction electronic health records PDF' → 4 IDs
+00:10:53  INFO     pipeline — [pubmed] ✓ rcprd: An R package to simplify the extraction and processing of Clini
+00:10:54  INFO     pipeline — [pubmed] ✓ Extracting patient-level data from the electronic health record: Expan
+00:10:55  INFO     pipeline — [pubmed] ✓ Deep Phenotyping on Electronic Health Records Facilitates Genetic Diag
+00:10:56  INFO     pipeline — [pubmed] ✓ Data-Driven Method to Enhance Craniofacial and Oral Phenotype Vocabula
+00:10:57  INFO     scrapers.pubmed — [pubmed] query='OCR medical document parsing clinical data' → 0 IDs
+00:10:59  INFO     scrapers.pubmed — [pubmed] query='NLP clinical laboratory reports information extraction' → 4 IDs
+00:11:00  INFO     pipeline — [pubmed] ✓ Building an Automated SOAP Classifier for Emergency Department Reports
+00:11:01  INFO     pipeline — [pubmed] ✓ Automated Extraction of Tumor Staging and Diagnosis Information From S
+00:11:01  INFO     pipeline — [pubmed] ✓ Interactive NLP in Clinical Care: Identifying Incidental Findings in R
+00:11:02  INFO     pipeline — [pubmed] ✓ A Natural Language Processing Tool for Large-Scale Data Extraction fro
+00:11:04  INFO     scrapers.pubmed — [pubmed] query='structured data extraction pathology PDF' → 4 IDs
+00:11:04  INFO     pipeline — [pubmed] ✓ Large multimodal model‐based standardisation of pathology reports with
+00:11:05  INFO     pipeline — [pubmed] ✓ Use of natural language processing to extract and classify papillary t
+00:11:07  INFO     pipeline — [pubmed] ✓ Rule-Based Information Extraction from Free-Text Pathology Reports Rev
+00:11:07  INFO     pipeline — ◀ [pubmed] готово — загружено: 15  новых: 15  дублей: 0  ошибок: 0
+00:11:07  INFO     pipeline — ✓ Итого — загружено: 15  новых: 15  дублей: 0  ошибок: 0
+2026-04-05 04:38:11,394 INFO [scrapers.pubmed] [pubmed] query='PDF table extraction medical laboratory' → 40 IDs
+2026-04-05 04:38:45,554 WARNING [scrapers.base] [pubmed] GET failed https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-04-05 04:39:00,273 INFO [scrapers.pubmed] [pubmed] query='lab results extraction electronic health records PDF' → 40 IDs
+2026-04-05 04:39:43,007 INFO [scrapers.pubmed] [pubmed] query='OCR medical document parsing clinical data' → 0 IDs
+2026-04-05 04:39:44,276 INFO [scrapers.pubmed] [pubmed] query='NLP clinical laboratory reports information extraction' → 40 IDs
+2026-04-05 04:40:23,638 INFO [scrapers.pubmed] [pubmed] query='structured data extraction pathology PDF' → 40 IDs
+2026-04-05 04:41:03,691 INFO [scrapers.doaj] [doaj] 'pdf+table+extraction+medical' → 0 results
+2026-04-05 04:41:05,903 INFO [scrapers.doaj] [doaj] 'laboratory+results+parsing+clinical' → 0 results
+2026-04-05 04:41:08,158 INFO [scrapers.doaj] [doaj] 'OCR+medical+document+extraction' → 2 results
+2026-04-05 04:41:10,440 INFO [scrapers.doaj] [doaj] 'clinical+NLP+laboratory+report' → 3 results
+2026-04-05 04:41:12,682 INFO [scrapers.doaj] [doaj] 'document+understanding+table+detection' → 5 results
+2026-04-05 04:41:15,393 INFO [scrapers.towards_ds] [towards_ds] feed=https://towardsdatascience.com/feed → 20 entries
+2026-04-05 04:41:18,062 INFO [scrapers.towards_ds] [towards_ds] feed=https://medium.com/feed/tag/ocr → 10 entries
+2026-04-05 04:41:20,233 INFO [scrapers.towards_ds] [towards_ds] feed=https://medium.com/feed/tag/pdf-parsing → 10 entries
+2026-04-05 04:41:22,197 INFO [scrapers.towards_ds] [towards_ds] feed=https://medium.com/feed/tag/nlp → 8 entries
+2026-04-05 04:41:24,262 INFO [scrapers.towards_ds] [towards_ds] feed=https://medium.com/feed/tag/healthcare-ai → 9 entries
+2026-04-05 04:41:26,420 INFO [scrapers.towards_ds] [towards_ds] feed=https://medium.com/feed/tag/document-understanding → 9 entries
+2026-04-05 04:41:42,282 INFO [scrapers.arxiv_html] [arxiv_html] batch API → 0 entries (max=200)
+2026-04-05 04:41:45,284 INFO [scrapers.habr] [habr] feed=https://habr.com/ru/rss/hub/machine_learning/articles/ → 40 entries
+2026-04-05 04:41:48,081 INFO [scrapers.habr] [habr] feed=https://habr.com/ru/rss/hub/data_mining/articles/ → 40 entries
+2026-04-05 04:41:50,919 INFO [scrapers.habr] [habr] feed=https://habr.com/ru/rss/hub/python/articles/ → 40 entries
+2026-04-05 04:41:53,659 INFO [scrapers.habr] [habr] feed=https://habr.com/ru/rss/hub/image_processing/articles/ → 40 entries
+2026-04-05 04:41:56,535 INFO [scrapers.habr] [habr] feed=https://habr.com/ru/rss/hub/artificial_intelligence/articles/ → 40 entries
+2026-04-05 04:57:06,139 INFO [scrapers.doaj] [doaj] 'pdf+table+extraction+medical' → 0 results
+2026-04-05 04:57:08,393 INFO [scrapers.doaj] [doaj] 'laboratory+results+parsing+clinical' → 0 results
+2026-04-05 04:57:10,639 INFO [scrapers.doaj] [doaj] 'OCR+medical+document+extraction' → 2 results
+2026-04-05 04:57:10,639 INFO [scrapers.doaj] [doaj] статья: Enhancing Medical Diagnosis Document Analysis with Layout-Aware Multit
+2026-04-05 04:57:10,651 INFO [scrapers.doaj] [doaj] статья: The Usage of Robotic Process Automation and Artificial Intelligence fo
+2026-04-05 04:57:12,954 INFO [scrapers.doaj] [doaj] 'clinical+NLP+laboratory+report' → 3 results
+2026-04-05 04:57:12,955 INFO [scrapers.doaj] [doaj] статья: Comparison of machine-learning algorithms for the prediction of curren
+2026-04-05 04:57:12,966 INFO [scrapers.doaj] [doaj] статья: Extracting laboratory test information from paper-based reports
+2026-04-05 04:57:12,977 INFO [scrapers.doaj] [doaj] статья: Comparison of machine-learning algorithms for the prediction of Curren
+2026-04-05 04:57:15,237 INFO [scrapers.doaj] [doaj] 'document+understanding+table+detection' → 5 results
+2026-04-05 04:57:15,237 INFO [scrapers.doaj] [doaj] статья: Robust Table Structure Recognition Network Based on Local and Global P
+2026-04-05 04:57:15,248 INFO [scrapers.doaj] [doaj] статья: Current Status and Performance Analysis of Table Recognition in Docume
+2026-04-05 04:57:15,260 INFO [scrapers.doaj] [doaj] статья: A Page Object Detection Method Based on Mask R-CNN
+2026-04-05 04:57:15,271 INFO [scrapers.doaj] [doaj] статья: Is There a Correlation between Patient-Staff Interactions and MDRO Acq
+2026-04-05 04:57:15,283 INFO [scrapers.doaj] [doaj] статья: Table Extraction with Table Data Using VGG-19 Deep Learning Model
+2026-04-05 04:57:22,196 INFO [scrapers.arxiv_html] [arxiv_html] _parse_xml → 0 entries
+2026-04-05 06:25:28,281 INFO [scrapers.pubmed] [pubmed] query='PDF table extraction medical laboratory' start=0 → 60 IDs (total=127073)
+2026-04-05 06:25:38,901 INFO [scrapers.pubmed] [pubmed] query='lab results extraction electronic health' start=0 → 60 IDs (total=5804)
+2026-04-05 06:25:49,425 INFO [scrapers.pubmed] [pubmed] query='OCR medical document parsing clinical da' start=0 → 0 IDs (total=0)
+2026-04-05 06:25:50,769 INFO [scrapers.pubmed] [pubmed] query='NLP clinical laboratory reports informat' start=0 → 60 IDs (total=5609)
+2026-04-05 06:26:00,454 INFO [scrapers.pubmed] [pubmed] query='structured data extraction pathology PDF' start=0 → 60 IDs (total=77716)
+2026-04-05 06:26:09,188 INFO [scrapers.pubmed] [pubmed] итого выдано: 0 статей
+2026-04-05 06:26:12,037 INFO [scrapers.doaj] [doaj] 'medical+pdf+extraction' page=1 → 6 (+6), total=6
+2026-04-05 06:26:12,037 INFO [scrapers.doaj] [doaj] 'medical+pdf+extraction' → 6 results
+2026-04-05 06:26:12,037 INFO [scrapers.doaj] [doaj] статья: Resilient Multimedia Embedding in DICOM Images: A Robustness Evaluatio
+2026-04-05 06:26:12,052 INFO [scrapers.doaj] [doaj] статья: A Review of Classification Techniques of EMG Signals during Isotonic a
+2026-04-05 06:26:12,065 INFO [scrapers.doaj] [doaj] статья: An Empirical Study of Several Information Theoretic Based Feature Extr
+2026-04-05 06:26:12,078 INFO [scrapers.doaj] [doaj] статья: A Policy-Driven Approach to Secure Extraction of COVID-19 Data From Re
+2026-04-05 06:26:12,090 INFO [scrapers.doaj] [doaj] статья: Using Crawlers for Targeted Data Extraction from a Local Multi-File Da
+2026-04-05 06:26:12,103 INFO [scrapers.doaj] [doaj] статья: Prevalence of post-dialysis fatigue: a systematic review and meta-anal
+2026-04-05 06:26:14,629 INFO [scrapers.doaj] [doaj] 'laboratory+results+clinical' page=1 → 40 (+40), total=40103
+2026-04-05 06:26:14,630 INFO [scrapers.doaj] [doaj] 'laboratory+results+clinical' → 40 results
+2026-04-05 06:26:14,630 INFO [scrapers.doaj] [doaj] статья: Genetic impact of non-consanguineous marriages in Saudi Arabia.
+2026-04-05 06:26:14,643 INFO [scrapers.doaj] [doaj] статья: Laboratory-based evaluation of the 4th-generation AlereTM HIV Combo ra
+2026-04-05 06:26:14,655 INFO [scrapers.doaj] [doaj] статья: A Comparative Analysis of Serum Sodium Level Utilizing Direct and Indi
+2026-04-05 06:26:14,668 INFO [scrapers.doaj] [doaj] статья: lab2clean: a novel algorithm for automated cleaning of retrospective c
+2026-04-05 06:26:14,681 INFO [scrapers.doaj] [doaj] статья: Detection of causative agents of bacterial pneumonia in hospitalized h
+2026-04-05 06:26:14,693 INFO [scrapers.doaj] [doaj] статья: Correlation between the triglyceride-glucose index and left ventricula
+2026-04-05 06:26:14,705 INFO [scrapers.doaj] [doaj] статья: Clinical Predictors and Determinants of Mpox Complications in Hospital
+2026-04-05 06:26:14,718 INFO [scrapers.doaj] [doaj] статья: Early urate-lowering therapy in gouty arthritis with acute flares: a d
+2026-04-05 06:26:14,731 INFO [scrapers.doaj] [doaj] статья: Percutaneous transhepatic stenting in management of post living donor 
+2026-04-05 06:26:14,744 INFO [scrapers.doaj] [doaj] статья: The Occult Insulinoma Was Localized Using Endoscopic Ultrasound Guidan
+2026-04-05 06:26:14,761 INFO [scrapers.doaj] [doaj] статья: Automated segmentation of brain metastases in T1-weighted contrast-enh
+2026-04-05 06:26:14,773 INFO [scrapers.doaj] [doaj] статья: Genomic evolution and stability of the mcr-1-harboring IncI2 plasmid i
+2026-04-05 06:26:14,785 INFO [scrapers.doaj] [doaj] статья: In situ detection of Chlamydia pneumoniae,&nbsp;C. trachomatis,&nbsp;a
+2026-04-05 06:26:14,797 INFO [scrapers.doaj] [doaj] статья: Which scoring systems are useful for predicting the prognosis of lower
+2026-04-05 06:26:14,810 INFO [scrapers.doaj] [doaj] статья: Component of oligomeric Golgi complex 1 deficiency leads to hypoglycem
+2026-04-05 06:26:14,822 INFO [scrapers.doaj] [doaj] статья: Doppler echocardiographic study in adolescents and young adults with s
+2026-04-05 06:26:14,834 INFO [scrapers.doaj] [doaj] статья: Prevalence of malaria infection and factors associated among HIV-infec
+2026-04-05 06:26:14,846 INFO [scrapers.doaj] [doaj] статья: Multiplexed Dilute-and-Shoot Liquid Chromatography–Multiple-Reaction M
+2026-04-05 06:26:14,857 INFO [scrapers.doaj] [doaj] статья: Clinical characteristics of COVID-19 in young patients differ from mid
+2026-04-05 06:26:14,869 INFO [scrapers.doaj] [doaj] статья: Sensitivity and Features of Computed Tomography in Diagnosis of COVID-
+2026-04-05 06:26:14,881 INFO [scrapers.doaj] [doaj] статья: ROsulord® sAfety for Patients with Dyslipidemia Study: A Non-intervent
+2026-04-05 06:26:14,892 INFO [scrapers.doaj] [doaj] статья: Evaluation of Head and Neck Lymphadenopathies in Childhood
+2026-04-05 06:26:14,904 INFO [scrapers.doaj] [doaj] статья: COVID-19 Outbreak at Sports Club: Conditions of Occurrence and Causes 
+2026-04-05 06:26:14,915 INFO [scrapers.doaj] [doaj] статья: Antibiotic use among young, hospitalized children in Jordan, 2010–2023
+2026-04-05 06:26:14,927 INFO [scrapers.doaj] [doaj] статья: Cationic antimicrobial peptides: alternatives and/or adjuvants to anti
+2026-04-05 06:26:14,939 INFO [scrapers.doaj] [doaj] статья: Prevalence of multi-drug resistant uropathogenic Escherichia coli in P
+2026-04-05 06:26:14,950 INFO [scrapers.doaj] [doaj] статья: Clinical characteristics and contributors to diagnostic delay in autoi
+2026-04-05 06:26:14,962 INFO [scrapers.doaj] [doaj] статья: Histopathological Study of Peripheral Neuropathies on Nerve Biopsy: A 
+2026-04-05 06:26:14,974 INFO [scrapers.doaj] [doaj] статья: Relapsing (recurrent) disease caused by Borrelia miyamotoi
+2026-04-05 06:26:14,986 INFO [scrapers.doaj] [doaj] статья: The initial pharmaceutical development of an artesunate/amodiaquine or
+2026-04-05 06:26:14,999 INFO [scrapers.doaj] [doaj] статья: A Novel PRKAR1A Mutation Identified in a Patient with Isolated Primary
+2026-04-05 06:26:15,010 INFO [scrapers.doaj] [doaj] статья: Evaluation of semisolid agar method for antifungal susceptibility test
+2026-04-05 06:26:15,022 INFO [scrapers.doaj] [doaj] статья: Relationship Between the High Frequency of 23S rRNA Point Mutations in
+2026-04-05 06:26:15,034 INFO [scrapers.doaj] [doaj] статья: Levels of Pathogenic Th17 and Th22 Cells in Patients with Rheumatoid A
+2026-04-05 06:26:15,047 INFO [scrapers.doaj] [doaj] статья: Carbon monoxide poisoning-induced myositis
+2026-04-05 06:26:15,059 INFO [scrapers.doaj] [doaj] статья: Comparative antimicrobial susceptibility of aerobic and facultative ba
+2026-04-05 06:26:15,071 INFO [scrapers.doaj] [doaj] статья: Trabecular bone score may indicate chronic kidney disease-mineral and 
+2026-04-05 06:26:15,082 INFO [scrapers.doaj] [doaj] статья: Risk of hereditary spherocytosis misdiagnosis due to limited effective
+2026-04-05 06:26:15,094 INFO [scrapers.doaj] [doaj] статья: DIAGNOSTIC VALUE OF GALECTIN-3 LEVEL IN PATIENTS WITH CHRONIC HEART FA
+2026-04-05 06:26:15,107 INFO [scrapers.doaj] [doaj] статья: Development of an Effective Neutralizing Antibody Assay for SARS-CoV-2
+2026-04-05 06:26:17,366 INFO [scrapers.doaj] [doaj] 'OCR+medical+document' page=1 → 5 (+5), total=5
+2026-04-05 06:26:17,366 INFO [scrapers.doaj] [doaj] 'OCR+medical+document' → 5 results
+2026-04-05 06:26:17,366 INFO [scrapers.doaj] [doaj] статья: Advancing Multilingual Handwritten Numeral Recognition With Attention-
+2026-04-05 06:26:17,378 INFO [scrapers.doaj] [doaj] статья: A comparison study on optical character recognition models in mathemat
+2026-04-05 06:26:17,390 INFO [scrapers.doaj] [doaj] статья: Enhancing Medical Diagnosis Document Analysis with Layout-Aware Multit
+2026-04-05 06:26:17,412 INFO [scrapers.doaj] [doaj] статья: The Usage of Robotic Process Automation and Artificial Intelligence fo
+2026-04-05 06:26:17,425 INFO [scrapers.doaj] [doaj] статья: Artificial Intelligence for Interpreting Medical Tests
+2026-04-05 06:26:19,814 INFO [scrapers.doaj] [doaj] 'clinical+NLP+records' page=1 → 40 (+40), total=351
+2026-04-05 06:26:19,815 INFO [scrapers.doaj] [doaj] 'clinical+NLP+records' → 40 results
+2026-04-05 06:26:19,815 INFO [scrapers.doaj] [doaj] статья: Classifying Characteristics of Opioid Use Disorder From Hospital Disch
+2026-04-05 06:26:19,827 INFO [scrapers.doaj] [doaj] статья: Natural language processing (NLP) to facilitate abstract review in med
+2026-04-05 06:26:19,839 INFO [scrapers.doaj] [doaj] статья: Determinants of Smoking and Quitting in HIV-Infected Individuals.
+2026-04-05 06:26:19,851 INFO [scrapers.doaj] [doaj] статья: Hybrid natural language processing tool for semantic annotation of med
+2026-04-05 06:26:19,862 INFO [scrapers.doaj] [doaj] статья: Automated abstraction of clinical parameters of multiple myeloma from 
+2026-04-05 06:26:19,874 INFO [scrapers.doaj] [doaj] статья: Natural language processing applied to mental illness detection: a nar
+2026-04-05 06:26:19,886 INFO [scrapers.doaj] [doaj] статья: Extracting social determinants of health from dental records: feasibil
+2026-04-05 06:26:19,897 INFO [scrapers.doaj] [doaj] статья: Balancing Model Complexity and Clinical Deployability in Deep Learning
+2026-04-05 06:26:19,909 INFO [scrapers.doaj] [doaj] статья: Clinical applications of artificial intelligence in symptom management
+2026-04-05 06:26:19,921 INFO [scrapers.doaj] [doaj] статья: Design of an extensive information representation scheme for clinical 
+2026-04-05 06:26:19,933 INFO [scrapers.doaj] [doaj] статья: Artificial Intelligence and Healthcare
+2026-04-05 06:26:19,946 INFO [scrapers.doaj] [doaj] статья: A data-driven architecture using natural language processing to improv
+2026-04-05 06:26:19,957 INFO [scrapers.doaj] [doaj] статья: Preoperative prediction model for risk of readmission after total join
+2026-04-05 06:26:19,969 INFO [scrapers.doaj] [doaj] статья: Keyword Extraction Algorithm for Classifying Smoking Status from Unstr
+2026-04-05 06:26:19,982 INFO [scrapers.doaj] [doaj] статья: From data strategy to implementation to advance cancer research and ca
+2026-04-05 06:26:19,994 INFO [scrapers.doaj] [doaj] статья: Development and Evaluation of a Natural Language Processing Annotation
+2026-04-05 06:26:20,006 INFO [scrapers.doaj] [doaj] статья: Near Real-time Natural Language Processing for the Extraction of Abdom
+2026-04-05 06:26:20,018 INFO [scrapers.doaj] [doaj] статья: Government plans in the 2016 and 2021 Peruvian presidential elections:
+2026-04-05 06:26:20,031 INFO [scrapers.doaj] [doaj] статья: Artificial intelligence in virtual fracture clinics: a systematic revi
+2026-04-05 06:26:20,043 INFO [scrapers.doaj] [doaj] статья: Codifying unstructured data: A Natural Language Processing approach to
+2026-04-05 06:26:20,055 INFO [scrapers.doaj] [doaj] статья: Development of a cardiac-centered frailty ontology
+2026-04-05 06:26:20,067 INFO [scrapers.doaj] [doaj] статья: Generation of silver standard concept annotations from biomedical text
+2026-04-05 06:26:20,080 INFO [scrapers.doaj] [doaj] статья: Extracting medication information from unstructured public health data
+2026-04-05 06:26:20,092 INFO [scrapers.doaj] [doaj] статья: Classification of the Disposition of Patients Hospitalized with COVID-
+2026-04-05 06:26:20,104 INFO [scrapers.doaj] [doaj] статья: MISTIC: a novel approach for metastasis classification in Italian elec
+2026-04-05 06:26:20,116 INFO [scrapers.doaj] [doaj] статья: Predicting ICD-9 Codes Using Self-Report of Patients
+2026-04-05 06:26:20,128 INFO [scrapers.doaj] [doaj] статья: Social and Behavioral Determinants of Health in the Era of Artificial 
+2026-04-05 06:26:20,140 INFO [scrapers.doaj] [doaj] статья: Development of a confidence-based Natural Language Processing tool to 
+2026-04-05 06:26:20,152 INFO [scrapers.doaj] [doaj] статья: The role of artificial intelligence in managing hospitalized patients 
+2026-04-05 06:26:20,164 INFO [scrapers.doaj] [doaj] статья: Advancing anti-infective drug discovery: The pivotal role of artificia
+2026-04-05 06:26:20,176 INFO [scrapers.doaj] [doaj] статья: Development of a natural language processing algorithm to detect chron
+2026-04-05 06:26:20,188 INFO [scrapers.doaj] [doaj] статья: Automated Annotation of Pain Chronicity in Patients With Back Pain by 
+2026-04-05 06:26:20,199 INFO [scrapers.doaj] [doaj] статья: Utilizing large language models and natural language processing to cla
+2026-04-05 06:26:20,212 INFO [scrapers.doaj] [doaj] статья: Enhancing Semantic Inference in Healthcare Systems With Ontology-Enric
+2026-04-05 06:26:20,224 INFO [scrapers.doaj] [doaj] статья: Natural language processing for populating lung cancer clinical resear
+2026-04-05 06:26:20,236 INFO [scrapers.doaj] [doaj] статья: Social Determinants of Health Documentation in Structured and Unstruct
+2026-04-05 06:26:20,249 INFO [scrapers.doaj] [doaj] статья: CROSS-LINGUAL TRANSFORMER-BASED SCREENING OF POST-TRAUMATIC STRESS DIS
+2026-04-05 06:26:20,261 INFO [scrapers.doaj] [doaj] статья: Automated Detection of Substance-Use Status and Related Information fr
+2026-04-05 06:26:20,274 INFO [scrapers.doaj] [doaj] статья: A Survey on Recent Named Entity Recognition and Relationship Extractio
+2026-04-05 06:26:20,286 INFO [scrapers.doaj] [doaj] статья: The reporting quality of natural language processing studies: systemat
+2026-04-05 06:26:22,613 INFO [scrapers.doaj] [doaj] 'table+detection+document' page=1 → 23 (+23), total=23
+2026-04-05 06:26:22,613 INFO [scrapers.doaj] [doaj] 'table+detection+document' → 23 results
+2026-04-05 06:26:22,613 INFO [scrapers.doaj] [doaj] статья: Pre-training transformer with dual-branch context content module for t
+2026-04-05 06:26:22,625 INFO [scrapers.doaj] [doaj] статья: MSIE-Net: Associative Entity-Based Multi-Stage Network for Structured 
+2026-04-05 06:26:22,639 INFO [scrapers.doaj] [doaj] статья: Continual Learning for Table Detection in Document Images
+2026-04-05 06:26:22,651 INFO [scrapers.doaj] [doaj] статья: Secure protection of video recorder video in smart car
+2026-04-05 06:26:22,664 INFO [scrapers.doaj] [doaj] статья: A Rule-Based Method for Table Detection in Website Images
+2026-04-05 06:26:22,675 INFO [scrapers.doaj] [doaj] статья: TableExtractNet: A Model of Automatic Detection and Recognition of Tab
+2026-04-05 06:26:22,688 INFO [scrapers.doaj] [doaj] статья: Robust Table Structure Recognition Network Based on Local and Global P
+2026-04-05 06:26:22,702 INFO [scrapers.doaj] [doaj] статья: Computer Vision-Based Framework for Data Extraction From Heterogeneous
+2026-04-05 06:26:22,714 INFO [scrapers.doaj] [doaj] статья: A new Approach for Detection and ExtractionTables in Scanned Document 
+2026-04-05 06:26:22,726 INFO [scrapers.doaj] [doaj] статья: Analisis Masalah Kerusakan pada Pabrik Daur Ulang Beton Hasil Konstruk
+2026-04-05 06:26:22,738 INFO [scrapers.doaj] [doaj] статья: Toward Semi-Supervised Graphical Object Detection in Document Images
+2026-04-05 06:26:22,750 INFO [scrapers.doaj] [doaj] статья: Current Status and Performance Analysis of Table Recognition in Docume
+2026-04-05 06:26:22,762 INFO [scrapers.doaj] [doaj] статья: TransTab: A transformer-based approach for table detection and tabular
+2026-04-05 06:26:22,774 INFO [scrapers.doaj] [doaj] статья: HybridTabNet: Towards Better Table Detection in Scanned Document Image
+2026-04-05 06:26:22,786 INFO [scrapers.doaj] [doaj] статья: U-SSD: Improved SSD Based on U-Net Architecture for End-to-End Table D
+2026-04-05 06:26:22,799 INFO [scrapers.doaj] [doaj] статья: Improving table detection for document images using boundary
+2026-04-05 06:26:22,811 INFO [scrapers.doaj] [doaj] статья: CasTabDetectoRS: Cascade Network for Table Detection in Document Image
+2026-04-05 06:26:22,823 INFO [scrapers.doaj] [doaj] статья: Creating a Historical Migration Dataset from Finnish Church Records, 1
+2026-04-05 06:26:22,835 INFO [scrapers.doaj] [doaj] статья: An event knowledge graph system for the operation and maintenance of p
+2026-04-05 06:26:22,847 INFO [scrapers.doaj] [doaj] статья: A Page Object Detection Method Based on Mask R-CNN
+2026-04-05 06:26:22,859 INFO [scrapers.doaj] [doaj] статья: Is There a Correlation between Patient-Staff Interactions and MDRO Acq
+2026-04-05 06:26:22,871 INFO [scrapers.doaj] [doaj] статья: HTTD: A Hierarchical Transformer for Accurate Table Detection in Docum
+2026-04-05 06:26:22,883 INFO [scrapers.doaj] [doaj] статья: Table Extraction with Table Data Using VGG-19 Deep Learning Model
+2026-04-05 06:26:25,642 INFO [scrapers.towards_ds] [towards_ds] tds → 20 записей
+2026-04-05 06:26:28,442 INFO [scrapers.towards_ds] [towards_ds] ocr → 10 записей
+2026-04-05 06:26:30,703 INFO [scrapers.towards_ds] [towards_ds] pdf-parsing → 10 записей
+2026-04-05 06:26:32,658 INFO [scrapers.towards_ds] [towards_ds] nlp → 8 записей
+2026-04-05 06:26:34,735 INFO [scrapers.towards_ds] [towards_ds] healthcare-ai → 9 записей
+2026-04-05 06:26:36,907 INFO [scrapers.towards_ds] [towards_ds] document-understanding → 9 записей
+2026-04-05 06:26:38,847 INFO [scrapers.towards_ds] [towards_ds] machine-learning → 10 записей
+2026-04-05 06:26:40,732 INFO [scrapers.towards_ds] [towards_ds] data-science → 10 записей
+2026-04-05 06:26:43,043 INFO [scrapers.towards_ds] [towards_ds] python → 10 записей
+2026-04-05 06:26:45,086 INFO [scrapers.towards_ds] [towards_ds] deep-learning → 10 записей
+2026-04-05 06:26:47,059 INFO [scrapers.towards_ds] [towards_ds] artificial-intelligence → 10 записей
+2026-04-05 06:26:49,229 INFO [scrapers.towards_ds] [towards_ds] medical-imaging → 10 записей
+2026-04-05 06:26:49,305 INFO [scrapers.towards_ds] [towards_ds] итого выдано: 64 статей
+2026-04-05 06:26:52,200 INFO [scrapers.habr] [habr] machine_learning → 40 записей
+2026-04-05 06:26:55,050 INFO [scrapers.habr] [habr] data_mining → 40 записей
+2026-04-05 06:26:57,796 INFO [scrapers.habr] [habr] python → 40 записей
+2026-04-05 06:27:00,560 INFO [scrapers.habr] [habr] image_processing → 40 записей
+2026-04-05 06:27:03,577 INFO [scrapers.habr] [habr] artificial_intelligence → 40 записей
+2026-04-05 06:27:05,938 WARNING [scrapers.base] [habr] GET failed https://habr.com/ru/rss/hub/data_analysis/articles/: 404 Client Error: Not Found for url: https://habr.com/ru/rss/hubs/data_analysis/articles/
+2026-04-05 06:27:12,894 WARNING [scrapers.base] [habr] GET failed https://habr.com/ru/rss/hub/data_analysis/articles/: 404 Client Error: Not Found for url: https://habr.com/ru/rss/hubs/data_analysis/articles/
+2026-04-05 06:27:19,876 WARNING [scrapers.base] [habr] GET failed https://habr.com/ru/rss/hub/data_analysis/articles/: 404 Client Error: Not Found for url: https://habr.com/ru/rss/hubs/data_analysis/articles/
+2026-04-05 06:27:22,239 INFO [scrapers.habr] [habr] programming → 40 записей
+2026-04-05 06:27:22,474 INFO [scrapers.habr] [habr] итого выдано: 200 статей
+2026-04-08 03:45:47,968 INFO [scrapers.pubmed] [pubmed] query='PDF table extraction medical laboratory' start=0 → 60 IDs (total=127203)
+2026-04-08 03:45:59,823 INFO [scrapers.pubmed] [pubmed] query='lab results extraction electronic health' start=0 → 60 IDs (total=5814)
+2026-04-08 03:46:11,178 INFO [scrapers.pubmed] [pubmed] query='OCR medical document parsing clinical da' start=0 → 0 IDs (total=0)
+2026-04-08 03:46:12,598 INFO [scrapers.pubmed] [pubmed] query='NLP clinical laboratory reports informat' start=0 → 60 IDs (total=5617)
+2026-04-08 03:46:22,467 INFO [scrapers.pubmed] [pubmed] query='structured data extraction pathology PDF' start=0 → 60 IDs (total=77791)
+2026-04-08 03:46:31,612 INFO [scrapers.pubmed] [pubmed] итого выдано: 0 статей
+2026-04-08 03:46:34,548 INFO [scrapers.doaj] [doaj] 'medical+pdf+extraction' page=1 → 6 (+6), total=6
+2026-04-08 03:46:34,548 INFO [scrapers.doaj] [doaj] 'medical+pdf+extraction' → 6 results
+2026-04-08 03:46:34,548 INFO [scrapers.doaj] [doaj] статья: Resilient Multimedia Embedding in DICOM Images: A Robustness Evaluatio
+2026-04-08 03:46:34,550 INFO [scrapers.doaj] [doaj] статья: A Review of Classification Techniques of EMG Signals during Isotonic a
+2026-04-08 03:46:34,551 INFO [scrapers.doaj] [doaj] статья: An Empirical Study of Several Information Theoretic Based Feature Extr
+2026-04-08 03:46:34,552 INFO [scrapers.doaj] [doaj] статья: A Policy-Driven Approach to Secure Extraction of COVID-19 Data From Re
+2026-04-08 03:46:34,553 INFO [scrapers.doaj] [doaj] статья: Using Crawlers for Targeted Data Extraction from a Local Multi-File Da
+2026-04-08 03:46:34,553 INFO [scrapers.doaj] [doaj] статья: Prevalence of post-dialysis fatigue: a systematic review and meta-anal
+2026-04-08 03:46:37,072 INFO [scrapers.doaj] [doaj] 'laboratory+results+clinical' page=1 → 40 (+40), total=40202
+2026-04-08 03:46:37,072 INFO [scrapers.doaj] [doaj] 'laboratory+results+clinical' → 40 results
+2026-04-08 03:46:37,072 INFO [scrapers.doaj] [doaj] статья: Genetic impact of non-consanguineous marriages in Saudi Arabia.
+2026-04-08 03:46:37,073 INFO [scrapers.doaj] [doaj] статья: Laboratory-based evaluation of the 4th-generation AlereTM HIV Combo ra
+2026-04-08 03:46:37,074 INFO [scrapers.doaj] [doaj] статья: A Comparative Analysis of Serum Sodium Level Utilizing Direct and Indi
+2026-04-08 03:46:37,075 INFO [scrapers.doaj] [doaj] статья: lab2clean: a novel algorithm for automated cleaning of retrospective c
+2026-04-08 03:46:37,076 INFO [scrapers.doaj] [doaj] статья: Detection of causative agents of bacterial pneumonia in hospitalized h
+2026-04-08 03:46:37,077 INFO [scrapers.doaj] [doaj] статья: Correlation between the triglyceride-glucose index and left ventricula
+2026-04-08 03:46:37,078 INFO [scrapers.doaj] [doaj] статья: Clinical Predictors and Determinants of Mpox Complications in Hospital
+2026-04-08 03:46:37,079 INFO [scrapers.doaj] [doaj] статья: Early urate-lowering therapy in gouty arthritis with acute flares: a d
+2026-04-08 03:46:37,080 INFO [scrapers.doaj] [doaj] статья: Percutaneous transhepatic stenting in management of post living donor 
+2026-04-08 03:46:37,080 INFO [scrapers.doaj] [doaj] статья: The Occult Insulinoma Was Localized Using Endoscopic Ultrasound Guidan
+2026-04-08 03:46:37,081 INFO [scrapers.doaj] [doaj] статья: Automated segmentation of brain metastases in T1-weighted contrast-enh
+2026-04-08 03:46:37,082 INFO [scrapers.doaj] [doaj] статья: Genomic evolution and stability of the mcr-1-harboring IncI2 plasmid i
+2026-04-08 03:46:37,083 INFO [scrapers.doaj] [doaj] статья: In situ detection of Chlamydia pneumoniae,&nbsp;C. trachomatis,&nbsp;a
+2026-04-08 03:46:37,083 INFO [scrapers.doaj] [doaj] статья: Which scoring systems are useful for predicting the prognosis of lower
+2026-04-08 03:46:37,084 INFO [scrapers.doaj] [doaj] статья: Component of oligomeric Golgi complex 1 deficiency leads to hypoglycem
+2026-04-08 03:46:37,085 INFO [scrapers.doaj] [doaj] статья: Doppler echocardiographic study in adolescents and young adults with s
+2026-04-08 03:46:37,086 INFO [scrapers.doaj] [doaj] статья: Prevalence of malaria infection and factors associated among HIV-infec
+2026-04-08 03:46:37,087 INFO [scrapers.doaj] [doaj] статья: Multiplexed Dilute-and-Shoot Liquid Chromatography–Multiple-Reaction M
+2026-04-08 03:46:37,088 INFO [scrapers.doaj] [doaj] статья: Clinical characteristics of COVID-19 in young patients differ from mid
+2026-04-08 03:46:37,088 INFO [scrapers.doaj] [doaj] статья: Sensitivity and Features of Computed Tomography in Diagnosis of COVID-
+2026-04-08 03:46:37,089 INFO [scrapers.doaj] [doaj] статья: ROsulord® sAfety for Patients with Dyslipidemia Study: A Non-intervent
+2026-04-08 03:46:37,090 INFO [scrapers.doaj] [doaj] статья: Evaluation of Head and Neck Lymphadenopathies in Childhood
+2026-04-08 03:46:37,091 INFO [scrapers.doaj] [doaj] статья: COVID-19 Outbreak at Sports Club: Conditions of Occurrence and Causes 
+2026-04-08 03:46:37,091 INFO [scrapers.doaj] [doaj] статья: Antibiotic use among young, hospitalized children in Jordan, 2010–2023
+2026-04-08 03:46:37,092 INFO [scrapers.doaj] [doaj] статья: Cationic antimicrobial peptides: alternatives and/or adjuvants to anti
+2026-04-08 03:46:37,093 INFO [scrapers.doaj] [doaj] статья: Prevalence of multi-drug resistant uropathogenic Escherichia coli in P
+2026-04-08 03:46:37,094 INFO [scrapers.doaj] [doaj] статья: Clinical characteristics and contributors to diagnostic delay in autoi
+2026-04-08 03:46:37,094 INFO [scrapers.doaj] [doaj] статья: Histopathological Study of Peripheral Neuropathies on Nerve Biopsy: A 
+2026-04-08 03:46:37,095 INFO [scrapers.doaj] [doaj] статья: Relapsing (recurrent) disease caused by Borrelia miyamotoi
+2026-04-08 03:46:37,096 INFO [scrapers.doaj] [doaj] статья: The initial pharmaceutical development of an artesunate/amodiaquine or
+2026-04-08 03:46:37,097 INFO [scrapers.doaj] [doaj] статья: A Novel PRKAR1A Mutation Identified in a Patient with Isolated Primary
+2026-04-08 03:46:37,098 INFO [scrapers.doaj] [doaj] статья: Evaluation of semisolid agar method for antifungal susceptibility test
+2026-04-08 03:46:37,099 INFO [scrapers.doaj] [doaj] статья: Relationship Between the High Frequency of 23S rRNA Point Mutations in
+2026-04-08 03:46:37,099 INFO [scrapers.doaj] [doaj] статья: Levels of Pathogenic Th17 and Th22 Cells in Patients with Rheumatoid A
+2026-04-08 03:46:37,100 INFO [scrapers.doaj] [doaj] статья: Carbon monoxide poisoning-induced myositis
+2026-04-08 03:46:37,101 INFO [scrapers.doaj] [doaj] статья: Comparative antimicrobial susceptibility of aerobic and facultative ba
+2026-04-08 03:46:37,102 INFO [scrapers.doaj] [doaj] статья: Trabecular bone score may indicate chronic kidney disease-mineral and 
+2026-04-08 03:46:37,102 INFO [scrapers.doaj] [doaj] статья: Risk of hereditary spherocytosis misdiagnosis due to limited effective
+2026-04-08 03:46:37,103 INFO [scrapers.doaj] [doaj] статья: DIAGNOSTIC VALUE OF GALECTIN-3 LEVEL IN PATIENTS WITH CHRONIC HEART FA
+2026-04-08 03:46:37,104 INFO [scrapers.doaj] [doaj] статья: Development of an Effective Neutralizing Antibody Assay for SARS-CoV-2
+2026-04-08 03:46:39,353 INFO [scrapers.doaj] [doaj] 'OCR+medical+document' page=1 → 5 (+5), total=5
+2026-04-08 03:46:39,354 INFO [scrapers.doaj] [doaj] 'OCR+medical+document' → 5 results
+2026-04-08 03:46:39,354 INFO [scrapers.doaj] [doaj] статья: Advancing Multilingual Handwritten Numeral Recognition With Attention-
+2026-04-08 03:46:39,355 INFO [scrapers.doaj] [doaj] статья: A comparison study on optical character recognition models in mathemat
+2026-04-08 03:46:39,356 INFO [scrapers.doaj] [doaj] статья: Enhancing Medical Diagnosis Document Analysis with Layout-Aware Multit
+2026-04-08 03:46:39,357 INFO [scrapers.doaj] [doaj] статья: The Usage of Robotic Process Automation and Artificial Intelligence fo
+2026-04-08 03:46:39,357 INFO [scrapers.doaj] [doaj] статья: Artificial Intelligence for Interpreting Medical Tests
+2026-04-08 03:46:41,731 INFO [scrapers.doaj] [doaj] 'clinical+NLP+records' page=1 → 40 (+40), total=352
+2026-04-08 03:46:41,731 INFO [scrapers.doaj] [doaj] 'clinical+NLP+records' → 40 results
+2026-04-08 03:46:41,731 INFO [scrapers.doaj] [doaj] статья: Classifying Characteristics of Opioid Use Disorder From Hospital Disch
+2026-04-08 03:46:41,732 INFO [scrapers.doaj] [doaj] статья: Natural language processing (NLP) to facilitate abstract review in med
+2026-04-08 03:46:41,734 INFO [scrapers.doaj] [doaj] статья: Determinants of Smoking and Quitting in HIV-Infected Individuals.
+2026-04-08 03:46:41,734 INFO [scrapers.doaj] [doaj] статья: Hybrid natural language processing tool for semantic annotation of med
+2026-04-08 03:46:41,735 INFO [scrapers.doaj] [doaj] статья: Automated abstraction of clinical parameters of multiple myeloma from 
+2026-04-08 03:46:41,736 INFO [scrapers.doaj] [doaj] статья: Natural language processing applied to mental illness detection: a nar
+2026-04-08 03:46:41,737 INFO [scrapers.doaj] [doaj] статья: Extracting social determinants of health from dental records: feasibil
+2026-04-08 03:46:41,738 INFO [scrapers.doaj] [doaj] статья: Balancing Model Complexity and Clinical Deployability in Deep Learning
+2026-04-08 03:46:41,739 INFO [scrapers.doaj] [doaj] статья: Clinical applications of artificial intelligence in symptom management
+2026-04-08 03:46:41,740 INFO [scrapers.doaj] [doaj] статья: Design of an extensive information representation scheme for clinical 
+2026-04-08 03:46:41,740 INFO [scrapers.doaj] [doaj] статья: Artificial Intelligence and Healthcare
+2026-04-08 03:46:41,741 INFO [scrapers.doaj] [doaj] статья: A data-driven architecture using natural language processing to improv
+2026-04-08 03:46:41,742 INFO [scrapers.doaj] [doaj] статья: Preoperative prediction model for risk of readmission after total join
+2026-04-08 03:46:41,743 INFO [scrapers.doaj] [doaj] статья: Keyword Extraction Algorithm for Classifying Smoking Status from Unstr
+2026-04-08 03:46:41,744 INFO [scrapers.doaj] [doaj] статья: From data strategy to implementation to advance cancer research and ca
+2026-04-08 03:46:41,746 INFO [scrapers.doaj] [doaj] статья: Development and Evaluation of a Natural Language Processing Annotation
+2026-04-08 03:46:41,747 INFO [scrapers.doaj] [doaj] статья: Near Real-time Natural Language Processing for the Extraction of Abdom
+2026-04-08 03:46:41,748 INFO [scrapers.doaj] [doaj] статья: Government plans in the 2016 and 2021 Peruvian presidential elections:
+2026-04-08 03:46:41,748 INFO [scrapers.doaj] [doaj] статья: Artificial intelligence in virtual fracture clinics: a systematic revi
+2026-04-08 03:46:41,749 INFO [scrapers.doaj] [doaj] статья: Codifying unstructured data: A Natural Language Processing approach to
+2026-04-08 03:46:41,750 INFO [scrapers.doaj] [doaj] статья: Development of a cardiac-centered frailty ontology
+2026-04-08 03:46:41,751 INFO [scrapers.doaj] [doaj] статья: Generation of silver standard concept annotations from biomedical text
+2026-04-08 03:46:41,751 INFO [scrapers.doaj] [doaj] статья: Extracting medication information from unstructured public health data
+2026-04-08 03:46:41,752 INFO [scrapers.doaj] [doaj] статья: Classification of the Disposition of Patients Hospitalized with COVID-
+2026-04-08 03:46:41,753 INFO [scrapers.doaj] [doaj] статья: MISTIC: a novel approach for metastasis classification in Italian elec
+2026-04-08 03:46:41,754 INFO [scrapers.doaj] [doaj] статья: Predicting ICD-9 Codes Using Self-Report of Patients
+2026-04-08 03:46:41,754 INFO [scrapers.doaj] [doaj] статья: Social and Behavioral Determinants of Health in the Era of Artificial 
+2026-04-08 03:46:41,755 INFO [scrapers.doaj] [doaj] статья: Development of a confidence-based Natural Language Processing tool to 
+2026-04-08 03:46:41,756 INFO [scrapers.doaj] [doaj] статья: The role of artificial intelligence in managing hospitalized patients 
+2026-04-08 03:46:41,757 INFO [scrapers.doaj] [doaj] статья: Advancing anti-infective drug discovery: The pivotal role of artificia
+2026-04-08 03:46:41,758 INFO [scrapers.doaj] [doaj] статья: Development of a natural language processing algorithm to detect chron
+2026-04-08 03:46:41,759 INFO [scrapers.doaj] [doaj] статья: Automated Annotation of Pain Chronicity in Patients With Back Pain by 
+2026-04-08 03:46:41,759 INFO [scrapers.doaj] [doaj] статья: Utilizing large language models and natural language processing to cla
+2026-04-08 03:46:41,760 INFO [scrapers.doaj] [doaj] статья: Enhancing Semantic Inference in Healthcare Systems With Ontology-Enric
+2026-04-08 03:46:41,761 INFO [scrapers.doaj] [doaj] статья: Natural language processing for populating lung cancer clinical resear
+2026-04-08 03:46:41,762 INFO [scrapers.doaj] [doaj] статья: Social Determinants of Health Documentation in Structured and Unstruct
+2026-04-08 03:46:41,762 INFO [scrapers.doaj] [doaj] статья: CROSS-LINGUAL TRANSFORMER-BASED SCREENING OF POST-TRAUMATIC STRESS DIS
+2026-04-08 03:46:41,763 INFO [scrapers.doaj] [doaj] статья: Automated Detection of Substance-Use Status and Related Information fr
+2026-04-08 03:46:41,764 INFO [scrapers.doaj] [doaj] статья: A Survey on Recent Named Entity Recognition and Relationship Extractio
+2026-04-08 03:46:41,764 INFO [scrapers.doaj] [doaj] статья: The reporting quality of natural language processing studies: systemat
+2026-04-08 03:46:44,032 INFO [scrapers.doaj] [doaj] 'table+detection+document' page=1 → 23 (+23), total=23
+2026-04-08 03:46:44,032 INFO [scrapers.doaj] [doaj] 'table+detection+document' → 23 results
+2026-04-08 03:46:44,032 INFO [scrapers.doaj] [doaj] статья: Pre-training transformer with dual-branch context content module for t
+2026-04-08 03:46:44,033 INFO [scrapers.doaj] [doaj] статья: MSIE-Net: Associative Entity-Based Multi-Stage Network for Structured 
+2026-04-08 03:46:44,034 INFO [scrapers.doaj] [doaj] статья: Continual Learning for Table Detection in Document Images
+2026-04-08 03:46:44,035 INFO [scrapers.doaj] [doaj] статья: Secure protection of video recorder video in smart car
+2026-04-08 03:46:44,036 INFO [scrapers.doaj] [doaj] статья: A Rule-Based Method for Table Detection in Website Images
+2026-04-08 03:46:44,036 INFO [scrapers.doaj] [doaj] статья: TableExtractNet: A Model of Automatic Detection and Recognition of Tab
+2026-04-08 03:46:44,037 INFO [scrapers.doaj] [doaj] статья: Robust Table Structure Recognition Network Based on Local and Global P
+2026-04-08 03:46:44,038 INFO [scrapers.doaj] [doaj] статья: Computer Vision-Based Framework for Data Extraction From Heterogeneous
+2026-04-08 03:46:44,039 INFO [scrapers.doaj] [doaj] статья: A new Approach for Detection and ExtractionTables in Scanned Document 
+2026-04-08 03:46:44,040 INFO [scrapers.doaj] [doaj] статья: Analisis Masalah Kerusakan pada Pabrik Daur Ulang Beton Hasil Konstruk
+2026-04-08 03:46:44,040 INFO [scrapers.doaj] [doaj] статья: Toward Semi-Supervised Graphical Object Detection in Document Images
+2026-04-08 03:46:44,041 INFO [scrapers.doaj] [doaj] статья: Current Status and Performance Analysis of Table Recognition in Docume
+2026-04-08 03:46:44,042 INFO [scrapers.doaj] [doaj] статья: TransTab: A transformer-based approach for table detection and tabular
+2026-04-08 03:46:44,043 INFO [scrapers.doaj] [doaj] статья: HybridTabNet: Towards Better Table Detection in Scanned Document Image
+2026-04-08 03:46:44,043 INFO [scrapers.doaj] [doaj] статья: U-SSD: Improved SSD Based on U-Net Architecture for End-to-End Table D
+2026-04-08 03:46:44,044 INFO [scrapers.doaj] [doaj] статья: Improving table detection for document images using boundary
+2026-04-08 03:46:44,045 INFO [scrapers.doaj] [doaj] статья: CasTabDetectoRS: Cascade Network for Table Detection in Document Image
+2026-04-08 03:46:44,046 INFO [scrapers.doaj] [doaj] статья: Creating a Historical Migration Dataset from Finnish Church Records, 1
+2026-04-08 03:46:44,046 INFO [scrapers.doaj] [doaj] статья: An event knowledge graph system for the operation and maintenance of p
+2026-04-08 03:46:44,047 INFO [scrapers.doaj] [doaj] статья: A Page Object Detection Method Based on Mask R-CNN
+2026-04-08 03:46:44,048 INFO [scrapers.doaj] [doaj] статья: Is There a Correlation between Patient-Staff Interactions and MDRO Acq
+2026-04-08 03:46:44,049 INFO [scrapers.doaj] [doaj] статья: HTTD: A Hierarchical Transformer for Accurate Table Detection in Docum
+2026-04-08 03:46:44,049 INFO [scrapers.doaj] [doaj] статья: Table Extraction with Table Data Using VGG-19 Deep Learning Model
+2026-04-08 03:46:46,842 INFO [scrapers.towards_ds] [towards_ds] tds → 20 записей
+2026-04-08 03:46:49,538 INFO [scrapers.towards_ds] [towards_ds] ocr → 10 записей
+2026-04-08 03:46:51,791 INFO [scrapers.towards_ds] [towards_ds] pdf-parsing → 10 записей
+2026-04-08 03:46:53,807 INFO [scrapers.towards_ds] [towards_ds] nlp → 10 записей
+2026-04-08 03:46:56,057 INFO [scrapers.towards_ds] [towards_ds] healthcare-ai → 10 записей
+2026-04-08 03:46:58,225 INFO [scrapers.towards_ds] [towards_ds] document-understanding → 9 записей
+2026-04-08 03:47:00,132 INFO [scrapers.towards_ds] [towards_ds] machine-learning → 10 записей
+2026-04-08 03:47:02,089 INFO [scrapers.towards_ds] [towards_ds] data-science → 10 записей
+2026-04-08 03:47:04,178 INFO [scrapers.towards_ds] [towards_ds] python → 9 записей
+2026-04-08 03:47:06,138 INFO [scrapers.towards_ds] [towards_ds] deep-learning → 10 записей
+2026-04-08 03:47:08,094 INFO [scrapers.towards_ds] [towards_ds] artificial-intelligence → 9 записей
+2026-04-08 03:47:10,308 INFO [scrapers.towards_ds] [towards_ds] medical-imaging → 10 записей
+2026-04-08 03:47:10,350 INFO [scrapers.towards_ds] [towards_ds] итого выдано: 70 статей
+2026-04-08 03:47:13,507 INFO [scrapers.habr] [habr] machine_learning → 40 записей
+2026-04-08 03:47:16,303 INFO [scrapers.habr] [habr] data_mining → 40 записей
+2026-04-08 03:47:18,706 INFO [scrapers.habr] [habr] python → 40 записей
+2026-04-08 03:47:21,225 INFO [scrapers.habr] [habr] image_processing → 40 записей
+2026-04-08 03:47:23,499 INFO [scrapers.habr] [habr] artificial_intelligence → 40 записей
+2026-04-08 03:47:25,835 WARNING [scrapers.base] [habr] GET failed https://habr.com/ru/rss/hub/data_analysis/articles/: 404 Client Error: Not Found for url: https://habr.com/ru/rss/hubs/data_analysis/articles/
+2026-04-08 03:47:32,800 WARNING [scrapers.base] [habr] GET failed https://habr.com/ru/rss/hub/data_analysis/articles/: 404 Client Error: Not Found for url: https://habr.com/ru/rss/hubs/data_analysis/articles/
+2026-04-08 03:47:39,775 WARNING [scrapers.base] [habr] GET failed https://habr.com/ru/rss/hub/data_analysis/articles/: 404 Client Error: Not Found for url: https://habr.com/ru/rss/hubs/data_analysis/articles/
+2026-04-08 03:47:42,123 INFO [scrapers.habr] [habr] programming → 40 записей
+2026-04-08 03:47:42,342 INFO [scrapers.habr] [habr] итого выдано: 200 статей
+2026-04-08 04:34:41,162 INFO [scrapers.habr] [habr] Этап 1: поиск по релевантности (8 запросов)
+2026-04-08 04:34:43,736 INFO [scrapers.habr] [habr] поиск='извлечение данных pdf' order=relevance → 35 статей
+2026-04-08 04:34:46,482 INFO [scrapers.habr] [habr] поиск='парсинг медицинских документов' order=relevance → 35 статей
+2026-04-08 04:34:49,137 INFO [scrapers.habr] [habr] поиск='распознавание таблиц ocr' order=relevance → 35 статей
+2026-04-08 04:34:51,767 INFO [scrapers.habr] [habr] поиск='обработка медицинских анализов' order=relevance → 35 статей
+2026-04-08 04:34:54,415 INFO [scrapers.habr] [habr] поиск='nlp медицина клинические данные' order=relevance → 35 статей
+2026-04-08 04:34:56,992 INFO [scrapers.habr] [habr] поиск='pdf table extraction' order=relevance → 35 статей
+2026-04-08 04:34:57,352 INFO [scrapers.habr] [habr] Этап 2: поиск по дате (8 запросов)
+2026-04-08 04:34:57,352 INFO [scrapers.habr] [habr] Этап 3: хабы (8 штук)
+2026-04-08 04:34:57,352 INFO [scrapers.habr] [habr] итого выдано: 200 статей
+2026-04-09 03:11:33,563 INFO [scrapers.pubmed] [pubmed] Проход 1: relevance (10 запросов)
+2026-04-09 03:11:34,823 INFO [scrapers.pubmed] [pubmed] esearch 'pdf extraction[tiab] AND medical[tiab]' sort=relevance → total=814
+2026-04-09 03:11:40,419 INFO [scrapers.pubmed] [pubmed] esearch 'table extraction[tiab] AND pdf[tiab]' sort=relevance → total=59
+2026-04-09 03:11:46,254 INFO [scrapers.pubmed] [pubmed] esearch 'laboratory results[tiab] AND pdf[tiab]' sort=relevance → total=467
+2026-04-09 03:11:51,715 INFO [scrapers.pubmed] [pubmed] esearch 'clinical data[tiab] AND pdf[tiab] AND extraction[t' sort=relevance → total=26
+2026-04-09 03:11:57,160 INFO [scrapers.pubmed] [pubmed] esearch 'ocr[tiab] AND medical document[tiab]' sort=relevance → total=15
+2026-04-09 03:12:00,917 INFO [scrapers.pubmed] [pubmed] esearch 'pdf parsing[tiab] AND medical[tiab]' sort=relevance → total=15
+2026-04-09 03:12:04,668 INFO [scrapers.pubmed] [pubmed] esearch 'document parsing[tiab] AND medical[tiab]' sort=relevance → total=56
+2026-04-09 03:12:09,758 INFO [scrapers.pubmed] [pubmed] esearch 'table detection[tiab] AND document[tiab]' sort=relevance → total=1148
+2026-04-09 03:12:15,994 INFO [scrapers.pubmed] [pubmed] esearch 'electronic health record[tiab] AND extraction[tiab' sort=relevance → total=1103
+2026-04-09 03:12:19,010 INFO [scrapers.pubmed] [pubmed] Проход 2: pub+date (10 запросов)
+2026-04-09 03:12:19,010 INFO [scrapers.pubmed] [pubmed] итого выдано: 200 статей
+2026-04-09 03:12:21,862 INFO [scrapers.doaj] [doaj] 'ocr+medical' page=1 → 4 (+4), total=62
+2026-04-09 03:12:21,863 INFO [scrapers.doaj] [doaj] 'ocr+medical' → 4 results
+2026-04-09 03:12:21,863 INFO [scrapers.doaj] [doaj] статья: Iridin Prevented Against Lipopolysaccharide-Induced Inflammatory Respo
+2026-04-09 03:12:21,875 INFO [scrapers.doaj] [doaj] статья: Prevalence  and predictors of depressive symptoms and wellbeing during
+2026-04-09 03:12:21,886 INFO [scrapers.doaj] [doaj] статья: A serialization method for digitizing the image-based medical laborato
+2026-04-09 03:12:21,899 INFO [scrapers.doaj] [doaj] статья: Coaching in Competence by Design: A New Model of Coaching in the Momen
+2026-04-09 03:12:24,160 INFO [scrapers.doaj] [doaj] 'medical+table+extraction' page=1 → 4 (+4), total=69
+2026-04-09 03:12:24,160 INFO [scrapers.doaj] [doaj] 'medical+table+extraction' → 4 results
+2026-04-09 03:12:24,160 INFO [scrapers.doaj] [doaj] статья: Cluster-based anonymity model and algorithm for 1:1 dataset with a sin
+2026-04-09 03:12:24,172 INFO [scrapers.doaj] [doaj] статья: MSIE-Net: Associative Entity-Based Multi-Stage Network for Structured 
+2026-04-09 03:12:24,174 INFO [scrapers.doaj] [doaj] статья: Coronectomy versus Extraction of Third Molar with Inferior Alveolar Ne
+2026-04-09 03:12:24,186 INFO [scrapers.doaj] [doaj] статья: Grouped semantic-feature relation extraction from texts to represent m
+2026-04-09 03:12:26,457 INFO [scrapers.doaj] [doaj] 'laboratory+pdf+results' page=1 → 4 (+4), total=42
+2026-04-09 03:12:26,458 INFO [scrapers.doaj] [doaj] 'laboratory+pdf+results' → 4 results
+2026-04-09 03:12:26,458 INFO [scrapers.doaj] [doaj] статья: Moment-based metrics for global sensitivity analysis of hydrological s
+2026-04-09 03:12:26,471 INFO [scrapers.doaj] [doaj] статья: Construction of an Electrocardiogram Database Including 12 Lead Wavefo
+2026-04-09 03:12:26,483 INFO [scrapers.doaj] [doaj] статья: Laboratory measurements and model sensitivity studies of dust depositi
+2026-04-09 03:12:26,495 INFO [scrapers.doaj] [doaj] статья: Next generation 3D Virtual Human Anatomy Laboratory, using offthe-shel
+2026-04-09 03:12:28,753 INFO [scrapers.doaj] [doaj] 'pdf+medical+extraction' page=1 → 4 (+4), total=6
+2026-04-09 03:12:28,753 INFO [scrapers.doaj] [doaj] 'pdf+medical+extraction' → 4 results
+2026-04-09 03:12:28,753 INFO [scrapers.doaj] [doaj] статья: Resilient Multimedia Embedding in DICOM Images: A Robustness Evaluatio
+2026-04-09 03:12:28,754 INFO [scrapers.doaj] [doaj] статья: A Review of Classification Techniques of EMG Signals during Isotonic a
+2026-04-09 03:12:28,755 INFO [scrapers.doaj] [doaj] статья: An Empirical Study of Several Information Theoretic Based Feature Extr
+2026-04-09 03:12:28,756 INFO [scrapers.doaj] [doaj] статья: A Policy-Driven Approach to Secure Extraction of COVID-19 Data From Re
+2026-04-09 03:12:31,044 INFO [scrapers.doaj] [doaj] 'clinical+document+parsing' page=1 → 1 (+1), total=1
+2026-04-09 03:12:31,044 INFO [scrapers.doaj] [doaj] 'clinical+document+parsing' → 1 results
+2026-04-09 03:12:31,044 INFO [scrapers.doaj] [doaj] статья: Functional remapping in networks of the Parkinsonian brain: A preclini
+2026-04-09 03:12:33,363 INFO [scrapers.doaj] [doaj] 'medical+document+information' page=1 → 4 (+4), total=944
+2026-04-09 03:12:33,364 INFO [scrapers.doaj] [doaj] 'medical+document+information' → 4 results
+2026-04-09 03:12:33,364 INFO [scrapers.doaj] [doaj] статья: Development and Human Testing of Chemical Warfare Agents and Means of 
+2026-04-09 03:12:33,377 INFO [scrapers.doaj] [doaj] статья: PROMOTING GLOBAL HEALTH: THE WORLD ASSOCIATION OF MEDICAL EDITORS POSI
+2026-04-09 03:12:33,392 INFO [scrapers.doaj] [doaj] статья: Institutionalising urogenital schistosomiasis surveillance: Best pract
+2026-04-09 03:12:33,404 INFO [scrapers.doaj] [doaj] статья: An approach to a geropsychiatric assessment
+2026-04-09 03:12:35,666 INFO [scrapers.doaj] [doaj] 'laboratory+results+extraction' page=1 → 4 (+4), total=2367
+2026-04-09 03:12:35,666 INFO [scrapers.doaj] [doaj] 'laboratory+results+extraction' → 4 results
+2026-04-09 03:12:35,666 INFO [scrapers.doaj] [doaj] статья: Extraction and Energy Management of Solar Photovoltaic, Fuel Cell, and
+2026-04-09 03:12:35,678 INFO [scrapers.doaj] [doaj] статья: Life cycle assessment for early-stage process optimization of microbia
+2026-04-09 03:12:35,691 INFO [scrapers.doaj] [doaj] статья: Development and validation of a portable, point-of-care canine distemp
+2026-04-09 03:12:35,703 INFO [scrapers.doaj] [doaj] статья: Genotoxicity of styrene oligomers extracted from polystyrene intended 
+2026-04-09 03:12:37,971 INFO [scrapers.doaj] [doaj] 'clinical+data+extraction' page=1 → 4 (+4), total=8548
+2026-04-09 03:12:37,971 INFO [scrapers.doaj] [doaj] 'clinical+data+extraction' → 4 results
+2026-04-09 03:12:37,971 INFO [scrapers.doaj] [doaj] статья: Efficacy and safety of lipid-lowering therapies in combination with or
+2026-04-09 03:12:37,989 INFO [scrapers.doaj] [doaj] статья: The impact of progestogens on RAAS – a systematic review
+2026-04-09 03:12:38,001 INFO [scrapers.doaj] [doaj] статья: Why do healthcare professionals fail to escalate as per the early warn
+2026-04-09 03:12:38,013 INFO [scrapers.doaj] [doaj] статья: Effectiveness of echocardiography and cardiac magnetic resonance for s
+2026-04-09 03:12:40,314 INFO [scrapers.doaj] [doaj] 'pdf+data+extraction' page=1 → 4 (+4), total=83
+2026-04-09 03:12:40,314 INFO [scrapers.doaj] [doaj] 'pdf+data+extraction' → 4 results
+2026-04-09 03:12:40,314 INFO [scrapers.doaj] [doaj] статья: Point Cloud Denoising and Feature Preservation: An Adaptive Kernel App
+2026-04-09 03:12:40,329 INFO [scrapers.doaj] [doaj] статья: Data Curation in Practice: Extract Tabular Data from PDF Files Using a
+2026-04-09 03:12:40,341 INFO [scrapers.doaj] [doaj] статья: Structured dataset of reported cloud seeding activities in the United 
+2026-04-09 03:12:42,650 INFO [scrapers.doaj] [doaj] 'document+information+extraction' page=1 → 4 (+4), total=601
+2026-04-09 03:12:42,650 INFO [scrapers.doaj] [doaj] 'document+information+extraction' → 4 results
+2026-04-09 03:12:42,650 INFO [scrapers.doaj] [doaj] статья: Using the Ship-Gram Model for Japanese Keyword Extraction Based on New
+2026-04-09 03:12:42,665 INFO [scrapers.doaj] [doaj] статья: Modeling Graph Neural Networks and Dynamic Role Sorting for Argument E
+2026-04-09 03:12:42,677 INFO [scrapers.doaj] [doaj] статья: Pre-training transformer with dual-branch context content module for t
+2026-04-09 03:12:42,678 INFO [scrapers.doaj] [doaj] статья: A Pan-Canadian narrative review on the protocols for reopening dental 
+2026-04-09 03:12:44,930 INFO [scrapers.doaj] [doaj] 'text+extraction+medical' page=1 → 4 (+4), total=661
+2026-04-09 03:12:44,930 INFO [scrapers.doaj] [doaj] 'text+extraction+medical' → 4 results
+2026-04-09 03:12:44,930 INFO [scrapers.doaj] [doaj] статья: Oral Lesions in a Teaching Clinic: A Retrospective Study and Systemati
+2026-04-09 03:12:44,942 INFO [scrapers.doaj] [doaj] статья: Large Language Models in Healthcare and Medical Domain: A Review
+2026-04-09 03:12:44,953 INFO [scrapers.doaj] [doaj] статья: Large Language Model–Supported Identification of Intellectual Disabili
+2026-04-09 03:12:44,966 INFO [scrapers.doaj] [doaj] статья: Study on Entity Extraction Method for Pharmaceutical Instructions Base
+2026-04-09 03:12:47,228 INFO [scrapers.doaj] [doaj] 'data+extraction+clinical' page=1 → 4 (+4), total=8548
+2026-04-09 03:12:47,229 INFO [scrapers.doaj] [doaj] 'data+extraction+clinical' → 4 results
+2026-04-09 03:12:49,468 INFO [scrapers.doaj] [doaj] 'structured+data+medical' page=1 → 4 (+4), total=11767
+2026-04-09 03:12:49,468 INFO [scrapers.doaj] [doaj] 'structured+data+medical' → 4 results
+2026-04-09 03:12:49,468 INFO [scrapers.doaj] [doaj] статья: Prevalence of Diabetes Mellitus and Associated Factors in Addis Ababa 
+2026-04-09 03:12:49,480 INFO [scrapers.doaj] [doaj] статья: Relationship Between Quality of Palliative Care for Children with Mali
+2026-04-09 03:12:49,494 INFO [scrapers.doaj] [doaj] статья: The impact of an online intervention on the medical, dental and health
+2026-04-09 03:12:49,506 INFO [scrapers.doaj] [doaj] статья: Sleep Quality and Psychological Distress Among Undergraduate Students 
+2026-04-09 03:12:51,799 INFO [scrapers.doaj] [doaj] 'unstructured+data+extraction' page=1 → 4 (+4), total=643
+2026-04-09 03:12:51,799 INFO [scrapers.doaj] [doaj] 'unstructured+data+extraction' → 4 results
+2026-04-09 03:12:51,799 INFO [scrapers.doaj] [doaj] статья: Human behavior analysis on political retweets using machine learning a
+2026-04-09 03:12:51,811 INFO [scrapers.doaj] [doaj] статья: FEATURE-EXTRACTION FROM ALL-SCALE NEIGHBORHOODS WITH APPLICATIONS TO S
+2026-04-09 03:12:51,823 INFO [scrapers.doaj] [doaj] статья: A Multi-Stage NLP Framework for Knowledge Discovery from Crop Disease 
+2026-04-09 03:12:54,118 INFO [scrapers.doaj] [doaj] 'named+entity+recognition+medical' page=1 → 4 (+4), total=246
+2026-04-09 03:12:54,118 INFO [scrapers.doaj] [doaj] 'named+entity+recognition+medical' → 4 results
+2026-04-09 03:12:54,118 INFO [scrapers.doaj] [doaj] статья: Few-shot Named Entity Ｒecognition for Medical Text
+2026-04-09 03:12:54,130 INFO [scrapers.doaj] [doaj] статья: Task-Specific Transformer-Based Language Models in Health Care: Scopin
+2026-04-09 03:12:56,448 INFO [scrapers.doaj] [doaj] 'information+retrieval+clinical' page=1 → 4 (+4), total=684
+2026-04-09 03:12:56,448 INFO [scrapers.doaj] [doaj] 'information+retrieval+clinical' → 4 results
+2026-04-09 03:12:56,448 INFO [scrapers.doaj] [doaj] статья: An interactive retrieval system for clinical trial studies with contex
+2026-04-09 03:12:56,460 INFO [scrapers.doaj] [doaj] статья: How i do it: A practical database management system to assist clinical
+2026-04-09 03:12:56,471 INFO [scrapers.doaj] [doaj] статья: A question-entailment approach to question answering
+2026-04-09 03:12:56,482 INFO [scrapers.doaj] [doaj] статья: Effect of Aneurysmal Subarachnoid Hemorrhage on Word Generation
+2026-04-09 03:12:58,727 INFO [scrapers.doaj] [doaj] 'table+extraction+document' page=1 → 4 (+4), total=31
+2026-04-09 03:12:58,728 INFO [scrapers.doaj] [doaj] 'table+extraction+document' → 4 results
+2026-04-09 03:12:58,728 INFO [scrapers.doaj] [doaj] статья: Non-invasive brain stimulation paradigms in treatment of alcohol use d
+2026-04-09 03:12:58,740 INFO [scrapers.doaj] [doaj] статья: Mapping the Landscape, Knowledge Gaps, and Areas for Innovation in Bra
+2026-04-09 03:13:00,991 INFO [scrapers.doaj] [doaj] 'table+detection+recognition' page=1 → 4 (+4), total=79
+2026-04-09 03:13:00,991 INFO [scrapers.doaj] [doaj] 'table+detection+recognition' → 4 results
+2026-04-09 03:13:00,991 INFO [scrapers.doaj] [doaj] статья: Design of a Wearable Wireless Multi-Sensor Monitoring System and Appli
+2026-04-09 03:13:01,003 INFO [scrapers.doaj] [doaj] статья: FPGA-Based Hybrid-Type Implementation of Quantized Neural Networks for
+2026-04-09 03:13:01,017 INFO [scrapers.doaj] [doaj] статья: Approach to Automated Visual Inspection of Objects Based on Artificial
+2026-04-09 03:13:03,259 INFO [scrapers.doaj] [doaj] 'pdf+table+parsing' page=1 → 2 (+2), total=2
+2026-04-09 03:13:03,259 INFO [scrapers.doaj] [doaj] 'pdf+table+parsing' → 2 results
+2026-04-09 03:13:03,259 INFO [scrapers.doaj] [doaj] статья: Skin Tone Analysis for Representation in Educational Materials (STAR-E
+2026-04-09 03:13:03,271 INFO [scrapers.doaj] [doaj] статья: A Study on Methods for Parsing Architectural Multi-Modal Data and Extr
+2026-04-09 03:13:05,559 INFO [scrapers.doaj] [doaj] 'document+layout+analysis' page=1 → 4 (+4), total=112
+2026-04-09 03:13:05,559 INFO [scrapers.doaj] [doaj] 'document+layout+analysis' → 4 results
+2026-04-09 03:13:05,559 INFO [scrapers.doaj] [doaj] статья: Library Computer Technologies in Operation with National Periodicals
+2026-04-09 03:13:05,572 INFO [scrapers.doaj] [doaj] статья: IMPLEMENTASI GMP BERDASAR PADA ISO/TS 22002-1 TERHADAP PRODUKSI IKAN T
+2026-04-09 03:13:05,584 INFO [scrapers.doaj] [doaj] статья: Evaluating Factors Affecting Interior Architectural Space Quality to E
+2026-04-09 03:13:05,595 INFO [scrapers.doaj] [doaj] статья: The Thought and Methodology of Ecological Restoration Planning of Nati
+2026-04-09 03:13:07,879 INFO [scrapers.doaj] [doaj] 'document+understanding+deep+learning' page=1 → 4 (+4), total=91
+2026-04-09 03:13:07,879 INFO [scrapers.doaj] [doaj] 'document+understanding+deep+learning' → 4 results
+2026-04-09 03:13:07,879 INFO [scrapers.doaj] [doaj] статья: Enhancing Arabic Sentiment Analysis of Consumer Reviews: Machine Learn
+2026-04-09 03:13:07,891 INFO [scrapers.doaj] [doaj] статья: Hybrid Feature Combination of TF-IDF and BERT for Enhanced Information
+2026-04-09 03:13:07,903 INFO [scrapers.doaj] [doaj] статья: Integration of corpus linguistics and deep learning techniques for enh
+2026-04-09 03:13:07,914 INFO [scrapers.doaj] [doaj] статья: AI Knows You: Deep Learning Model for Prediction of Extroversion Perso
+2026-04-09 03:13:10,211 INFO [scrapers.doaj] [doaj] 'form+extraction+document' page=1 → 4 (+4), total=109
+2026-04-09 03:13:10,211 INFO [scrapers.doaj] [doaj] 'form+extraction+document' → 4 results
+2026-04-09 03:13:10,211 INFO [scrapers.doaj] [doaj] статья: Developing a Conceptual Pattern of Creating "Mental Imagination" Relyi
+2026-04-09 03:13:10,224 INFO [scrapers.doaj] [doaj] статья: Perancangan model kemasan distribusi minuman kopi cup menggunakan kans
+2026-04-09 03:13:12,482 INFO [scrapers.doaj] [doaj] 'optical+character+recognition+medical' page=1 → 4 (+4), total=41
+2026-04-09 03:13:12,482 INFO [scrapers.doaj] [doaj] 'optical+character+recognition+medical' → 4 results
+2026-04-09 03:13:12,483 INFO [scrapers.doaj] [doaj] статья: Structuring and centralizing breast cancer real-world biomarker data f
+2026-04-09 03:13:12,494 INFO [scrapers.doaj] [doaj] статья: LabTracker: Navigating Laboratory Test Results with Ease and Understan
+2026-04-09 03:13:12,506 INFO [scrapers.doaj] [doaj] статья: First study of the RuPatient health information system with optical ch
+2026-04-09 03:13:12,518 INFO [scrapers.doaj] [doaj] статья: Cor<i>Deep</i> and the Sacrobosco Dataset: Detection of Visual Element
+2026-04-09 03:13:14,792 INFO [scrapers.doaj] [doaj] 'ocr+document+processing' page=1 → 4 (+4), total=50
+2026-04-09 03:13:14,792 INFO [scrapers.doaj] [doaj] 'ocr+document+processing' → 4 results
+2026-04-09 03:13:14,792 INFO [scrapers.doaj] [doaj] статья: Document Image Rectification Method Based on Lines Space
+2026-04-09 03:13:14,804 INFO [scrapers.doaj] [doaj] статья: Handwritten Indic Script Recognition Based on the Dempster–Shafer Theo
+2026-04-09 03:13:14,815 INFO [scrapers.doaj] [doaj] статья: Efficient AI-driven allegation screening: A case study of Thailand's N
+2026-04-09 03:13:14,829 INFO [scrapers.doaj] [doaj] статья: Development of OCR Service for Page-Level Recognition for Camera-Captu
+2026-04-09 03:13:17,100 INFO [scrapers.doaj] [doaj] 'ocr+table+recognition' page=1 → 4 (+4), total=12
+2026-04-09 03:13:17,100 INFO [scrapers.doaj] [doaj] 'ocr+table+recognition' → 4 results
+2026-04-09 03:13:17,100 INFO [scrapers.doaj] [doaj] статья: Optical character recognition on engineering drawings to achieve autom
+2026-04-09 03:13:17,112 INFO [scrapers.doaj] [doaj] статья: An Ante Hoc Enhancement Method for Image-Based Complex Financial Table
+2026-04-09 03:13:17,124 INFO [scrapers.doaj] [doaj] статья: Automatic Recognition of Financial Instruments Based on Anisotropic Pa
+2026-04-09 03:13:17,135 INFO [scrapers.doaj] [doaj] статья: Reichsanzeiger-GT: An OCR ground truth dataset based on the historical
+2026-04-09 03:13:19,432 INFO [scrapers.doaj] [doaj] 'text+recognition+document' page=1 → 4 (+4), total=318
+2026-04-09 03:13:19,432 INFO [scrapers.doaj] [doaj] 'text+recognition+document' → 4 results
+2026-04-09 03:13:19,432 INFO [scrapers.doaj] [doaj] статья: Experimental determination of chosen document elements parameters from
+2026-04-09 03:13:19,444 INFO [scrapers.doaj] [doaj] статья: A Proposed Arabic Handwritten Text Normalization Method
+2026-04-09 03:13:19,457 INFO [scrapers.doaj] [doaj] статья: Food bags, silent squares: Changes in the actions of state agents and 
+2026-04-09 03:13:21,737 INFO [scrapers.doaj] [doaj] 'handwriting+recognition+medical' page=1 → 4 (+4), total=14
+2026-04-09 03:13:21,738 INFO [scrapers.doaj] [doaj] 'handwriting+recognition+medical' → 4 results
+2026-04-09 03:13:21,738 INFO [scrapers.doaj] [doaj] статья: Integrated Sensing and Computing for Wearable Human Activity Recogniti
+2026-04-09 03:13:21,753 INFO [scrapers.doaj] [doaj] статья: On Using Entropy for Enhancing Handwriting Preprocessing
+2026-04-09 03:13:21,765 INFO [scrapers.doaj] [doaj] статья: Machine-Learning Methods for Speech and Handwriting Detection Using Ne
+2026-04-09 03:13:21,777 INFO [scrapers.doaj] [doaj] статья: Recognition of handwriting from electromyography.
+2026-04-09 03:13:24,095 INFO [scrapers.doaj] [doaj] 'electronic+health+record+extraction' page=1 → 4 (+4), total=203
+2026-04-09 03:13:24,095 INFO [scrapers.doaj] [doaj] 'electronic+health+record+extraction' → 4 results
+2026-04-09 03:13:24,095 INFO [scrapers.doaj] [doaj] статья: Comparing Cancer Primary and Secondary Prevention Documentation Betwee
+2026-04-09 03:13:24,107 INFO [scrapers.doaj] [doaj] статья: A modified Delphi approach to develop a trial protocol for antibiotic 
+2026-04-09 03:13:24,118 INFO [scrapers.doaj] [doaj] статья: Risk factors for adverse outcomes during mechanical ventilation of 115
+2026-04-09 03:13:24,129 INFO [scrapers.doaj] [doaj] статья: Real-World Evidence to Assess Medication Safety or Effectiveness in Ch
+2026-04-09 03:13:26,439 INFO [scrapers.doaj] [doaj] 'ehr+information+extraction' page=1 → 4 (+4), total=106
+2026-04-09 03:13:26,439 INFO [scrapers.doaj] [doaj] 'ehr+information+extraction' → 4 results
+2026-04-09 03:13:26,439 INFO [scrapers.doaj] [doaj] статья: Automated Filtering and Visualization of Patient-Centered Data from El
+2026-04-09 03:13:26,451 INFO [scrapers.doaj] [doaj] статья: Secure electronic health record access control via blockchain, dual-at
+2026-04-09 03:13:26,463 INFO [scrapers.doaj] [doaj] статья: Design of an extensive information representation scheme for clinical 
+2026-04-09 03:13:26,464 INFO [scrapers.doaj] [doaj] статья: Keyword Extraction Algorithm for Classifying Smoking Status from Unstr
+2026-04-09 03:13:28,706 INFO [scrapers.doaj] [doaj] 'clinical+notes+nlp' page=1 → 4 (+4), total=265
+2026-04-09 03:13:28,706 INFO [scrapers.doaj] [doaj] 'clinical+notes+nlp' → 4 results
+2026-04-09 03:13:28,706 INFO [scrapers.doaj] [doaj] статья: Thyroid Ultrasound Appropriateness Identification Through Natural Lang
+2026-04-09 03:13:28,718 INFO [scrapers.doaj] [doaj] статья: Classifying Characteristics of Opioid Use Disorder From Hospital Disch
+2026-04-09 03:13:28,720 INFO [scrapers.doaj] [doaj] статья: Determinants of Smoking and Quitting in HIV-Infected Individuals.
+2026-04-09 03:13:28,721 INFO [scrapers.doaj] [doaj] статья: Developing a Framework to Infer Opioid Use Disorder Severity From Clin
+2026-04-09 03:13:31,016 INFO [scrapers.doaj] [doaj] 'medical+record+parsing' page=1 → 4 (+4), total=4
+2026-04-09 03:13:31,017 INFO [scrapers.doaj] [doaj] 'medical+record+parsing' → 4 results
+2026-04-09 03:13:31,017 INFO [scrapers.doaj] [doaj] статья: CHDbase: A Comprehensive Knowledgebase for Congenital Heart Disease-re
+2026-04-09 03:13:31,029 INFO [scrapers.doaj] [doaj] статья: A controlled trial of automated classification of negation from clinic
+2026-04-09 03:13:31,040 INFO [scrapers.doaj] [doaj] статья: Extraction of Substance Use Information From Clinical Notes: Generativ
+2026-04-09 03:13:31,051 INFO [scrapers.doaj] [doaj] статья: Automated Pathologic TN Classification Prediction and Rationale Genera
+2026-04-09 03:13:33,322 INFO [scrapers.doaj] [doaj] 'patient+data+extraction' page=1 → 4 (+4), total=4469
+2026-04-09 03:13:33,322 INFO [scrapers.doaj] [doaj] 'patient+data+extraction' → 4 results
+2026-04-09 03:13:33,322 INFO [scrapers.doaj] [doaj] статья: Next-Generation Sequencing Analysis of Root Canal Microbiota Associate
+2026-04-09 03:13:35,628 INFO [scrapers.doaj] [doaj] 'radiology+report+extraction' page=1 → 4 (+4), total=31
+2026-04-09 03:13:35,628 INFO [scrapers.doaj] [doaj] 'radiology+report+extraction' → 4 results
+2026-04-09 03:13:35,629 INFO [scrapers.doaj] [doaj] статья: S-RRG-Bench: Structured radiology report generation with fine-grained 
+2026-04-09 03:13:35,641 INFO [scrapers.doaj] [doaj] статья: Structured reporting of dental panoramic images in a hospital-based ra
+2026-04-09 03:13:35,652 INFO [scrapers.doaj] [doaj] статья: Extracting Pulmonary Embolism Diagnoses From Radiology Impressions Usi
+2026-04-09 03:13:35,663 INFO [scrapers.doaj] [doaj] статья: Artificial intelligence software for analysing chest X-ray images to i
+2026-04-09 03:13:37,919 INFO [scrapers.doaj] [doaj] 'pathology+report+nlp' page=1 → 4 (+4), total=16
+2026-04-09 03:13:37,919 INFO [scrapers.doaj] [doaj] 'pathology+report+nlp' → 4 results
+2026-04-09 03:13:37,919 INFO [scrapers.doaj] [doaj] статья: Successful Treatment of Severe Nail Lichen Planus with Janus Kinase 1 
+2026-04-09 03:13:37,931 INFO [scrapers.doaj] [doaj] статья: A Question-and-Answer System to Extract Data From Free-Text Oncologica
+2026-04-09 03:13:37,943 INFO [scrapers.doaj] [doaj] статья: Large-scale identification of undiagnosed hepatic steatosis using natu
+2026-04-09 03:13:37,956 INFO [scrapers.doaj] [doaj] статья: Automated medical chart review for breast cancer outcomes research: a 
+2026-04-09 03:13:40,238 INFO [scrapers.doaj] [doaj] 'discharge+summary+extraction' page=1 → 4 (+4), total=31
+2026-04-09 03:13:40,238 INFO [scrapers.doaj] [doaj] 'discharge+summary+extraction' → 4 results
+2026-04-09 03:13:40,238 INFO [scrapers.doaj] [doaj] статья: Temporal Expression Classification and Normalization From Chinese Narr
+2026-04-09 03:13:40,251 INFO [scrapers.doaj] [doaj] статья: Enhanced recovery pathway for older people with hip fracture and cogni
+2026-04-09 03:13:40,265 INFO [scrapers.doaj] [doaj] статья: Automatically identifying social isolation from clinical narratives fo
+2026-04-09 03:13:40,276 INFO [scrapers.doaj] [doaj] статья: From Waste to Power: Fly Ash-Based Silicone Anode Lithium-Ion Batterie
+2026-04-09 03:13:42,552 INFO [scrapers.doaj] [doaj] 'medical+report+parsing' page=1 → 2 (+2), total=2
+2026-04-09 03:13:42,552 INFO [scrapers.doaj] [doaj] 'medical+report+parsing' → 2 results
+2026-04-09 03:13:42,552 INFO [scrapers.doaj] [doaj] статья: Extracting Medical Information From Free-Text and Unstructured Patient
+2026-04-09 03:13:44,806 INFO [scrapers.doaj] [doaj] 'laboratory+test+results' page=1 → 4 (+4), total=25820
+2026-04-09 03:13:44,806 INFO [scrapers.doaj] [doaj] 'laboratory+test+results' → 4 results
+2026-04-09 03:13:44,806 INFO [scrapers.doaj] [doaj] статья: Construction of the cancer patients’ database based on the US National
+2026-04-09 03:13:44,819 INFO [scrapers.doaj] [doaj] статья: Application of biologically active substances in agriculture preparati
+2026-04-09 03:13:44,830 INFO [scrapers.doaj] [doaj] статья: Analysis of Distribution Process to the Increasing of Escherichia Coli
+2026-04-09 03:13:44,840 INFO [scrapers.doaj] [doaj] статья: Genetic impact of non-consanguineous marriages in Saudi Arabia.
+2026-04-09 03:13:47,076 INFO [scrapers.doaj] [doaj] 'lab+results+extraction' page=1 → 4 (+4), total=362
+2026-04-09 03:13:47,076 INFO [scrapers.doaj] [doaj] 'lab+results+extraction' → 4 results
+2026-04-09 03:13:47,076 INFO [scrapers.doaj] [doaj] статья: Extraction and Recovery of Metals from Spent HDS Catalysts: Lab- and P
+2026-04-09 03:13:47,088 INFO [scrapers.doaj] [doaj] статья: Clinical utility of circulating cell-free DNA in advanced colorectal c
+2026-04-09 03:13:47,099 INFO [scrapers.doaj] [doaj] статья: How methodological frameworks are being developed: evidence from a sco
+2026-04-09 03:13:47,110 INFO [scrapers.doaj] [doaj] статья: Fatty Acid Methyl Ester (FAME) Succession in Different Substrates as A
+2026-04-09 03:13:49,363 INFO [scrapers.doaj] [doaj] 'blood+test+data+extraction' page=1 → 4 (+4), total=323
+2026-04-09 03:13:49,363 INFO [scrapers.doaj] [doaj] 'blood+test+data+extraction' → 4 results
+2026-04-09 03:13:49,363 INFO [scrapers.doaj] [doaj] статья: Prevalence and factors associated with diabetic retinopathy among diab
+2026-04-09 03:13:49,380 INFO [scrapers.doaj] [doaj] статья: Pharmacogenetic analysis of inter-ethnic variability in the uptake tra
+2026-04-09 03:13:49,394 INFO [scrapers.doaj] [doaj] статья: Test-retest analysis of cerebral oxygen extraction estimates in health
+2026-04-09 03:13:49,404 INFO [scrapers.doaj] [doaj] статья: Is there an association between retinal vein occlusion and cerebrovasc
+2026-04-09 03:13:51,693 INFO [scrapers.doaj] [doaj] 'clinical+laboratory+nlp' page=1 → 4 (+4), total=33
+2026-04-09 03:13:51,693 INFO [scrapers.doaj] [doaj] 'clinical+laboratory+nlp' → 4 results
+2026-04-09 03:13:51,693 INFO [scrapers.doaj] [doaj] статья: Impacting Management of Chronic Kidney Disease Through Primary Care Pr
+2026-04-09 03:13:51,706 INFO [scrapers.doaj] [doaj] статья: Preoperative prediction model for risk of readmission after total join
+2026-04-09 03:13:51,709 INFO [scrapers.doaj] [doaj] статья: Development and Evaluation of a Natural Language Processing Annotation
+2026-04-09 03:13:51,709 INFO [scrapers.doaj] [doaj] статья: Exploring subdomain variation in biomedical language
+2026-04-09 03:13:53,958 INFO [scrapers.doaj] [doaj] 'laboratory+findings+extraction' page=1 → 4 (+4), total=446
+2026-04-09 03:13:53,958 INFO [scrapers.doaj] [doaj] 'laboratory+findings+extraction' → 4 results
+2026-04-09 03:13:53,958 INFO [scrapers.doaj] [doaj] статья: Cuticular Hydrocarbon Recognition in the Mating Behavior of Two <i>Pis
+2026-04-09 03:13:53,971 INFO [scrapers.doaj] [doaj] статья: Performance evaluation of GenXplore q4800: a novel open-platform autom
+2026-04-09 03:13:56,282 INFO [scrapers.doaj] [doaj] 'diagnostic+report+extraction' page=1 → 4 (+4), total=301
+2026-04-09 03:13:56,282 INFO [scrapers.doaj] [doaj] 'diagnostic+report+extraction' → 4 results
+2026-04-09 03:13:56,282 INFO [scrapers.doaj] [doaj] статья: Nucleic acid purification from plants, animals and microbes in under 3
+2026-04-09 03:13:56,294 INFO [scrapers.doaj] [doaj] статья: Endoscopic management of a transgastric migrated gossypiboma: A case r
+2026-04-09 03:13:56,305 INFO [scrapers.doaj] [doaj] статья: MRI software and cognitive fusion biopsies in people with suspected pr
+2026-04-09 03:13:56,317 INFO [scrapers.doaj] [doaj] статья: Analysing the HERV-K env, np9, rec and gag expression in cervical tiss
+2026-04-09 03:13:58,639 INFO [scrapers.doaj] [doaj] 'natural+language+processing+clinical' page=1 → 4 (+4), total=1766
+2026-04-09 03:13:58,639 INFO [scrapers.doaj] [doaj] 'natural+language+processing+clinical' → 4 results
+2026-04-09 03:13:58,639 INFO [scrapers.doaj] [doaj] статья: The Impact of Word Regularity on the Reading of Normal and Aphasic Gil
+2026-04-09 03:13:58,651 INFO [scrapers.doaj] [doaj] статья: Artificial Intelligence in Healthcare: Advancing Innovation and Ethics
+2026-04-09 03:13:58,662 INFO [scrapers.doaj] [doaj] статья: NeuroBlu, an electronic health record (EHR) trusted research environme
+2026-04-09 03:14:00,904 INFO [scrapers.doaj] [doaj] 'nlp+healthcare' page=1 → 4 (+4), total=420
+2026-04-09 03:14:00,904 INFO [scrapers.doaj] [doaj] 'nlp+healthcare' → 4 results
+2026-04-09 03:14:00,904 INFO [scrapers.doaj] [doaj] статья: Evaluation of the accuracy of ChatGPT-4 and Gemini’s responses to the 
+2026-04-09 03:14:00,916 INFO [scrapers.doaj] [doaj] статья: AI-driven transformation of precision medicine: a comprehensive narrat
+2026-04-09 03:14:00,927 INFO [scrapers.doaj] [doaj] статья: Facebook Sentiment Analysis on Healthcare of Timor-Leste: Analysing pu
+2026-04-09 03:14:03,245 INFO [scrapers.doaj] [doaj] 'biomedical+text+mining' page=1 → 4 (+4), total=411
+2026-04-09 03:14:03,245 INFO [scrapers.doaj] [doaj] 'biomedical+text+mining' → 4 results
+2026-04-09 03:14:03,245 INFO [scrapers.doaj] [doaj] статья: Investigating the Role of Artificial Intelligence in Management of Dia
+2026-04-09 03:14:03,256 INFO [scrapers.doaj] [doaj] статья: Bioregulatory event extraction using large language models: a case stu
+2026-04-09 03:14:03,267 INFO [scrapers.doaj] [doaj] статья: A Novel Metric to Quantify the Effect of Pathway Enrichment Evaluation
+2026-04-09 03:14:03,279 INFO [scrapers.doaj] [doaj] статья: A resource description framework (RDF) model of named entity co-occurr
+2026-04-09 03:14:05,528 INFO [scrapers.doaj] [doaj] 'clinical+text+mining' page=1 → 4 (+4), total=432
+2026-04-09 03:14:05,528 INFO [scrapers.doaj] [doaj] 'clinical+text+mining' → 4 results
+2026-04-09 03:14:05,528 INFO [scrapers.doaj] [doaj] статья: Named entity recognition of pharmacokinetic parameters in the scientif
+2026-04-09 03:14:05,539 INFO [scrapers.doaj] [doaj] статья: Global research trends in immunotherapy for head and neck neoplasms: A
+2026-04-09 03:14:05,549 INFO [scrapers.doaj] [doaj] статья: Natural language processing (NLP) to facilitate abstract review in med
+2026-04-09 03:14:05,550 INFO [scrapers.doaj] [doaj] статья: HealthProcessAI: a technical framework and proof-of-concept for LLM-en
+2026-04-09 03:14:07,792 INFO [scrapers.doaj] [doaj] 'medical+nlp+deep+learning' page=1 → 4 (+4), total=128
+2026-04-09 03:14:07,792 INFO [scrapers.doaj] [doaj] 'medical+nlp+deep+learning' → 4 results
+2026-04-09 03:14:07,792 INFO [scrapers.doaj] [doaj] статья: Intelligent diagnosis with Chinese electronic medical records based on
+2026-04-09 03:14:07,802 INFO [scrapers.doaj] [doaj] статья: TECRR: a benchmark dataset of radiological reports for BI-RADS classif
+2026-04-09 03:14:10,092 INFO [scrapers.doaj] [doaj] 'biomedical+information+extraction' page=1 → 4 (+4), total=451
+2026-04-09 03:14:10,093 INFO [scrapers.doaj] [doaj] 'biomedical+information+extraction' → 4 results
+2026-04-09 03:14:10,093 INFO [scrapers.doaj] [doaj] статья: Evaluation of reproducible and transparent research practices in pulmo
+2026-04-09 03:14:10,099 INFO [scrapers.doaj] [doaj] статья: Benchmarking of the 2010 BioCreative Challenge III text-mining competi
+2026-04-09 03:14:10,106 INFO [scrapers.doaj] [doaj] статья: An Imbalanced Image Classification Method for the Cell Cycle Phase
+2026-04-09 03:14:10,111 INFO [scrapers.doaj] [doaj] статья: NetiNeti: discovery of scientific names from text using machine learni
+2026-04-09 03:14:13,557 INFO [scrapers.towards_ds] [towards_ds] tds → 20 записей
+2026-04-09 03:14:55,249 INFO [scrapers.towards_ds] [towards_ds] ocr → 10 записей
+2026-04-09 03:14:57,428 INFO [scrapers.towards_ds] [towards_ds] pdf-parsing → 10 записей
+2026-04-09 03:14:59,325 INFO [scrapers.towards_ds] [towards_ds] nlp → 10 записей
+2026-04-09 03:15:01,432 INFO [scrapers.towards_ds] [towards_ds] healthcare-ai → 10 записей
+2026-04-09 03:15:03,529 INFO [scrapers.towards_ds] [towards_ds] document-understanding → 9 записей
+2026-04-09 03:15:05,376 INFO [scrapers.towards_ds] [towards_ds] machine-learning → 10 записей
+2026-04-09 03:15:07,266 INFO [scrapers.towards_ds] [towards_ds] data-science → 10 записей
+2026-04-09 03:15:09,362 INFO [scrapers.towards_ds] [towards_ds] medical-imaging → 10 записей
+2026-04-09 03:15:11,243 INFO [scrapers.towards_ds] [towards_ds] deep-learning → 9 записей
+2026-04-09 03:15:13,120 INFO [scrapers.towards_ds] [towards_ds] artificial-intelligence → 9 записей
+2026-04-09 03:15:15,414 INFO [scrapers.towards_ds] [towards_ds] information-extraction → 10 записей
+2026-04-09 03:15:17,924 INFO [scrapers.towards_ds] [towards_ds] computer-vision → 10 записей
+2026-04-09 03:15:20,131 INFO [scrapers.towards_ds] [towards_ds] text-mining → 10 записей
+2026-04-09 03:15:20,134 INFO [scrapers.towards_ds] [towards_ds] итого выдано: 87 статей
+2026-04-09 03:15:20,159 INFO [scrapers.habr] [habr] Этап 1: поиск по релевантности (8 запросов)
+2026-04-09 03:15:22,506 INFO [scrapers.habr] [habr] поиск='извлечение данных pdf' order=relevance → 0 статей
+2026-04-09 03:15:24,307 INFO [scrapers.habr] [habr] поиск='парсинг медицинских документов' order=relevance → 0 статей
+2026-04-09 03:15:26,065 INFO [scrapers.habr] [habr] поиск='распознавание таблиц ocr' order=relevance → 0 статей
+2026-04-09 03:15:27,818 INFO [scrapers.habr] [habr] поиск='обработка медицинских анализов' order=relevance → 0 статей
+2026-04-09 03:15:30,182 INFO [scrapers.habr] [habr] поиск='nlp медицина клинические данные' order=relevance → 0 статей
+2026-04-09 03:15:31,919 INFO [scrapers.habr] [habr] поиск='pdf table extraction' order=relevance → 0 статей
+2026-04-09 03:15:33,664 INFO [scrapers.habr] [habr] поиск='medical document parsing' order=relevance → 0 статей
+2026-04-09 03:15:35,400 INFO [scrapers.habr] [habr] поиск='laboratory results nlp' order=relevance → 0 статей
+2026-04-09 03:15:35,400 INFO [scrapers.habr] [habr] Этап 2: поиск по дате (8 запросов)
+2026-04-09 03:15:39,055 INFO [scrapers.habr] [habr] поиск='извлечение данных pdf' order=date → 0 статей
+2026-04-09 03:15:40,814 INFO [scrapers.habr] [habr] поиск='парсинг медицинских документов' order=date → 0 статей
+2026-04-09 03:15:42,556 INFO [scrapers.habr] [habr] поиск='распознавание таблиц ocr' order=date → 0 статей
+2026-04-09 03:15:44,461 INFO [scrapers.habr] [habr] поиск='обработка медицинских анализов' order=date → 0 статей
+2026-04-09 03:15:46,210 INFO [scrapers.habr] [habr] поиск='nlp медицина клинические данные' order=date → 0 статей
+2026-04-09 03:15:48,209 INFO [scrapers.habr] [habr] поиск='pdf table extraction' order=date → 0 статей
+2026-04-09 03:15:49,958 INFO [scrapers.habr] [habr] поиск='medical document parsing' order=date → 0 статей
+2026-04-09 03:15:51,699 INFO [scrapers.habr] [habr] поиск='laboratory results nlp' order=date → 0 статей
+2026-04-09 03:15:51,699 INFO [scrapers.habr] [habr] Этап 3: хабы (8 штук)
+2026-04-09 03:15:54,917 INFO [scrapers.habr] [habr] hub=machine_learning → 100 статей
+2026-04-09 03:15:58,219 INFO [scrapers.habr] [habr] hub=data_mining → 100 статей
+2026-04-09 03:16:01,636 INFO [scrapers.habr] [habr] hub=python → 100 статей
+2026-04-09 03:16:01,662 INFO [scrapers.habr] [habr] итого выдано: 200 статей
+2026-04-09 03:32:52,753 INFO [scrapers.pubmed] [pubmed] Проход 1: relevance (10 запросов)
+2026-04-09 03:32:54,053 INFO [scrapers.pubmed] [pubmed] esearch 'pdf extraction[tiab] AND medical[tiab]' sort=relevance → total=814
+2026-04-09 03:32:57,935 INFO [scrapers.pubmed] [pubmed] esearch 'table extraction[tiab] AND pdf[tiab]' sort=relevance → total=59
+2026-04-09 03:33:02,309 INFO [scrapers.pubmed] [pubmed] esearch 'laboratory results[tiab] AND pdf[tiab]' sort=relevance → total=467
+2026-04-09 03:33:05,800 INFO [scrapers.pubmed] [pubmed] Проход 2: pub+date (10 запросов)
+2026-04-09 03:33:05,800 INFO [scrapers.pubmed] [pubmed] итого выдано: 50 статей
+2026-04-09 03:33:08,661 INFO [scrapers.doaj] [doaj] 'ocr+medical' page=1 → 1 (+1), total=62
+2026-04-09 03:33:08,661 INFO [scrapers.doaj] [doaj] 'ocr+medical' → 1 results
+2026-04-09 03:33:08,661 INFO [scrapers.doaj] [doaj] статья: Iridin Prevented Against Lipopolysaccharide-Induced Inflammatory Respo
+2026-04-09 03:33:10,951 INFO [scrapers.doaj] [doaj] 'medical+table+extraction' page=1 → 1 (+1), total=69
+2026-04-09 03:33:10,951 INFO [scrapers.doaj] [doaj] 'medical+table+extraction' → 1 results
+2026-04-09 03:33:10,951 INFO [scrapers.doaj] [doaj] статья: Cluster-based anonymity model and algorithm for 1:1 dataset with a sin
+2026-04-09 03:33:13,258 INFO [scrapers.doaj] [doaj] 'laboratory+pdf+results' page=1 → 1 (+1), total=42
+2026-04-09 03:33:13,258 INFO [scrapers.doaj] [doaj] 'laboratory+pdf+results' → 1 results
+2026-04-09 03:33:13,258 INFO [scrapers.doaj] [doaj] статья: Moment-based metrics for global sensitivity analysis of hydrological s
+2026-04-09 03:33:15,506 INFO [scrapers.doaj] [doaj] 'pdf+medical+extraction' page=1 → 1 (+1), total=6
+2026-04-09 03:33:15,506 INFO [scrapers.doaj] [doaj] 'pdf+medical+extraction' → 1 results
+2026-04-09 03:33:15,506 INFO [scrapers.doaj] [doaj] статья: Resilient Multimedia Embedding in DICOM Images: A Robustness Evaluatio
+2026-04-09 03:33:17,791 INFO [scrapers.doaj] [doaj] 'clinical+document+parsing' page=1 → 1 (+1), total=1
+2026-04-09 03:33:17,792 INFO [scrapers.doaj] [doaj] 'clinical+document+parsing' → 1 results
+2026-04-09 03:33:17,792 INFO [scrapers.doaj] [doaj] статья: Functional remapping in networks of the Parkinsonian brain: A preclini
+2026-04-09 03:33:20,029 INFO [scrapers.doaj] [doaj] 'medical+document+information' page=1 → 1 (+1), total=944
+2026-04-09 03:33:20,029 INFO [scrapers.doaj] [doaj] 'medical+document+information' → 1 results
+2026-04-09 03:33:20,029 INFO [scrapers.doaj] [doaj] статья: Development and Human Testing of Chemical Warfare Agents and Means of 
+2026-04-09 03:33:22,323 INFO [scrapers.doaj] [doaj] 'laboratory+results+extraction' page=1 → 1 (+1), total=2367
+2026-04-09 03:33:22,324 INFO [scrapers.doaj] [doaj] 'laboratory+results+extraction' → 1 results
+2026-04-09 03:33:22,324 INFO [scrapers.doaj] [doaj] статья: Extraction and Energy Management of Solar Photovoltaic, Fuel Cell, and
+2026-04-09 03:33:24,623 INFO [scrapers.doaj] [doaj] 'clinical+data+extraction' page=1 → 1 (+1), total=8548
+2026-04-09 03:33:24,623 INFO [scrapers.doaj] [doaj] 'clinical+data+extraction' → 1 results
+2026-04-09 03:33:24,623 INFO [scrapers.doaj] [doaj] статья: Efficacy and safety of lipid-lowering therapies in combination with or
+2026-04-09 03:33:26,894 INFO [scrapers.doaj] [doaj] 'pdf+data+extraction' page=1 → 1 (+1), total=83
+2026-04-09 03:33:26,894 INFO [scrapers.doaj] [doaj] 'pdf+data+extraction' → 1 results
+2026-04-09 03:33:26,894 INFO [scrapers.doaj] [doaj] статья: Point Cloud Denoising and Feature Preservation: An Adaptive Kernel App
+2026-04-09 03:33:29,173 INFO [scrapers.doaj] [doaj] 'document+information+extraction' page=1 → 1 (+1), total=601
+2026-04-09 03:33:29,173 INFO [scrapers.doaj] [doaj] 'document+information+extraction' → 1 results
+2026-04-09 03:33:29,173 INFO [scrapers.doaj] [doaj] статья: Using the Ship-Gram Model for Japanese Keyword Extraction Based on New
+2026-04-09 03:33:31,405 INFO [scrapers.doaj] [doaj] 'text+extraction+medical' page=1 → 1 (+1), total=661
+2026-04-09 03:33:31,405 INFO [scrapers.doaj] [doaj] 'text+extraction+medical' → 1 results
+2026-04-09 03:33:31,405 INFO [scrapers.doaj] [doaj] статья: Oral Lesions in a Teaching Clinic: A Retrospective Study and Systemati
+2026-04-09 03:33:33,694 INFO [scrapers.doaj] [doaj] 'data+extraction+clinical' page=1 → 1 (+1), total=8548
+2026-04-09 03:33:33,694 INFO [scrapers.doaj] [doaj] 'data+extraction+clinical' → 1 results
+2026-04-09 03:33:35,982 INFO [scrapers.doaj] [doaj] 'structured+data+medical' page=1 → 1 (+1), total=11767
+2026-04-09 03:33:35,983 INFO [scrapers.doaj] [doaj] 'structured+data+medical' → 1 results
+2026-04-09 03:33:35,983 INFO [scrapers.doaj] [doaj] статья: Prevalence of Diabetes Mellitus and Associated Factors in Addis Ababa 
+2026-04-09 03:33:38,277 INFO [scrapers.doaj] [doaj] 'unstructured+data+extraction' page=1 → 1 (+1), total=643
+2026-04-09 03:33:38,277 INFO [scrapers.doaj] [doaj] 'unstructured+data+extraction' → 1 results
+2026-04-09 03:33:38,277 INFO [scrapers.doaj] [doaj] статья: Human behavior analysis on political retweets using machine learning a
+2026-04-09 03:33:40,578 INFO [scrapers.doaj] [doaj] 'named+entity+recognition+medical' page=1 → 1 (+1), total=246
+2026-04-09 03:33:40,578 INFO [scrapers.doaj] [doaj] 'named+entity+recognition+medical' → 1 results
+2026-04-09 03:33:40,578 INFO [scrapers.doaj] [doaj] статья: Large Language Models in Healthcare and Medical Domain: A Review
+2026-04-09 03:33:42,866 INFO [scrapers.doaj] [doaj] 'information+retrieval+clinical' page=1 → 1 (+1), total=684
+2026-04-09 03:33:42,866 INFO [scrapers.doaj] [doaj] 'information+retrieval+clinical' → 1 results
+2026-04-09 03:33:42,866 INFO [scrapers.doaj] [doaj] статья: An interactive retrieval system for clinical trial studies with contex
+2026-04-09 03:33:45,143 INFO [scrapers.doaj] [doaj] 'table+extraction+document' page=1 → 1 (+1), total=31
+2026-04-09 03:33:45,143 INFO [scrapers.doaj] [doaj] 'table+extraction+document' → 1 results
+2026-04-09 03:33:45,143 INFO [scrapers.doaj] [doaj] статья: Non-invasive brain stimulation paradigms in treatment of alcohol use d
+2026-04-09 03:33:47,433 INFO [scrapers.doaj] [doaj] 'table+detection+recognition' page=1 → 1 (+1), total=79
+2026-04-09 03:33:47,434 INFO [scrapers.doaj] [doaj] 'table+detection+recognition' → 1 results
+2026-04-09 03:33:47,434 INFO [scrapers.doaj] [doaj] статья: Design of a Wearable Wireless Multi-Sensor Monitoring System and Appli
+2026-04-09 03:33:49,719 INFO [scrapers.doaj] [doaj] 'pdf+table+parsing' page=1 → 1 (+1), total=2
+2026-04-09 03:33:49,719 INFO [scrapers.doaj] [doaj] 'pdf+table+parsing' → 1 results
+2026-04-09 03:33:49,719 INFO [scrapers.doaj] [doaj] статья: Skin Tone Analysis for Representation in Educational Materials (STAR-E
+2026-04-09 03:33:52,014 INFO [scrapers.doaj] [doaj] 'document+layout+analysis' page=1 → 1 (+1), total=112
+2026-04-09 03:33:52,014 INFO [scrapers.doaj] [doaj] 'document+layout+analysis' → 1 results
+2026-04-09 03:33:52,014 INFO [scrapers.doaj] [doaj] статья: Library Computer Technologies in Operation with National Periodicals
+2026-04-09 03:33:54,304 INFO [scrapers.doaj] [doaj] 'document+understanding+deep+learning' page=1 → 1 (+1), total=91
+2026-04-09 03:33:54,304 INFO [scrapers.doaj] [doaj] 'document+understanding+deep+learning' → 1 results
+2026-04-09 03:33:54,304 INFO [scrapers.doaj] [doaj] статья: Enhancing Arabic Sentiment Analysis of Consumer Reviews: Machine Learn
+2026-04-09 03:33:56,583 INFO [scrapers.doaj] [doaj] 'form+extraction+document' page=1 → 1 (+1), total=109
+2026-04-09 03:33:56,583 INFO [scrapers.doaj] [doaj] 'form+extraction+document' → 1 results
+2026-04-09 03:33:58,813 INFO [scrapers.doaj] [doaj] 'optical+character+recognition+medical' page=1 → 1 (+1), total=41
+2026-04-09 03:33:58,814 INFO [scrapers.doaj] [doaj] 'optical+character+recognition+medical' → 1 results
+2026-04-09 03:33:58,814 INFO [scrapers.doaj] [doaj] статья: Structuring and centralizing breast cancer real-world biomarker data f
+2026-04-09 03:34:01,084 INFO [scrapers.doaj] [doaj] 'ocr+document+processing' page=1 → 1 (+1), total=50
+2026-04-09 03:34:01,084 INFO [scrapers.doaj] [doaj] 'ocr+document+processing' → 1 results
+2026-04-09 03:34:01,084 INFO [scrapers.doaj] [doaj] статья: Document Image Rectification Method Based on Lines Space
+2026-04-09 03:34:03,383 INFO [scrapers.doaj] [doaj] 'ocr+table+recognition' page=1 → 1 (+1), total=12
+2026-04-09 03:34:03,384 INFO [scrapers.doaj] [doaj] 'ocr+table+recognition' → 1 results
+2026-04-09 03:34:03,384 INFO [scrapers.doaj] [doaj] статья: Optical character recognition on engineering drawings to achieve autom
+2026-04-09 03:34:05,660 INFO [scrapers.doaj] [doaj] 'text+recognition+document' page=1 → 1 (+1), total=318
+2026-04-09 03:34:05,660 INFO [scrapers.doaj] [doaj] 'text+recognition+document' → 1 results
+2026-04-09 03:34:05,660 INFO [scrapers.doaj] [doaj] статья: Experimental determination of chosen document elements parameters from
+2026-04-09 03:34:07,932 INFO [scrapers.doaj] [doaj] 'handwriting+recognition+medical' page=1 → 1 (+1), total=14
+2026-04-09 03:34:07,933 INFO [scrapers.doaj] [doaj] 'handwriting+recognition+medical' → 1 results
+2026-04-09 03:34:07,933 INFO [scrapers.doaj] [doaj] статья: Integrated Sensing and Computing for Wearable Human Activity Recogniti
+2026-04-09 03:34:10,230 INFO [scrapers.doaj] [doaj] 'electronic+health+record+extraction' page=1 → 1 (+1), total=203
+2026-04-09 03:34:10,230 INFO [scrapers.doaj] [doaj] 'electronic+health+record+extraction' → 1 results
+2026-04-09 03:34:10,230 INFO [scrapers.doaj] [doaj] статья: Comparing Cancer Primary and Secondary Prevention Documentation Betwee
+2026-04-09 03:34:12,513 INFO [scrapers.doaj] [doaj] 'ehr+information+extraction' page=1 → 1 (+1), total=106
+2026-04-09 03:34:12,513 INFO [scrapers.doaj] [doaj] 'ehr+information+extraction' → 1 results
+2026-04-09 03:34:12,513 INFO [scrapers.doaj] [doaj] статья: Automated Filtering and Visualization of Patient-Centered Data from El
+2026-04-09 03:34:14,806 INFO [scrapers.doaj] [doaj] 'clinical+notes+nlp' page=1 → 1 (+1), total=265
+2026-04-09 03:34:14,806 INFO [scrapers.doaj] [doaj] 'clinical+notes+nlp' → 1 results
+2026-04-09 03:34:14,806 INFO [scrapers.doaj] [doaj] статья: Thyroid Ultrasound Appropriateness Identification Through Natural Lang
+2026-04-09 03:34:17,119 INFO [scrapers.doaj] [doaj] 'medical+record+parsing' page=1 → 1 (+1), total=4
+2026-04-09 03:34:17,119 INFO [scrapers.doaj] [doaj] 'medical+record+parsing' → 1 results
+2026-04-09 03:34:17,119 INFO [scrapers.doaj] [doaj] статья: CHDbase: A Comprehensive Knowledgebase for Congenital Heart Disease-re
+2026-04-09 03:34:19,408 INFO [scrapers.doaj] [doaj] 'patient+data+extraction' page=1 → 1 (+1), total=4469
+2026-04-09 03:34:19,409 INFO [scrapers.doaj] [doaj] 'patient+data+extraction' → 1 results
+2026-04-09 03:34:21,676 INFO [scrapers.doaj] [doaj] 'radiology+report+extraction' page=1 → 1 (+1), total=31
+2026-04-09 03:34:21,676 INFO [scrapers.doaj] [doaj] 'radiology+report+extraction' → 1 results
+2026-04-09 03:34:21,676 INFO [scrapers.doaj] [doaj] статья: S-RRG-Bench: Structured radiology report generation with fine-grained 
+2026-04-09 03:34:23,984 INFO [scrapers.doaj] [doaj] 'pathology+report+nlp' page=1 → 1 (+1), total=16
+2026-04-09 03:34:23,984 INFO [scrapers.doaj] [doaj] 'pathology+report+nlp' → 1 results
+2026-04-09 03:34:23,984 INFO [scrapers.doaj] [doaj] статья: Successful Treatment of Severe Nail Lichen Planus with Janus Kinase 1 
+2026-04-09 03:34:26,217 INFO [scrapers.doaj] [doaj] 'discharge+summary+extraction' page=1 → 1 (+1), total=31
+2026-04-09 03:34:26,218 INFO [scrapers.doaj] [doaj] 'discharge+summary+extraction' → 1 results
+2026-04-09 03:34:26,218 INFO [scrapers.doaj] [doaj] статья: Temporal Expression Classification and Normalization From Chinese Narr
+2026-04-09 03:34:28,460 INFO [scrapers.doaj] [doaj] 'medical+report+parsing' page=1 → 1 (+1), total=2
+2026-04-09 03:34:28,460 INFO [scrapers.doaj] [doaj] 'medical+report+parsing' → 1 results
+2026-04-09 03:34:28,460 INFO [scrapers.doaj] [doaj] статья: Extracting Medical Information From Free-Text and Unstructured Patient
+2026-04-09 03:34:30,764 INFO [scrapers.doaj] [doaj] 'laboratory+test+results' page=1 → 1 (+1), total=25820
+2026-04-09 03:34:30,764 INFO [scrapers.doaj] [doaj] 'laboratory+test+results' → 1 results
+2026-04-09 03:34:30,764 INFO [scrapers.doaj] [doaj] статья: Construction of the cancer patients’ database based on the US National
+2026-04-09 03:34:33,058 INFO [scrapers.doaj] [doaj] 'lab+results+extraction' page=1 → 1 (+1), total=362
+2026-04-09 03:34:33,058 INFO [scrapers.doaj] [doaj] 'lab+results+extraction' → 1 results
+2026-04-09 03:34:33,058 INFO [scrapers.doaj] [doaj] статья: Extraction and Recovery of Metals from Spent HDS Catalysts: Lab- and P
+2026-04-09 03:34:35,363 INFO [scrapers.doaj] [doaj] 'blood+test+data+extraction' page=1 → 1 (+1), total=323
+2026-04-09 03:34:35,364 INFO [scrapers.doaj] [doaj] 'blood+test+data+extraction' → 1 results
+2026-04-09 03:34:35,364 INFO [scrapers.doaj] [doaj] статья: Prevalence and factors associated with diabetic retinopathy among diab
+2026-04-09 03:34:37,643 INFO [scrapers.doaj] [doaj] 'clinical+laboratory+nlp' page=1 → 1 (+1), total=33
+2026-04-09 03:34:37,643 INFO [scrapers.doaj] [doaj] 'clinical+laboratory+nlp' → 1 results
+2026-04-09 03:34:37,644 INFO [scrapers.doaj] [doaj] статья: Impacting Management of Chronic Kidney Disease Through Primary Care Pr
+2026-04-09 03:34:39,938 INFO [scrapers.doaj] [doaj] 'laboratory+findings+extraction' page=1 → 1 (+1), total=446
+2026-04-09 03:34:39,938 INFO [scrapers.doaj] [doaj] 'laboratory+findings+extraction' → 1 results
+2026-04-09 03:34:42,209 INFO [scrapers.doaj] [doaj] 'diagnostic+report+extraction' page=1 → 1 (+1), total=301
+2026-04-09 03:34:42,209 INFO [scrapers.doaj] [doaj] 'diagnostic+report+extraction' → 1 results
+2026-04-09 03:34:42,209 INFO [scrapers.doaj] [doaj] статья: Nucleic acid purification from plants, animals and microbes in under 3
+2026-04-09 03:34:44,534 INFO [scrapers.doaj] [doaj] 'natural+language+processing+clinical' page=1 → 1 (+1), total=1766
+2026-04-09 03:34:44,534 INFO [scrapers.doaj] [doaj] 'natural+language+processing+clinical' → 1 results
+2026-04-09 03:34:44,534 INFO [scrapers.doaj] [doaj] статья: The Impact of Word Regularity on the Reading of Normal and Aphasic Gil
+2026-04-09 03:34:46,822 INFO [scrapers.doaj] [doaj] 'nlp+healthcare' page=1 → 1 (+1), total=420
+2026-04-09 03:34:46,822 INFO [scrapers.doaj] [doaj] 'nlp+healthcare' → 1 results
+2026-04-09 03:34:46,822 INFO [scrapers.doaj] [doaj] статья: NeuroBlu, an electronic health record (EHR) trusted research environme
+2026-04-09 03:34:49,141 INFO [scrapers.doaj] [doaj] 'biomedical+text+mining' page=1 → 1 (+1), total=411
+2026-04-09 03:34:49,141 INFO [scrapers.doaj] [doaj] 'biomedical+text+mining' → 1 results
+2026-04-09 03:34:49,141 INFO [scrapers.doaj] [doaj] статья: Investigating the Role of Artificial Intelligence in Management of Dia
+2026-04-09 03:34:51,436 INFO [scrapers.doaj] [doaj] 'clinical+text+mining' page=1 → 1 (+1), total=432
+2026-04-09 03:34:51,436 INFO [scrapers.doaj] [doaj] 'clinical+text+mining' → 1 results
+2026-04-09 03:34:51,436 INFO [scrapers.doaj] [doaj] статья: Named entity recognition of pharmacokinetic parameters in the scientif
+2026-04-09 03:34:53,720 INFO [scrapers.doaj] [doaj] 'medical+nlp+deep+learning' page=1 → 1 (+1), total=128
+2026-04-09 03:34:53,720 INFO [scrapers.doaj] [doaj] 'medical+nlp+deep+learning' → 1 results
+2026-04-09 03:34:53,720 INFO [scrapers.doaj] [doaj] статья: Intelligent diagnosis with Chinese electronic medical records based on
+2026-04-09 03:34:56,020 INFO [scrapers.doaj] [doaj] 'biomedical+information+extraction' page=1 → 1 (+1), total=451
+2026-04-09 03:34:56,020 INFO [scrapers.doaj] [doaj] 'biomedical+information+extraction' → 1 results
+2026-04-09 03:34:56,020 INFO [scrapers.doaj] [doaj] статья: Evaluation of reproducible and transparent research practices in pulmo
+2026-04-09 03:34:59,432 INFO [scrapers.towards_ds] [towards_ds] tds → 20 записей
+2026-04-09 03:35:40,691 INFO [scrapers.towards_ds] [towards_ds] ocr → 10 записей
+2026-04-09 03:35:42,822 INFO [scrapers.towards_ds] [towards_ds] pdf-parsing → 10 записей
+2026-04-09 03:35:44,713 INFO [scrapers.towards_ds] [towards_ds] nlp → 10 записей
+2026-04-09 03:35:46,807 INFO [scrapers.towards_ds] [towards_ds] healthcare-ai → 10 записей
+2026-04-09 03:35:48,912 INFO [scrapers.towards_ds] [towards_ds] document-understanding → 9 записей
+2026-04-09 03:35:50,778 INFO [scrapers.towards_ds] [towards_ds] machine-learning → 10 записей
+2026-04-09 03:35:50,782 INFO [scrapers.towards_ds] [towards_ds] итого выдано: 50 статей
+2026-04-09 03:35:50,806 INFO [scrapers.habr] [habr] Этап 1: поиск по релевантности (8 запросов)
+2026-04-09 03:35:52,927 INFO [scrapers.habr] [habr] поиск='извлечение данных pdf' order=relevance → 0 статей
+2026-04-09 03:35:54,684 INFO [scrapers.habr] [habr] поиск='парсинг медицинских документов' order=relevance → 0 статей
+2026-04-09 03:35:56,429 INFO [scrapers.habr] [habr] поиск='распознавание таблиц ocr' order=relevance → 0 статей
+2026-04-09 03:35:58,188 INFO [scrapers.habr] [habr] поиск='обработка медицинских анализов' order=relevance → 0 статей
+2026-04-09 03:35:59,941 INFO [scrapers.habr] [habr] поиск='nlp медицина клинические данные' order=relevance → 0 статей
+2026-04-09 03:36:01,700 INFO [scrapers.habr] [habr] поиск='pdf table extraction' order=relevance → 0 статей
+2026-04-09 03:36:03,454 INFO [scrapers.habr] [habr] поиск='medical document parsing' order=relevance → 0 статей
+2026-04-09 03:36:05,304 INFO [scrapers.habr] [habr] поиск='laboratory results nlp' order=relevance → 0 статей
+2026-04-09 03:36:05,304 INFO [scrapers.habr] [habr] Этап 2: поиск по дате (8 запросов)
+2026-04-09 03:36:07,096 INFO [scrapers.habr] [habr] поиск='извлечение данных pdf' order=date → 0 статей
+2026-04-09 03:36:08,846 INFO [scrapers.habr] [habr] поиск='парсинг медицинских документов' order=date → 0 статей
+2026-04-09 03:36:10,602 INFO [scrapers.habr] [habr] поиск='распознавание таблиц ocr' order=date → 0 статей
+2026-04-09 03:36:12,360 INFO [scrapers.habr] [habr] поиск='обработка медицинских анализов' order=date → 0 статей
+2026-04-09 03:36:14,104 INFO [scrapers.habr] [habr] поиск='nlp медицина клинические данные' order=date → 0 статей
+2026-04-09 03:36:15,855 INFO [scrapers.habr] [habr] поиск='pdf table extraction' order=date → 0 статей
+2026-04-09 03:36:17,622 INFO [scrapers.habr] [habr] поиск='medical document parsing' order=date → 0 статей
+2026-04-09 03:36:19,378 INFO [scrapers.habr] [habr] поиск='laboratory results nlp' order=date → 0 статей
+2026-04-09 03:36:19,378 INFO [scrapers.habr] [habr] Этап 3: хабы (8 штук)
+2026-04-09 03:36:22,266 INFO [scrapers.habr] [habr] hub=machine_learning → 100 статей
+2026-04-09 03:36:22,895 INFO [scrapers.habr] [habr] итого выдано: 50 статей
+2026-04-09 03:41:43,783 INFO [scrapers.pubmed] [pubmed] Проход 1: relevance (10 запросов)
+2026-04-09 03:41:45,129 INFO [scrapers.pubmed] [pubmed] esearch 'pdf extraction[tiab] AND medical[tiab]' sort=relevance → total=814
+2026-04-09 03:41:49,174 INFO [scrapers.pubmed] [pubmed] esearch 'table extraction[tiab] AND pdf[tiab]' sort=relevance → total=59
+2026-04-09 03:41:53,258 INFO [scrapers.pubmed] [pubmed] esearch 'laboratory results[tiab] AND pdf[tiab]' sort=relevance → total=467
+2026-04-09 03:41:56,462 INFO [scrapers.pubmed] [pubmed] Проход 2: pub+date (10 запросов)
+2026-04-09 03:41:56,462 INFO [scrapers.pubmed] [pubmed] итого выдано: 50 статей
+2026-04-09 03:41:59,354 INFO [scrapers.doaj] [doaj] 'ocr+medical' page=1 → 10 (+10), total=62
+2026-04-09 03:41:59,354 INFO [scrapers.doaj] [doaj] 'ocr+medical' → 10 results
+2026-04-09 03:41:59,354 INFO [scrapers.doaj] [doaj] статья: Iridin Prevented Against Lipopolysaccharide-Induced Inflammatory Respo
+2026-04-09 03:41:59,366 INFO [scrapers.doaj] [doaj] статья: Prevalence  and predictors of depressive symptoms and wellbeing during
+2026-04-09 03:41:59,378 INFO [scrapers.doaj] [doaj] статья: A serialization method for digitizing the image-based medical laborato
+2026-04-09 03:41:59,389 INFO [scrapers.doaj] [doaj] статья: Coaching in Competence by Design: A New Model of Coaching in the Momen
+2026-04-09 03:41:59,401 INFO [scrapers.doaj] [doaj] статья: LabTracker: Navigating Laboratory Test Results with Ease and Understan
+2026-04-09 03:41:59,413 INFO [scrapers.doaj] [doaj] статья: The Economic Analysis of the Overlooked Recurrent Low Back Pain: Three
+2026-04-09 03:41:59,425 INFO [scrapers.doaj] [doaj] статья: A Policy-Driven Approach to Secure Extraction of COVID-19 Data From Re
+2026-04-09 03:41:59,437 INFO [scrapers.doaj] [doaj] статья: Outpatient coordination reform improves the sustainability of China's 
+2026-04-09 03:41:59,450 INFO [scrapers.doaj] [doaj] статья: Sustained Remission and Decreased Severity of CAR T-Cell Related Adver
+2026-04-09 03:41:59,462 INFO [scrapers.doaj] [doaj] статья: Generating high-quality data abstractions from scanned clinical record
+2026-04-09 03:42:01,818 INFO [scrapers.doaj] [doaj] 'medical+table+extraction' page=1 → 10 (+10), total=69
+2026-04-09 03:42:01,818 INFO [scrapers.doaj] [doaj] 'medical+table+extraction' → 10 results
+2026-04-09 03:42:01,818 INFO [scrapers.doaj] [doaj] статья: Cluster-based anonymity model and algorithm for 1:1 dataset with a sin
+2026-04-09 03:42:01,830 INFO [scrapers.doaj] [doaj] статья: MSIE-Net: Associative Entity-Based Multi-Stage Network for Structured 
+2026-04-09 03:42:01,841 INFO [scrapers.doaj] [doaj] статья: Coronectomy versus Extraction of Third Molar with Inferior Alveolar Ne
+2026-04-09 03:42:01,852 INFO [scrapers.doaj] [doaj] статья: Grouped semantic-feature relation extraction from texts to represent m
+2026-04-09 03:42:01,864 INFO [scrapers.doaj] [doaj] статья: Quality of Life of Mothers of Deaf Children: Lived Experience with a P
+2026-04-09 03:42:01,878 INFO [scrapers.doaj] [doaj] статья: Evaluation of the Resilience of District 20 of Tehran Metropolitan Reg
+2026-04-09 03:42:01,890 INFO [scrapers.doaj] [doaj] статья: INSPIRE datahub: a pan-African integrated suite of services for harmon
+2026-04-09 03:42:01,902 INFO [scrapers.doaj] [doaj] статья: Clinical course, maternal and neonatal outcomes of COVID-19 infection 
+2026-04-09 03:42:01,914 INFO [scrapers.doaj] [doaj] статья: Bone Age Assessment Using Content-Based Image Retrieval System Using V
+2026-04-09 03:42:01,926 INFO [scrapers.doaj] [doaj] статья: Double Walker of an Infected Dental Follicle
+2026-04-09 03:42:04,301 INFO [scrapers.doaj] [doaj] 'laboratory+pdf+results' page=1 → 10 (+10), total=42
+2026-04-09 03:42:04,301 INFO [scrapers.doaj] [doaj] 'laboratory+pdf+results' → 10 results
+2026-04-09 03:42:04,301 INFO [scrapers.doaj] [doaj] статья: Moment-based metrics for global sensitivity analysis of hydrological s
+2026-04-09 03:42:04,314 INFO [scrapers.doaj] [doaj] статья: Construction of an Electrocardiogram Database Including 12 Lead Wavefo
+2026-04-09 03:42:04,325 INFO [scrapers.doaj] [doaj] статья: Laboratory measurements and model sensitivity studies of dust depositi
+2026-04-09 03:42:04,338 INFO [scrapers.doaj] [doaj] статья: Next generation 3D Virtual Human Anatomy Laboratory, using offthe-shel
+2026-04-09 03:42:04,350 INFO [scrapers.doaj] [doaj] статья: Development and initial implementation of InstaDx: a smartphone app fo
+2026-04-09 03:42:04,361 INFO [scrapers.doaj] [doaj] статья: Victims Again
+2026-04-09 03:42:04,374 INFO [scrapers.doaj] [doaj] статья: INTRAVENOUS THERAPY IN THE WEB
+2026-04-09 03:42:04,386 INFO [scrapers.doaj] [doaj] статья: Three-dimensional limit equilibrium method for rock slopes by construc
+2026-04-09 03:42:04,398 INFO [scrapers.doaj] [doaj] статья: From sink to Sea: Microplastic release from kitchen sponges and potent
+2026-04-09 03:42:04,410 INFO [scrapers.doaj] [doaj] статья: The eDNA-Container App: A Simple-to-Use Cross-Platform Package for the
+2026-04-09 03:42:06,704 INFO [scrapers.doaj] [doaj] 'pdf+medical+extraction' page=1 → 6 (+6), total=6
+2026-04-09 03:42:06,704 INFO [scrapers.doaj] [doaj] 'pdf+medical+extraction' → 6 results
+2026-04-09 03:42:06,704 INFO [scrapers.doaj] [doaj] статья: Resilient Multimedia Embedding in DICOM Images: A Robustness Evaluatio
+2026-04-09 03:42:06,716 INFO [scrapers.doaj] [doaj] статья: A Review of Classification Techniques of EMG Signals during Isotonic a
+2026-04-09 03:42:06,728 INFO [scrapers.doaj] [doaj] статья: An Empirical Study of Several Information Theoretic Based Feature Extr
+2026-04-09 03:42:06,740 INFO [scrapers.doaj] [doaj] статья: Using Crawlers for Targeted Data Extraction from a Local Multi-File Da
+2026-04-09 03:42:06,752 INFO [scrapers.doaj] [doaj] статья: Prevalence of post-dialysis fatigue: a systematic review and meta-anal
+2026-04-09 03:42:09,034 INFO [scrapers.doaj] [doaj] 'clinical+document+parsing' page=1 → 1 (+1), total=1
+2026-04-09 03:42:09,034 INFO [scrapers.doaj] [doaj] 'clinical+document+parsing' → 1 results
+2026-04-09 03:42:09,034 INFO [scrapers.doaj] [doaj] статья: Functional remapping in networks of the Parkinsonian brain: A preclini
+2026-04-09 03:42:11,383 INFO [scrapers.doaj] [doaj] 'medical+document+information' page=1 → 10 (+10), total=944
+2026-04-09 03:42:11,383 INFO [scrapers.doaj] [doaj] 'medical+document+information' → 10 results
+2026-04-09 03:42:11,383 INFO [scrapers.doaj] [doaj] статья: Development and Human Testing of Chemical Warfare Agents and Means of 
+2026-04-09 03:42:11,396 INFO [scrapers.doaj] [doaj] статья: PROMOTING GLOBAL HEALTH: THE WORLD ASSOCIATION OF MEDICAL EDITORS POSI
+2026-04-09 03:42:11,408 INFO [scrapers.doaj] [doaj] статья: Institutionalising urogenital schistosomiasis surveillance: Best pract
+2026-04-09 03:42:11,419 INFO [scrapers.doaj] [doaj] статья: An approach to a geropsychiatric assessment
+2026-04-09 03:42:11,431 INFO [scrapers.doaj] [doaj] статья: Watching Out for Older Drivers
+2026-04-09 03:42:11,442 INFO [scrapers.doaj] [doaj] статья: Active surveillance of chemotherapy-related symptom burden in ambulato
+2026-04-09 03:42:11,454 INFO [scrapers.doaj] [doaj] статья: Hospital burden of pulmonary arterial hypertension in France.
+2026-04-09 03:42:11,466 INFO [scrapers.doaj] [doaj] статья: Developing a Mobile App (iGAM) to Promote Gingival Health by Professio
+2026-04-09 03:42:11,477 INFO [scrapers.doaj] [doaj] статья: Amending Federal Regulations to Counteract Language Barriers in the In
+2026-04-09 03:42:11,490 INFO [scrapers.doaj] [doaj] статья: Community-acquired pneumonia in adults: Approaches to antibacterial th
+2026-04-09 03:42:13,807 INFO [scrapers.doaj] [doaj] 'laboratory+results+extraction' page=1 → 10 (+10), total=2367
+2026-04-09 03:42:13,807 INFO [scrapers.doaj] [doaj] 'laboratory+results+extraction' → 10 results
+2026-04-09 03:42:13,807 INFO [scrapers.doaj] [doaj] статья: Extraction and Energy Management of Solar Photovoltaic, Fuel Cell, and
+2026-04-09 03:42:13,819 INFO [scrapers.doaj] [doaj] статья: Life cycle assessment for early-stage process optimization of microbia
+2026-04-09 03:42:13,830 INFO [scrapers.doaj] [doaj] статья: Development and validation of a portable, point-of-care canine distemp
+2026-04-09 03:42:13,841 INFO [scrapers.doaj] [doaj] статья: Genotoxicity of styrene oligomers extracted from polystyrene intended 
+2026-04-09 03:42:13,853 INFO [scrapers.doaj] [doaj] итого выдано: 50 статей
+2026-04-09 03:42:16,710 INFO [scrapers.towards_ds] [towards_ds] tds → 20 записей
+2026-04-09 03:42:58,362 INFO [scrapers.towards_ds] [towards_ds] ocr → 10 записей
+2026-04-09 03:43:00,260 INFO [scrapers.towards_ds] [towards_ds] pdf-parsing → 10 записей
+2026-04-09 03:43:02,150 INFO [scrapers.towards_ds] [towards_ds] nlp → 10 записей
+2026-04-09 03:43:04,046 INFO [scrapers.towards_ds] [towards_ds] healthcare-ai → 10 записей
+2026-04-09 03:43:05,960 INFO [scrapers.towards_ds] [towards_ds] document-understanding → 9 записей
+2026-04-09 03:43:07,805 INFO [scrapers.towards_ds] [towards_ds] machine-learning → 10 записей
+2026-04-09 03:43:07,810 INFO [scrapers.towards_ds] [towards_ds] итого выдано: 50 статей
+2026-04-09 03:43:07,836 INFO [scrapers.habr] [habr] Этап 1: поиск по релевантности (8 запросов)
+2026-04-09 03:43:09,921 INFO [scrapers.habr] [habr] поиск='извлечение данных pdf' order=relevance → 0 статей
+2026-04-09 03:43:11,653 INFO [scrapers.habr] [habr] поиск='парсинг медицинских документов' order=relevance → 0 статей
+2026-04-09 03:43:13,403 INFO [scrapers.habr] [habr] поиск='распознавание таблиц ocr' order=relevance → 0 статей
+2026-04-09 03:43:15,142 INFO [scrapers.habr] [habr] поиск='обработка медицинских анализов' order=relevance → 0 статей
+2026-04-09 03:43:16,895 INFO [scrapers.habr] [habr] поиск='nlp медицина клинические данные' order=relevance → 0 статей
+2026-04-09 03:43:18,643 INFO [scrapers.habr] [habr] поиск='pdf table extraction' order=relevance → 0 статей
+2026-04-09 03:43:20,377 INFO [scrapers.habr] [habr] поиск='medical document parsing' order=relevance → 0 статей
+2026-04-09 03:43:22,119 INFO [scrapers.habr] [habr] поиск='laboratory results nlp' order=relevance → 0 статей
+2026-04-09 03:43:22,119 INFO [scrapers.habr] [habr] Этап 2: поиск по дате (8 запросов)
+2026-04-09 03:43:23,863 INFO [scrapers.habr] [habr] поиск='извлечение данных pdf' order=date → 0 статей
+2026-04-09 03:43:25,605 INFO [scrapers.habr] [habr] поиск='парсинг медицинских документов' order=date → 0 статей
+2026-04-09 03:43:27,335 INFO [scrapers.habr] [habr] поиск='распознавание таблиц ocr' order=date → 0 статей
+2026-04-09 03:43:29,076 INFO [scrapers.habr] [habr] поиск='обработка медицинских анализов' order=date → 0 статей
+2026-04-09 03:43:30,806 INFO [scrapers.habr] [habr] поиск='nlp медицина клинические данные' order=date → 0 статей
+2026-04-09 03:43:32,548 INFO [scrapers.habr] [habr] поиск='pdf table extraction' order=date → 0 статей
+2026-04-09 03:43:34,282 INFO [scrapers.habr] [habr] поиск='medical document parsing' order=date → 0 статей
+2026-04-09 03:43:36,019 INFO [scrapers.habr] [habr] поиск='laboratory results nlp' order=date → 0 статей
+2026-04-09 03:43:36,019 INFO [scrapers.habr] [habr] Этап 3: хабы (8 штук)
+2026-04-09 03:43:38,248 INFO [scrapers.habr] [habr] hub=machine_learning → 100 статей
+2026-04-09 03:43:38,887 INFO [scrapers.habr] [habr] итого выдано: 50 статей
+2026-04-09 03:50:49,141 INFO [scrapers.pubmed] [pubmed] Проход 1: relevance (10 запросов)
+2026-04-09 03:50:50,618 INFO [scrapers.pubmed] [pubmed] esearch 'pdf extraction[tiab] AND medical[tiab]' sort=relevance → total=814
+2026-04-09 03:50:56,182 INFO [scrapers.pubmed] [pubmed] esearch 'table extraction[tiab] AND pdf[tiab]' sort=relevance → total=59
+2026-04-09 03:51:01,892 INFO [scrapers.pubmed] [pubmed] esearch 'laboratory results[tiab] AND pdf[tiab]' sort=relevance → total=467
+2026-04-09 03:51:07,544 INFO [scrapers.pubmed] [pubmed] esearch 'clinical data[tiab] AND pdf[tiab] AND extraction[t' sort=relevance → total=26
+2026-04-09 03:51:13,996 INFO [scrapers.pubmed] [pubmed] esearch 'ocr[tiab] AND medical document[tiab]' sort=relevance → total=15
+2026-04-09 03:51:17,694 INFO [scrapers.pubmed] [pubmed] esearch 'pdf parsing[tiab] AND medical[tiab]' sort=relevance → total=15
+2026-04-09 03:51:21,671 INFO [scrapers.pubmed] [pubmed] esearch 'document parsing[tiab] AND medical[tiab]' sort=relevance → total=56
+2026-04-09 03:51:26,528 INFO [scrapers.pubmed] [pubmed] esearch 'table detection[tiab] AND document[tiab]' sort=relevance → total=1148
+2026-04-09 03:51:32,927 INFO [scrapers.pubmed] [pubmed] esearch 'electronic health record[tiab] AND extraction[tiab' sort=relevance → total=1103
+2026-04-09 03:51:35,958 INFO [scrapers.pubmed] [pubmed] Проход 2: pub+date (10 запросов)
+2026-04-09 03:51:35,958 INFO [scrapers.pubmed] [pubmed] итого выдано: 200 статей
+2026-04-09 03:51:49,444 INFO [scrapers.doaj] [doaj] 'ocr+medical' page=1 → 10 (+10), total=62
+2026-04-09 03:51:49,444 INFO [scrapers.doaj] [doaj] 'ocr+medical' → 10 results
+2026-04-09 03:51:49,444 INFO [scrapers.doaj] [doaj] статья: Iridin Prevented Against Lipopolysaccharide-Induced Inflammatory Respo
+2026-04-09 03:51:49,456 INFO [scrapers.doaj] [doaj] статья: Prevalence  and predictors of depressive symptoms and wellbeing during
+2026-04-09 03:51:49,469 INFO [scrapers.doaj] [doaj] статья: A serialization method for digitizing the image-based medical laborato
+2026-04-09 03:51:49,481 INFO [scrapers.doaj] [doaj] статья: Coaching in Competence by Design: A New Model of Coaching in the Momen
+2026-04-09 03:51:49,493 INFO [scrapers.doaj] [doaj] статья: LabTracker: Navigating Laboratory Test Results with Ease and Understan
+2026-04-09 03:51:49,504 INFO [scrapers.doaj] [doaj] статья: The Economic Analysis of the Overlooked Recurrent Low Back Pain: Three
+2026-04-09 03:51:49,516 INFO [scrapers.doaj] [doaj] статья: A Policy-Driven Approach to Secure Extraction of COVID-19 Data From Re
+2026-04-09 03:51:49,528 INFO [scrapers.doaj] [doaj] статья: Outpatient coordination reform improves the sustainability of China's 
+2026-04-09 03:51:49,541 INFO [scrapers.doaj] [doaj] статья: Sustained Remission and Decreased Severity of CAR T-Cell Related Adver
+2026-04-09 03:51:49,553 INFO [scrapers.doaj] [doaj] статья: Generating high-quality data abstractions from scanned clinical record
+2026-04-09 03:51:51,992 INFO [scrapers.doaj] [doaj] 'medical+table+extraction' page=1 → 10 (+10), total=69
+2026-04-09 03:51:51,992 INFO [scrapers.doaj] [doaj] 'medical+table+extraction' → 10 results
+2026-04-09 03:51:51,992 INFO [scrapers.doaj] [doaj] статья: Cluster-based anonymity model and algorithm for 1:1 dataset with a sin
+2026-04-09 03:51:52,005 INFO [scrapers.doaj] [doaj] статья: MSIE-Net: Associative Entity-Based Multi-Stage Network for Structured 
+2026-04-09 03:51:52,017 INFO [scrapers.doaj] [doaj] статья: Coronectomy versus Extraction of Third Molar with Inferior Alveolar Ne
+2026-04-09 03:51:52,029 INFO [scrapers.doaj] [doaj] статья: Grouped semantic-feature relation extraction from texts to represent m
+2026-04-09 03:51:52,043 INFO [scrapers.doaj] [doaj] статья: Quality of Life of Mothers of Deaf Children: Lived Experience with a P
+2026-04-09 03:51:52,055 INFO [scrapers.doaj] [doaj] статья: Evaluation of the Resilience of District 20 of Tehran Metropolitan Reg
+2026-04-09 03:51:52,067 INFO [scrapers.doaj] [doaj] статья: INSPIRE datahub: a pan-African integrated suite of services for harmon
+2026-04-09 03:51:52,080 INFO [scrapers.doaj] [doaj] статья: Clinical course, maternal and neonatal outcomes of COVID-19 infection 
+2026-04-09 03:51:52,092 INFO [scrapers.doaj] [doaj] статья: Bone Age Assessment Using Content-Based Image Retrieval System Using V
+2026-04-09 03:51:52,104 INFO [scrapers.doaj] [doaj] статья: Double Walker of an Infected Dental Follicle
+2026-04-09 03:51:54,489 INFO [scrapers.doaj] [doaj] 'laboratory+pdf+results' page=1 → 10 (+10), total=42
+2026-04-09 03:51:54,489 INFO [scrapers.doaj] [doaj] 'laboratory+pdf+results' → 10 results
+2026-04-09 03:51:54,489 INFO [scrapers.doaj] [doaj] статья: Moment-based metrics for global sensitivity analysis of hydrological s
+2026-04-09 03:51:54,501 INFO [scrapers.doaj] [doaj] статья: Construction of an Electrocardiogram Database Including 12 Lead Wavefo
+2026-04-09 03:51:54,513 INFO [scrapers.doaj] [doaj] статья: Laboratory measurements and model sensitivity studies of dust depositi
+2026-04-09 03:51:54,525 INFO [scrapers.doaj] [doaj] статья: Next generation 3D Virtual Human Anatomy Laboratory, using offthe-shel
+2026-04-09 03:51:54,537 INFO [scrapers.doaj] [doaj] статья: Development and initial implementation of InstaDx: a smartphone app fo
+2026-04-09 03:51:54,550 INFO [scrapers.doaj] [doaj] статья: Victims Again
+2026-04-09 03:51:54,563 INFO [scrapers.doaj] [doaj] статья: INTRAVENOUS THERAPY IN THE WEB
+2026-04-09 03:51:54,575 INFO [scrapers.doaj] [doaj] статья: Three-dimensional limit equilibrium method for rock slopes by construc
+2026-04-09 03:51:54,588 INFO [scrapers.doaj] [doaj] статья: From sink to Sea: Microplastic release from kitchen sponges and potent
+2026-04-09 03:51:54,601 INFO [scrapers.doaj] [doaj] статья: The eDNA-Container App: A Simple-to-Use Cross-Platform Package for the
+2026-04-09 03:51:57,130 INFO [scrapers.doaj] [doaj] 'pdf+medical+extraction' page=1 → 6 (+6), total=6
+2026-04-09 03:51:57,130 INFO [scrapers.doaj] [doaj] 'pdf+medical+extraction' → 6 results
+2026-04-09 03:51:57,130 INFO [scrapers.doaj] [doaj] статья: Resilient Multimedia Embedding in DICOM Images: A Robustness Evaluatio
+2026-04-09 03:51:57,143 INFO [scrapers.doaj] [doaj] статья: A Review of Classification Techniques of EMG Signals during Isotonic a
+2026-04-09 03:51:57,154 INFO [scrapers.doaj] [doaj] статья: An Empirical Study of Several Information Theoretic Based Feature Extr
+2026-04-09 03:51:57,167 INFO [scrapers.doaj] [doaj] статья: Using Crawlers for Targeted Data Extraction from a Local Multi-File Da
+2026-04-09 03:51:57,179 INFO [scrapers.doaj] [doaj] статья: Prevalence of post-dialysis fatigue: a systematic review and meta-anal
+2026-04-09 03:51:59,508 INFO [scrapers.doaj] [doaj] 'clinical+document+parsing' page=1 → 1 (+1), total=1
+2026-04-09 03:51:59,509 INFO [scrapers.doaj] [doaj] 'clinical+document+parsing' → 1 results
+2026-04-09 03:51:59,509 INFO [scrapers.doaj] [doaj] статья: Functional remapping in networks of the Parkinsonian brain: A preclini
+2026-04-09 03:52:01,844 INFO [scrapers.doaj] [doaj] 'medical+document+information' page=1 → 10 (+10), total=944
+2026-04-09 03:52:01,844 INFO [scrapers.doaj] [doaj] 'medical+document+information' → 10 results
+2026-04-09 03:52:01,844 INFO [scrapers.doaj] [doaj] статья: Development and Human Testing of Chemical Warfare Agents and Means of 
+2026-04-09 03:52:01,856 INFO [scrapers.doaj] [doaj] статья: PROMOTING GLOBAL HEALTH: THE WORLD ASSOCIATION OF MEDICAL EDITORS POSI
+2026-04-09 03:52:01,869 INFO [scrapers.doaj] [doaj] статья: Institutionalising urogenital schistosomiasis surveillance: Best pract
+2026-04-09 03:52:01,883 INFO [scrapers.doaj] [doaj] статья: An approach to a geropsychiatric assessment
+2026-04-09 03:52:01,895 INFO [scrapers.doaj] [doaj] статья: Watching Out for Older Drivers
+2026-04-09 03:52:01,907 INFO [scrapers.doaj] [doaj] статья: Active surveillance of chemotherapy-related symptom burden in ambulato
+2026-04-09 03:52:01,919 INFO [scrapers.doaj] [doaj] статья: Hospital burden of pulmonary arterial hypertension in France.
+2026-04-09 03:52:01,931 INFO [scrapers.doaj] [doaj] статья: Developing a Mobile App (iGAM) to Promote Gingival Health by Professio
+2026-04-09 03:52:01,943 INFO [scrapers.doaj] [doaj] статья: Amending Federal Regulations to Counteract Language Barriers in the In
+2026-04-09 03:52:01,955 INFO [scrapers.doaj] [doaj] статья: Community-acquired pneumonia in adults: Approaches to antibacterial th
+2026-04-09 03:52:04,295 INFO [scrapers.doaj] [doaj] 'laboratory+results+extraction' page=1 → 10 (+10), total=2367
+2026-04-09 03:52:04,295 INFO [scrapers.doaj] [doaj] 'laboratory+results+extraction' → 10 results
+2026-04-09 03:52:04,295 INFO [scrapers.doaj] [doaj] статья: Extraction and Energy Management of Solar Photovoltaic, Fuel Cell, and
+2026-04-09 03:52:04,308 INFO [scrapers.doaj] [doaj] статья: Life cycle assessment for early-stage process optimization of microbia
+2026-04-09 03:52:04,320 INFO [scrapers.doaj] [doaj] статья: Development and validation of a portable, point-of-care canine distemp
+2026-04-09 03:52:04,332 INFO [scrapers.doaj] [doaj] статья: Genotoxicity of styrene oligomers extracted from polystyrene intended 
+2026-04-09 03:52:04,344 INFO [scrapers.doaj] [doaj] статья: Drosophila melanogaster as a physiologically relevant invertebrate tea
+2026-04-09 03:52:04,356 INFO [scrapers.doaj] [doaj] статья: Frequency of Epstein-Barr virus DNA sequences in human                
+2026-04-09 03:52:04,368 INFO [scrapers.doaj] [doaj] статья: The Magnitude of MTB and Rifampicin Resistance MTB Using Xpert-MTB/RIF
+2026-04-09 03:52:04,381 INFO [scrapers.doaj] [doaj] статья: Evaluation of rapid extraction and isothermal amplification techniques
+2026-04-09 03:52:04,397 INFO [scrapers.doaj] [doaj] статья: Research on the Cumulative Dust Suppression Effect of Foam and Dust Ex
+2026-04-09 03:52:04,410 INFO [scrapers.doaj] [doaj] статья: Molecular Prevalence of Larval Stages of Fasciola hepatica in Lymnaea 
+2026-04-09 03:52:06,748 INFO [scrapers.doaj] [doaj] 'clinical+data+extraction' page=1 → 10 (+10), total=8548
+2026-04-09 03:52:06,748 INFO [scrapers.doaj] [doaj] 'clinical+data+extraction' → 10 results
+2026-04-09 03:52:06,748 INFO [scrapers.doaj] [doaj] статья: Efficacy and safety of lipid-lowering therapies in combination with or
+2026-04-09 03:52:06,763 INFO [scrapers.doaj] [doaj] статья: The impact of progestogens on RAAS – a systematic review
+2026-04-09 03:52:06,776 INFO [scrapers.doaj] [doaj] статья: Why do healthcare professionals fail to escalate as per the early warn
+2026-04-09 03:52:06,791 INFO [scrapers.doaj] [doaj] статья: Effectiveness of echocardiography and cardiac magnetic resonance for s
+2026-04-09 03:52:06,804 INFO [scrapers.doaj] [doaj] статья: Epidemiology and Ecology of Toscana Virus Infection and Its Global Ris
+2026-04-09 03:52:06,815 INFO [scrapers.doaj] [doaj] статья: Impact of Polymorphisms in Genes Related to Vitamin D Metabolism on Se
+2026-04-09 03:52:06,829 INFO [scrapers.doaj] [doaj] статья: Next-Generation Sequencing Analysis of Root Canal Microbiota Associate
+2026-04-09 03:52:06,840 INFO [scrapers.doaj] [doaj] статья: A comparative study of short-term outcomes of laparoscopic right hemic
+2026-04-09 03:52:06,852 INFO [scrapers.doaj] [doaj] статья: Clinical outcomes of contemporary lateral augmentation techniques in p
+2026-04-09 03:52:06,864 INFO [scrapers.doaj] [doaj] статья: Implementation of the therapeutic use of hydroxyurea for sickle cell d
+2026-04-09 03:52:09,135 INFO [scrapers.doaj] [doaj] 'pdf+data+extraction' page=1 → 10 (+10), total=83
+2026-04-09 03:52:09,135 INFO [scrapers.doaj] [doaj] 'pdf+data+extraction' → 10 results
+2026-04-09 03:52:09,135 INFO [scrapers.doaj] [doaj] статья: Point Cloud Denoising and Feature Preservation: An Adaptive Kernel App
+2026-04-09 03:52:09,148 INFO [scrapers.doaj] [doaj] статья: Data Curation in Practice: Extract Tabular Data from PDF Files Using a
+2026-04-09 03:52:09,162 INFO [scrapers.doaj] [doaj] статья: Structured dataset of reported cloud seeding activities in the United 
+2026-04-09 03:52:09,174 INFO [scrapers.doaj] [doaj] статья: Towards the extraction of the crystal cell parameters from pair distri
+2026-04-09 03:52:09,186 INFO [scrapers.doaj] [doaj] статья: Design of an extensive information representation scheme for clinical 
+2026-04-09 03:52:09,199 INFO [scrapers.doaj] [doaj] статья: Microwave-assisted extraction optimization and conventional extraction
+2026-04-09 03:52:09,210 INFO [scrapers.doaj] [doaj] статья: Proton-PDF uncertainties in extracting nuclear PDFs from $$W^\pm $$ W 
+2026-04-09 03:52:09,223 INFO [scrapers.doaj] [doaj] статья: Editorial
+2026-04-09 03:52:09,241 INFO [scrapers.doaj] [doaj] статья: GeoDeepShovel: A platform for building scientific database from geosci
+2026-04-09 03:52:11,564 INFO [scrapers.doaj] [doaj] 'document+information+extraction' page=1 → 10 (+10), total=601
+2026-04-09 03:52:11,565 INFO [scrapers.doaj] [doaj] 'document+information+extraction' → 10 results
+2026-04-09 03:52:11,565 INFO [scrapers.doaj] [doaj] статья: Using the Ship-Gram Model for Japanese Keyword Extraction Based on New
+2026-04-09 03:52:11,578 INFO [scrapers.doaj] [doaj] статья: Modeling Graph Neural Networks and Dynamic Role Sorting for Argument E
+2026-04-09 03:52:11,590 INFO [scrapers.doaj] [doaj] статья: Pre-training transformer with dual-branch context content module for t
+2026-04-09 03:52:11,602 INFO [scrapers.doaj] [doaj] статья: A Pan-Canadian narrative review on the protocols for reopening dental 
+2026-04-09 03:52:11,614 INFO [scrapers.doaj] [doaj] статья: Automatic Keyword and Sentence-Based Text Summarization for Software B
+2026-04-09 03:52:11,626 INFO [scrapers.doaj] [doaj] статья: Enhancing Arabic Sentiment Analysis of Consumer Reviews: Machine Learn
+2026-04-09 03:52:11,638 INFO [scrapers.doaj] [doaj] статья: Two-Stream Modeling for Document-Level Event Argument Extraction Using
+2026-04-09 03:52:11,651 INFO [scrapers.doaj] [doaj] статья: A hybrid algorithm for clinical decision support in precision medicine
+2026-04-09 03:52:11,664 INFO [scrapers.doaj] [doaj] статья: Construction and application of integrated knowledge graph for mine di
+2026-04-09 03:52:11,676 INFO [scrapers.doaj] [doaj] статья: A Non-Exclusive Multi-Class Convolutional Neural Network for the Class
+2026-04-09 03:52:13,962 INFO [scrapers.doaj] [doaj] 'text+extraction+medical' page=1 → 10 (+10), total=661
+2026-04-09 03:52:13,962 INFO [scrapers.doaj] [doaj] 'text+extraction+medical' → 10 results
+2026-04-09 03:52:13,962 INFO [scrapers.doaj] [doaj] статья: Oral Lesions in a Teaching Clinic: A Retrospective Study and Systemati
+2026-04-09 03:52:13,974 INFO [scrapers.doaj] [doaj] статья: Large Language Models in Healthcare and Medical Domain: A Review
+2026-04-09 03:52:13,986 INFO [scrapers.doaj] [doaj] статья: Large Language Model–Supported Identification of Intellectual Disabili
+2026-04-09 03:52:13,998 INFO [scrapers.doaj] [doaj] статья: Study on Entity Extraction Method for Pharmaceutical Instructions Base
+2026-04-09 03:52:14,009 INFO [scrapers.doaj] [doaj] статья: Telemedicine in Advanced Kidney Disease and Kidney Transplant: A Quali
+2026-04-09 03:52:14,022 INFO [scrapers.doaj] [doaj] статья: MRI software and cognitive fusion biopsies in people with suspected pr
+2026-04-09 03:52:14,036 INFO [scrapers.doaj] [doaj] статья: Beyond aroma: A scoping review on the impact of chronic rhinosinusitis
+2026-04-09 03:52:14,048 INFO [scrapers.doaj] [doaj] статья: Policies on artificial intelligence chatbots among academic publishers
+2026-04-09 03:52:16,367 INFO [scrapers.doaj] [doaj] 'data+extraction+clinical' page=1 → 10 (+10), total=8548
+2026-04-09 03:52:16,367 INFO [scrapers.doaj] [doaj] 'data+extraction+clinical' → 10 results
+2026-04-09 03:52:18,673 INFO [scrapers.doaj] [doaj] 'structured+data+medical' page=1 → 10 (+10), total=11767
+2026-04-09 03:52:18,673 INFO [scrapers.doaj] [doaj] 'structured+data+medical' → 10 results
+2026-04-09 03:52:18,673 INFO [scrapers.doaj] [doaj] статья: Prevalence of Diabetes Mellitus and Associated Factors in Addis Ababa 
+2026-04-09 03:52:18,686 INFO [scrapers.doaj] [doaj] статья: Relationship Between Quality of Palliative Care for Children with Mali
+2026-04-09 03:52:18,700 INFO [scrapers.doaj] [doaj] статья: The impact of an online intervention on the medical, dental and health
+2026-04-09 03:52:18,713 INFO [scrapers.doaj] [doaj] статья: Sleep Quality and Psychological Distress Among Undergraduate Students 
+2026-04-09 03:52:18,726 INFO [scrapers.doaj] [doaj] статья: Prevalence and factors associated with diabetic retinopathy among diab
+2026-04-09 03:52:18,738 INFO [scrapers.doaj] [doaj] статья: Level of Utilization of Traditional and Orthodox Medicines by Rural Dw
+2026-04-09 03:52:18,752 INFO [scrapers.doaj] [doaj] статья: Nurses&rsquo; Supplemental Oxygen Therapy Knowledge and Practice in De
+2026-04-09 03:52:18,763 INFO [scrapers.doaj] [doaj] статья: Effect of Nicotine Consumption on Oral Health and Hygiene Practices Am
+2026-04-09 03:52:18,775 INFO [scrapers.doaj] [doaj] статья: A study to critically analyze Revised National Tuberculosis Control Pr
+2026-04-09 03:52:18,787 INFO [scrapers.doaj] [doaj] статья: Writing in and reading ICU diaries: qualitative study of families' exp
+2026-04-09 03:52:21,034 INFO [scrapers.doaj] [doaj] 'unstructured+data+extraction' page=1 → 10 (+10), total=643
+2026-04-09 03:52:21,034 INFO [scrapers.doaj] [doaj] 'unstructured+data+extraction' → 10 results
+2026-04-09 03:52:21,034 INFO [scrapers.doaj] [doaj] статья: Human behavior analysis on political retweets using machine learning a
+2026-04-09 03:52:21,046 INFO [scrapers.doaj] [doaj] статья: FEATURE-EXTRACTION FROM ALL-SCALE NEIGHBORHOODS WITH APPLICATIONS TO S
+2026-04-09 03:52:21,058 INFO [scrapers.doaj] [doaj] статья: A Multi-Stage NLP Framework for Knowledge Discovery from Crop Disease 
+2026-04-09 03:52:21,070 INFO [scrapers.doaj] [doaj] статья: A Graph Database Representation of Portuguese Criminal-Related Documen
+2026-04-09 03:52:21,082 INFO [scrapers.doaj] [doaj] статья: Cross-domain graph based similarity measurement of workflows
+2026-04-09 03:52:21,094 INFO [scrapers.doaj] [doaj] статья: A hybrid deep learning and fuzzy logic framework for feature-based eva
+2026-04-09 03:52:21,106 INFO [scrapers.doaj] [doaj] статья: Hybrid natural language processing tool for semantic annotation of med
+2026-04-09 03:52:21,118 INFO [scrapers.doaj] [doaj] статья: A Unified Graph Theory Approach: Clustering and Learning in Criminal D
+2026-04-09 03:52:21,130 INFO [scrapers.doaj] [doaj] статья: Multimodal fusion for equipment health status assessment based on dyna
+2026-04-09 03:52:23,399 INFO [scrapers.doaj] [doaj] 'named+entity+recognition+medical' page=1 → 10 (+10), total=246
+2026-04-09 03:52:23,399 INFO [scrapers.doaj] [doaj] 'named+entity+recognition+medical' → 10 results
+2026-04-09 03:52:23,399 INFO [scrapers.doaj] [doaj] статья: Few-shot Named Entity Ｒecognition for Medical Text
+2026-04-09 03:52:23,411 INFO [scrapers.doaj] [doaj] статья: Task-Specific Transformer-Based Language Models in Health Care: Scopin
+2026-04-09 03:52:23,423 INFO [scrapers.doaj] [doaj] статья: Chinese medical named entity recognition utilizing entity association 
+2026-04-09 03:52:23,434 INFO [scrapers.doaj] [doaj] статья: Information Extraction Of Diseases And Its Application
+2026-04-09 03:52:23,446 INFO [scrapers.doaj] [doaj] статья: pyMeSHSim: an integrative python package for biomedical named entity r
+2026-04-09 03:52:23,458 INFO [scrapers.doaj] [doaj] статья: Tibetan Medical Named Entity Recognition Based on Syllable‐Word‐Senten
+2026-04-09 03:52:23,470 INFO [scrapers.doaj] [doaj] статья: NAMED ENTITY RECOGNITION FOR MEDICAL DATA EXTRACTION USING BIOBERT
+2026-04-09 03:52:25,734 INFO [scrapers.doaj] [doaj] 'information+retrieval+clinical' page=1 → 10 (+10), total=684
+2026-04-09 03:52:25,735 INFO [scrapers.doaj] [doaj] 'information+retrieval+clinical' → 10 results
+2026-04-09 03:52:25,735 INFO [scrapers.doaj] [doaj] статья: An interactive retrieval system for clinical trial studies with contex
+2026-04-09 03:52:25,748 INFO [scrapers.doaj] [doaj] статья: How i do it: A practical database management system to assist clinical
+2026-04-09 03:52:25,759 INFO [scrapers.doaj] [doaj] статья: A question-entailment approach to question answering
+2026-04-09 03:52:25,772 INFO [scrapers.doaj] [doaj] статья: Effect of Aneurysmal Subarachnoid Hemorrhage on Word Generation
+2026-04-09 03:52:25,784 INFO [scrapers.doaj] [doaj] статья: Artificial Intelligence Developments in Medical Visualization and Onco
+2026-04-09 03:52:25,796 INFO [scrapers.doaj] [doaj] статья: Evaluating base and retrieval augmented LLMs with document or online s
+2026-04-09 03:52:25,807 INFO [scrapers.doaj] [doaj] статья: Improving Semantic Information Retrieval Using Multinomial Naive Bayes
+2026-04-09 03:52:25,819 INFO [scrapers.doaj] [doaj] статья: Understanding compensable and non-compensable patient profiles, pathwa
+2026-04-09 03:52:25,834 INFO [scrapers.doaj] [doaj] статья: Information retrieval for the Cochrane systematic reviews: the case of
+2026-04-09 03:52:28,140 INFO [scrapers.doaj] [doaj] 'table+extraction+document' page=1 → 10 (+10), total=31
+2026-04-09 03:52:28,140 INFO [scrapers.doaj] [doaj] 'table+extraction+document' → 10 results
+2026-04-09 03:52:28,140 INFO [scrapers.doaj] [doaj] статья: Non-invasive brain stimulation paradigms in treatment of alcohol use d
+2026-04-09 03:52:28,152 INFO [scrapers.doaj] [doaj] статья: Mapping the Landscape, Knowledge Gaps, and Areas for Innovation in Bra
+2026-04-09 03:52:28,167 INFO [scrapers.doaj] [doaj] статья: A Rule-Based Method for Table Detection in Website Images
+2026-04-09 03:52:28,179 INFO [scrapers.doaj] [doaj] статья: Robust Table Structure Recognition Network Based on Local and Global P
+2026-04-09 03:52:28,192 INFO [scrapers.doaj] [doaj] статья: Bibliometric Analysis and Systematic Review of Executive Functions in 
+2026-04-09 03:52:28,205 INFO [scrapers.doaj] [doaj] статья: Statistical Machine Translation Method Integrating Topic for Chinese-V
+2026-04-09 03:52:28,218 INFO [scrapers.doaj] [doaj] статья: Computer Vision-Based Framework for Data Extraction From Heterogeneous
+2026-04-09 03:52:28,231 INFO [scrapers.doaj] [doaj] статья: A new Approach for Detection and ExtractionTables in Scanned Document 
+2026-04-09 03:52:30,484 INFO [scrapers.doaj] [doaj] 'table+detection+recognition' page=1 → 10 (+10), total=79
+2026-04-09 03:52:30,484 INFO [scrapers.doaj] [doaj] 'table+detection+recognition' → 10 results
+2026-04-09 03:52:30,484 INFO [scrapers.doaj] [doaj] статья: Design of a Wearable Wireless Multi-Sensor Monitoring System and Appli
+2026-04-09 03:52:30,497 INFO [scrapers.doaj] [doaj] статья: FPGA-Based Hybrid-Type Implementation of Quantized Neural Networks for
+2026-04-09 03:52:30,509 INFO [scrapers.doaj] [doaj] статья: Approach to Automated Visual Inspection of Objects Based on Artificial
+2026-04-09 03:52:30,521 INFO [scrapers.doaj] [doaj] статья: An Overview of the Journal of Police Medicine in 2022
+2026-04-09 03:52:30,533 INFO [scrapers.doaj] [doaj] статья: Accounting and Financial Management Cost Accounting Integrating Rough 
+2026-04-09 03:52:30,545 INFO [scrapers.doaj] [doaj] статья: Optical character recognition on engineering drawings to achieve autom
+2026-04-09 03:52:30,557 INFO [scrapers.doaj] [doaj] статья: Evaluation of Cluster Algorithms for Radar-Based Object Recognition in
+2026-04-09 03:52:30,569 INFO [scrapers.doaj] [doaj] статья: TableExtractNet: A Model of Automatic Detection and Recognition of Tab
+2026-04-09 03:52:32,799 INFO [scrapers.doaj] [doaj] 'pdf+table+parsing' page=1 → 2 (+2), total=2
+2026-04-09 03:52:32,799 INFO [scrapers.doaj] [doaj] 'pdf+table+parsing' → 2 results
+2026-04-09 03:52:32,799 INFO [scrapers.doaj] [doaj] статья: Skin Tone Analysis for Representation in Educational Materials (STAR-E
+2026-04-09 03:52:32,811 INFO [scrapers.doaj] [doaj] статья: A Study on Methods for Parsing Architectural Multi-Modal Data and Extr
+2026-04-09 03:52:35,087 INFO [scrapers.doaj] [doaj] 'document+layout+analysis' page=1 → 10 (+10), total=112
+2026-04-09 03:52:35,088 INFO [scrapers.doaj] [doaj] 'document+layout+analysis' → 10 results
+2026-04-09 03:52:35,088 INFO [scrapers.doaj] [doaj] статья: Library Computer Technologies in Operation with National Periodicals
+2026-04-09 03:52:35,099 INFO [scrapers.doaj] [doaj] статья: IMPLEMENTASI GMP BERDASAR PADA ISO/TS 22002-1 TERHADAP PRODUKSI IKAN T
+2026-04-09 03:52:35,115 INFO [scrapers.doaj] [doaj] статья: Evaluating Factors Affecting Interior Architectural Space Quality to E
+2026-04-09 03:52:35,128 INFO [scrapers.doaj] [doaj] статья: The Thought and Methodology of Ecological Restoration Planning of Nati
+2026-04-09 03:52:35,140 INFO [scrapers.doaj] [doaj] статья: Structure matérielle et contenu sémantique du texte écrit
+2026-04-09 03:52:35,152 INFO [scrapers.doaj] [doaj] статья: The contribution of historical aerial and satellite photos to archaeol
+2026-04-09 03:52:35,164 INFO [scrapers.doaj] [doaj] статья: Continual Learning for Table Detection in Document Images
+2026-04-09 03:52:35,176 INFO [scrapers.doaj] [doaj] статья: Consistent two-dimensional visualization of protein-ligand complex ser
+2026-04-09 03:52:35,188 INFO [scrapers.doaj] [doaj] статья: Development of OCR Service for Page-Level Recognition for Camera-Captu
+2026-04-09 03:52:35,200 INFO [scrapers.doaj] [doaj] статья: Revitalization of urban industrial heritage from a perspective of spat
+2026-04-09 03:52:37,468 INFO [scrapers.doaj] [doaj] 'document+understanding+deep+learning' page=1 → 10 (+10), total=91
+2026-04-09 03:52:37,469 INFO [scrapers.doaj] [doaj] 'document+understanding+deep+learning' → 10 results
+2026-04-09 03:52:37,469 INFO [scrapers.doaj] [doaj] статья: Hybrid Feature Combination of TF-IDF and BERT for Enhanced Information
+2026-04-09 03:52:37,481 INFO [scrapers.doaj] [doaj] статья: Integration of corpus linguistics and deep learning techniques for enh
+2026-04-09 03:52:37,493 INFO [scrapers.doaj] [doaj] статья: AI Knows You: Deep Learning Model for Prediction of Extroversion Perso
+2026-04-09 03:52:37,505 INFO [scrapers.doaj] [doaj] статья: Integration of Ecotheology Literacy Games Through Deep Learning to Inc
+2026-04-09 03:52:37,517 INFO [scrapers.doaj] [doaj] статья: Pembelajaran Mendalam untuk Membentuk Karakter Siswa sebagai Pembelaja
+2026-04-09 03:52:37,529 INFO [scrapers.doaj] [doaj] статья: Cross-lingual SMS spam detection using GAN-based augmentation for imba
+2026-04-09 03:52:37,541 INFO [scrapers.doaj] [doaj] статья: Distilling Structure from Imagery:Graph-based Models for the Interpret
+2026-04-09 03:52:37,553 INFO [scrapers.doaj] [doaj] статья: A Novel Two-Fold Loss Function for Data Clustering and Reconstruction:
+2026-04-09 03:52:39,813 INFO [scrapers.doaj] [doaj] 'form+extraction+document' page=1 → 10 (+10), total=109
+2026-04-09 03:52:39,813 INFO [scrapers.doaj] [doaj] 'form+extraction+document' → 10 results
+2026-04-09 03:52:39,813 INFO [scrapers.doaj] [doaj] статья: Developing a Conceptual Pattern of Creating "Mental Imagination" Relyi
+2026-04-09 03:52:39,825 INFO [scrapers.doaj] [doaj] статья: Perancangan model kemasan distribusi minuman kopi cup menggunakan kans
+2026-04-09 03:52:39,837 INFO [scrapers.doaj] [doaj] статья: ANALISIS PROGRAM MAKAN BERGIZI GRATIS DENGAN SUPPORT VECTOR MACHINE (S
+2026-04-09 03:52:39,851 INFO [scrapers.doaj] [doaj] статья: Maximum Marginal Relevance and Vector Space Model for Summarizing Stud
+2026-04-09 03:52:39,863 INFO [scrapers.doaj] [doaj] статья: Bi-STAB: Enhanced abstractive text summarization model using hybridize
+2026-04-09 03:52:39,874 INFO [scrapers.doaj] [doaj] статья: Towards a scientific workflow featuring Natural Language Processing fo
+2026-04-09 03:52:39,887 INFO [scrapers.doaj] [doaj] статья: Pearson Correlation-Based Feature Selection for Document Classificatio
+2026-04-09 03:52:39,900 INFO [scrapers.doaj] [doaj] статья: Grammar-Based Recognition of Documentary Forms and Extraction of Metad
+2026-04-09 03:52:42,179 INFO [scrapers.doaj] [doaj] 'optical+character+recognition+medical' page=1 → 10 (+10), total=41
+2026-04-09 03:52:42,179 INFO [scrapers.doaj] [doaj] 'optical+character+recognition+medical' → 10 results
+2026-04-09 03:52:42,179 INFO [scrapers.doaj] [doaj] статья: Structuring and centralizing breast cancer real-world biomarker data f
+2026-04-09 03:52:42,191 INFO [scrapers.doaj] [doaj] статья: First study of the RuPatient health information system with optical ch
+2026-04-09 03:52:42,203 INFO [scrapers.doaj] [doaj] статья: Cor<i>Deep</i> and the Sacrobosco Dataset: Detection of Visual Element
+2026-04-09 03:52:42,215 INFO [scrapers.doaj] [doaj] статья: Non-Invasive Detection of Expired Medicines Using Artificial Intellige
+2026-04-09 03:52:42,226 INFO [scrapers.doaj] [doaj] статья: CIMI: Classify and Itemize Medical Image System for PFT Big Data Based
+2026-04-09 03:52:42,238 INFO [scrapers.doaj] [doaj] статья: A Novel QR Code–Based Solution for Secure Electronic Health Record Tra
+2026-04-09 03:52:42,250 INFO [scrapers.doaj] [doaj] статья: Medicine Drug Name Detection Based Object Recognition Using Augmented 
+2026-04-09 03:52:42,262 INFO [scrapers.doaj] [doaj] статья: A fast text structuring methodology of TCM medical records based on NL
+2026-04-09 03:52:44,569 INFO [scrapers.doaj] [doaj] 'ocr+document+processing' page=1 → 10 (+10), total=50
+2026-04-09 03:52:44,569 INFO [scrapers.doaj] [doaj] 'ocr+document+processing' → 10 results
+2026-04-09 03:52:44,570 INFO [scrapers.doaj] [doaj] статья: Document Image Rectification Method Based on Lines Space
+2026-04-09 03:52:44,582 INFO [scrapers.doaj] [doaj] статья: Handwritten Indic Script Recognition Based on the Dempster–Shafer Theo
+2026-04-09 03:52:44,593 INFO [scrapers.doaj] [doaj] статья: Efficient AI-driven allegation screening: A case study of Thailand's N
+2026-04-09 03:52:44,605 INFO [scrapers.doaj] [doaj] статья: Aligning document layouts extracted with different OCR engines with cl
+2026-04-09 03:52:44,616 INFO [scrapers.doaj] [doaj] статья: Discrete Script or Cursive Language Identification from Document Image
+2026-04-09 03:52:44,629 INFO [scrapers.doaj] [doaj] статья: Enhancing optical character recognition: Efficient techniques for docu
+2026-04-09 03:52:44,640 INFO [scrapers.doaj] [doaj] статья: A comparison of deep transfer learning backbone architecture technique
+2026-04-09 03:52:44,652 INFO [scrapers.doaj] [doaj] статья: Digitization of Health Records using Spark OCR
+2026-04-09 03:52:46,958 INFO [scrapers.doaj] [doaj] 'ocr+table+recognition' page=1 → 10 (+10), total=12
+2026-04-09 03:52:46,959 INFO [scrapers.doaj] [doaj] 'ocr+table+recognition' → 10 results
+2026-04-09 03:52:46,959 INFO [scrapers.doaj] [doaj] статья: An Ante Hoc Enhancement Method for Image-Based Complex Financial Table
+2026-04-09 03:52:46,971 INFO [scrapers.doaj] [doaj] статья: Automatic Recognition of Financial Instruments Based on Anisotropic Pa
+2026-04-09 03:52:46,982 INFO [scrapers.doaj] [doaj] статья: Reichsanzeiger-GT: An OCR ground truth dataset based on the historical
+2026-04-09 03:52:46,994 INFO [scrapers.doaj] [doaj] статья: Review of Pre-training Methods for Visually-rich Document Understandin
+2026-04-09 03:52:47,006 INFO [scrapers.doaj] [doaj] статья: Method of railway shunting operation sheet information extraction guid
+2026-04-09 03:52:47,018 INFO [scrapers.doaj] [doaj] статья: Large Language Models can extract morphological data from taxonomic de
+2026-04-09 03:52:47,029 INFO [scrapers.doaj] [doaj] статья: Research of the Localization of Restaurant Service Robot
+2026-04-09 03:52:47,041 INFO [scrapers.doaj] [doaj] статья: Table Recognition for Sensitive Data Perception in an IoT Vision Envir
+2026-04-09 03:52:47,053 INFO [scrapers.doaj] [doaj] статья: Research of the Localization of Restaurant Service Robot
+2026-04-09 03:52:49,352 INFO [scrapers.doaj] [doaj] 'text+recognition+document' page=1 → 10 (+10), total=318
+2026-04-09 03:52:49,353 INFO [scrapers.doaj] [doaj] 'text+recognition+document' → 10 results
+2026-04-09 03:52:49,353 INFO [scrapers.doaj] [doaj] статья: Experimental determination of chosen document elements parameters from
+2026-04-09 03:52:49,366 INFO [scrapers.doaj] [doaj] статья: A Proposed Arabic Handwritten Text Normalization Method
+2026-04-09 03:52:49,378 INFO [scrapers.doaj] [doaj] статья: Food bags, silent squares: Changes in the actions of state agents and 
+2026-04-09 03:52:49,390 INFO [scrapers.doaj] [doaj] итого выдано: 200 статей
+2026-04-09 03:52:52,261 INFO [scrapers.towards_ds] [towards_ds] tds → 20 записей
+2026-04-09 03:53:34,263 INFO [scrapers.towards_ds] [towards_ds] ocr → 10 записей
+2026-04-09 03:53:36,488 INFO [scrapers.towards_ds] [towards_ds] pdf-parsing → 10 записей
+2026-04-09 03:53:38,478 INFO [scrapers.towards_ds] [towards_ds] nlp → 10 записей
+2026-04-09 03:53:40,604 INFO [scrapers.towards_ds] [towards_ds] healthcare-ai → 10 записей
+2026-04-09 03:53:42,742 INFO [scrapers.towards_ds] [towards_ds] document-understanding → 9 записей
+2026-04-09 03:53:44,633 INFO [scrapers.towards_ds] [towards_ds] machine-learning → 10 записей
+2026-04-09 03:53:46,625 INFO [scrapers.towards_ds] [towards_ds] data-science → 10 записей
+2026-04-09 03:53:48,755 INFO [scrapers.towards_ds] [towards_ds] medical-imaging → 10 записей
+2026-04-09 03:53:50,735 INFO [scrapers.towards_ds] [towards_ds] deep-learning → 9 записей
+2026-04-09 03:53:52,688 INFO [scrapers.towards_ds] [towards_ds] artificial-intelligence → 10 записей
+2026-04-09 03:53:54,894 INFO [scrapers.towards_ds] [towards_ds] information-extraction → 10 записей
+2026-04-09 03:53:57,108 INFO [scrapers.towards_ds] [towards_ds] computer-vision → 10 записей
+2026-04-09 03:53:59,517 INFO [scrapers.towards_ds] [towards_ds] text-mining → 10 записей
+2026-04-09 03:53:59,561 INFO [scrapers.towards_ds] [towards_ds] итого выдано: 147 статей
+2026-04-09 03:53:59,585 INFO [scrapers.habr] [habr] Этап 1: поиск по релевантности (8 запросов)
+2026-04-09 03:54:01,983 INFO [scrapers.habr] [habr] поиск='извлечение данных pdf' order=relevance → 0 статей
+2026-04-09 03:54:03,739 INFO [scrapers.habr] [habr] поиск='парсинг медицинских документов' order=relevance → 0 статей
+2026-04-09 03:54:05,507 INFO [scrapers.habr] [habr] поиск='распознавание таблиц ocr' order=relevance → 0 статей
+2026-04-09 03:54:07,264 INFO [scrapers.habr] [habr] поиск='обработка медицинских анализов' order=relevance → 0 статей
+2026-04-09 03:54:09,020 INFO [scrapers.habr] [habr] поиск='nlp медицина клинические данные' order=relevance → 0 статей
+2026-04-09 03:54:10,783 INFO [scrapers.habr] [habr] поиск='pdf table extraction' order=relevance → 0 статей
+2026-04-09 03:54:12,549 INFO [scrapers.habr] [habr] поиск='medical document parsing' order=relevance → 0 статей
+2026-04-09 03:54:14,336 INFO [scrapers.habr] [habr] поиск='laboratory results nlp' order=relevance → 0 статей
+2026-04-09 03:54:14,336 INFO [scrapers.habr] [habr] Этап 2: поиск по дате (8 запросов)
+2026-04-09 03:54:16,080 INFO [scrapers.habr] [habr] поиск='извлечение данных pdf' order=date → 0 статей
+2026-04-09 03:54:17,841 INFO [scrapers.habr] [habr] поиск='парсинг медицинских документов' order=date → 0 статей
+2026-04-09 03:54:19,592 INFO [scrapers.habr] [habr] поиск='распознавание таблиц ocr' order=date → 0 статей
+2026-04-09 03:54:21,340 INFO [scrapers.habr] [habr] поиск='обработка медицинских анализов' order=date → 0 статей
+2026-04-09 03:54:23,103 INFO [scrapers.habr] [habr] поиск='nlp медицина клинические данные' order=date → 0 статей
+2026-04-09 03:54:24,863 INFO [scrapers.habr] [habr] поиск='pdf table extraction' order=date → 0 статей
+2026-04-09 03:54:26,625 INFO [scrapers.habr] [habr] поиск='medical document parsing' order=date → 0 статей
+2026-04-09 03:54:28,379 INFO [scrapers.habr] [habr] поиск='laboratory results nlp' order=date → 0 статей
+2026-04-09 03:54:28,379 INFO [scrapers.habr] [habr] Этап 3: хабы (8 штук)
+2026-04-09 03:54:31,074 INFO [scrapers.habr] [habr] hub=machine_learning → 100 статей
+2026-04-09 03:54:34,854 INFO [scrapers.habr] [habr] hub=data_mining → 100 статей
+2026-04-09 03:54:38,717 INFO [scrapers.habr] [habr] hub=python → 100 статей
+2026-04-09 03:54:38,745 INFO [scrapers.habr] [habr] итого выдано: 200 статей

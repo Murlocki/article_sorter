@@ -148,18 +148,13 @@ class HabrScraper(BaseScraper):
 
     # ── Публичный интерфейс ───────────────────────────────────────────────────
 
-    def iter_articles(self, max_articles: int = 50) -> Iterator[ArticleData]:
+    def iter_articles(self, max_articles: int = 50, custom_query: str = "") -> Iterator[ArticleData]:
         seen_urls: set[str] = set()
         yielded   = 0
-
-        per_query = 100  # реальный максимум Habr RSS поиска
-        per_hub   = 100  # реальный максимум Habr RSS хабов
 
         def _yield_entries(entries: list) -> Iterator[ArticleData]:
             nonlocal yielded
             for entry in entries:
-                if yielded >= max_articles:
-                    return
                 article = self._entry_to_article(entry)
                 if article is None or article.url in seen_urls:
                     continue
@@ -167,28 +162,25 @@ class HabrScraper(BaseScraper):
                 yield article
                 yielded += 1
 
-        # ── Этап 1: поиск по релевантности ───────────────────────────────────
-        logger.info("[habr] Этап 1: поиск по релевантности (%d запросов)", len(SEARCH_QUERIES))
-        for query in SEARCH_QUERIES:
-            if yielded >= max_articles:
-                break
-            entries = self._search_rss(query, order="relevance", limit=per_query)
+        queries = [custom_query] if custom_query else SEARCH_QUERIES
+
+        # Этап 1: поиск по релевантности
+        logger.info("[habr] Этап 1: relevance (%d запросов)", len(queries))
+        for query in queries:
+            entries = self._search_rss(query, order="relevance", limit=100)
             yield from _yield_entries(entries)
 
-        # ── Этап 2: поиск по дате ─────────────────────────────────────────────
-        logger.info("[habr] Этап 2: поиск по дате (%d запросов)", len(SEARCH_QUERIES))
-        for query in SEARCH_QUERIES:
-            if yielded >= max_articles:
-                break
-            entries = self._search_rss(query, order="date", limit=per_query)
+        # Этап 2: поиск по дате
+        logger.info("[habr] Этап 2: date (%d запросов)", len(queries))
+        for query in queries:
+            entries = self._search_rss(query, order="date", limit=100)
             yield from _yield_entries(entries)
 
-        # ── Этап 3: RSS хабов ─────────────────────────────────────────────────
-        logger.info("[habr] Этап 3: хабы (%d штук)", len(HUBS))
-        for hub in HUBS:
-            if yielded >= max_articles:
-                break
-            entries = self._hub_rss(hub, limit=per_hub)
-            yield from _yield_entries(entries)
+        # Этап 3: RSS хабов (только если нет кастомного запроса)
+        if not custom_query:
+            logger.info("[habr] Этап 3: хабы (%d штук)", len(HUBS))
+            for hub in HUBS:
+                entries = self._hub_rss(hub, limit=100)
+                yield from _yield_entries(entries)
 
-        logger.info("[habr] итого выдано: %d статей", yielded)
+        logger.info("[habr] итого отдано: %d статей", yielded)

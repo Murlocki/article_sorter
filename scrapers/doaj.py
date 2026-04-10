@@ -182,33 +182,25 @@ class DOAJScraper(BaseScraper):
             published_at = pub_date,
         )
 
-    def iter_articles(self, max_articles: int = 50) -> Iterator[ArticleData]:
-        # Минимум 10 на запрос чтобы получать реальные результаты
-        # (при max=50 и 48 запросах per_query=1 — слишком мало)
-        per_query  = max(10, max_articles // len(SEARCH_QUERIES))
+    def iter_articles(self, max_articles: int = 50, custom_query: str = "") -> Iterator[ArticleData]:
+        queries   = [custom_query.replace(" ", "+")] if custom_query else SEARCH_QUERIES
+        per_query = max(10, max_articles // len(queries))
         seen_urls: set[str] = set()
         yielded = 0
 
-        for query in SEARCH_QUERIES:
-            if yielded >= max_articles:
-                break
-
+        for query in queries:
             results = self._search(query, per_query)
             logger.info("[doaj] %r → %d results", query, len(results))
 
             for result in results:
-                if yielded >= max_articles:
-                    break
-
                 article = self._to_article(result)
                 if article is None:
                     continue
                 if article.url in seen_urls:
-                    logger.debug("[doaj] дубль URL: %s", article.url)
                     continue
                 seen_urls.add(article.url)
                 logger.info("[doaj] статья: %s", article.title[:70])
                 yield article
                 yielded += 1
 
-        logger.info("[doaj] итого выдано: %d статей", yielded)
+        logger.info("[doaj] итого отдано: %d статей", yielded)

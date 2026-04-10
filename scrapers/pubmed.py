@@ -226,16 +226,14 @@ class PubMedScraper(BaseScraper):
         max_articles: int = 50,
         mindate: str = "",
         maxdate: str = "",
+        custom_query: str = "",
     ) -> Iterator[ArticleData]:
         seen_urls: set[str] = set()
-        yielded   = 0
-        per_query = max(BATCH_SIZE, max_articles // len(SEARCH_QUERIES_RELEVANCE) + 10)
+        # Если задан кастомный запрос — используем только его
+        queries = [custom_query] if custom_query else SEARCH_QUERIES_RELEVANCE
+        per_query = max(BATCH_SIZE, max_articles // len(queries) + 10)
 
         def _fetch_query(term: str, sort: str):
-            nonlocal yielded
-            if yielded >= max_articles:
-                return
-
             webenv, qkey, total = self._esearch(
                 term, retmax=per_query, sort=sort,
                 mindate=mindate, maxdate=maxdate,
@@ -244,31 +242,28 @@ class PubMedScraper(BaseScraper):
                 return
 
             for retstart in range(0, min(per_query, total), BATCH_SIZE):
-                if yielded >= max_articles:
-                    break
-
                 articles = self._efetch_batch(webenv, qkey, retstart)
                 for article in articles:
-                    if yielded >= max_articles:
-                        break
                     if article.url in seen_urls:
                         continue
                     seen_urls.add(article.url)
                     yield article
-                    yielded += 1
+
+        yielded = 0
 
         # Проход 1: по релевантности
-        logger.info("[pubmed] Проход 1: relevance (%d запросов)", len(SEARCH_QUERIES_RELEVANCE))
-        for term in SEARCH_QUERIES_RELEVANCE:
-            if yielded >= max_articles:
-                break
-            yield from _fetch_query(term, sort="relevance")
+        logger.info("[pubmed] Проход 1: relevance (%d запросов)", len(queries))
+        for term in queries:
+            for article in _fetch_query(term, sort="relevance"):
+                yield article
+                yielded += 1
 
-        # Проход 2: по дате (свежие статьи)
-        logger.info("[pubmed] Проход 2: pub+date (%d запросов)", len(SEARCH_QUERIES_DATE))
-        for term in SEARCH_QUERIES_DATE:
-            if yielded >= max_articles:
-                break
-            yield from _fetch_query(term, sort="pub+date")
+        # Проход 2: по дате (пропускаем при кастомном запросе — он уже специфичен)
+        if not custom_query:
+            logger.info("[pubmed] Проход 2: pub+date (%d запросов)", len(queries))
+            for term in queries:
+                for article in _fetch_query(term, sort="pub+date"):
+                    yield article
+                    yielded += 1
 
-        logger.info("[pubmed] итого выдано: %d статей", yielded)
+        logger.info("[pubmed] итого отдано скраперу: %d статей", yielded)

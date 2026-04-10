@@ -181,24 +181,21 @@ class TowardsDSScraper(BaseScraper):
 
     # ── Публичный интерфейс ───────────────────────────────────────────────
 
-    def iter_articles(self, max_articles: int = 50) -> Iterator[ArticleData]:
+    def iter_articles(self, max_articles: int = 50, custom_query: str = "") -> Iterator[ArticleData]:
         seen_urls: set[str] = set()
         yielded = 0
 
+        if custom_query:
+            logger.info("[towards_ds] кастомный запрос %r игнорируется — "
+                        "TDS/Medium не поддерживают RSS поиска", custom_query)
+
         for feed_url, source_type in RSS_FEEDS:
-            if yielded >= max_articles:
-                break
-
             for entry in self._fetch_feed(feed_url):
-                if yielded >= max_articles:
-                    break
-
                 article = self._entry_to_article(entry, source_type)
                 if article is None or article.url in seen_urls:
                     continue
-
                 seen_urls.add(article.url)
                 yield article
                 yielded += 1
 
-        logger.info("[towards_ds] итого выдано: %d статей", yielded)
+        logger.info("[towards_ds] итого отдано: %d статей", yielded)

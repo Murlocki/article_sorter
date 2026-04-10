@@ -80,13 +80,18 @@ def run_source(cfg: SourceConfig, repo: ArticleRepository, max_articles: int) ->
 
             if ok:
                 counters["new"] += 1
-                logger.info("[%s] ✓ сохранена в БД", cfg.key)
+                logger.info("[%s] ✓ сохранена в БД (новых: %d/%d)",
+                            cfg.key, counters["new"], max_articles)
+                # Останавливаемся когда набрали нужное число НОВЫХ статей
+                if counters["new"] >= max_articles:
+                    logger.info("[%s] достигнут лимит новых статей (%d)",
+                                cfg.key, max_articles)
+                    break
             elif reason == "duplicate":
                 counters["skipped"] += 1
-                logger.info("[%s] — дубль, пропускаем", cfg.key)
+                logger.info("[%s] — дубль (пропущено: %d)", cfg.key, counters["skipped"])
             elif reason == "too_short":
                 counters["skipped"] += 1
-                logger.info("[%s] — текст слишком короткий, пропускаем", cfg.key)
             else:
                 counters["errors"] += 1
                 logger.warning("[%s] ✗ ошибка сохранения", cfg.key)

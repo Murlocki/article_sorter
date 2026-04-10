@@ -12,7 +12,7 @@ from typing import Optional
 
 from sqlalchemy.exc import IntegrityError
 
-from config import DATABASE_URL, MIN_TEXT_LENGTH
+from config import DATABASE_URL
 from db.models import Article, ScrapingLog, get_session, init_db
 
 logger = logging.getLogger(__name__)
@@ -44,7 +44,7 @@ class ArticleRepository:
         Возвращает (success, reason):
           reason ∈ "saved" | "duplicate" | "too_short" | "error"
         """
-        if not data.text or len(data.text.strip()) < MIN_TEXT_LENGTH:
+        if not data.text or not data.text.strip():
             return False, "too_short"
 
         article = Article(

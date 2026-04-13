@@ -88,34 +88,69 @@ class ArticleRepository:
 
     # ── Чтение ─────────────────────────────────────────────────────────────────
 
+    def _build_query(self, s, source_name=None, language=None, is_relevant=None,
+                      date_from=None, date_to=None, search=None):
+        """Общий построитель запроса с фильтрами."""
+        from sqlalchemy import or_
+        q = s.query(Article)
+        if source_name:
+            q = q.filter(Article.source_name == source_name)
+        if language:
+            q = q.filter(Article.language == language)
+        if is_relevant is not None:
+            q = q.filter(Article.is_relevant == is_relevant)
+        if date_from:
+            q = q.filter(Article.scraped_at >= date_from)
+        if date_to:
+            q = q.filter(Article.scraped_at <= date_to)
+        if search:
+            like = f"%{search}%"
+            q = q.filter(or_(Article.title.ilike(like), Article.abstract.ilike(like)))
+        return q
+
     def get_articles(
         self,
         source_name: str | None = None,
         language: str | None = None,
-        is_relevant: bool | None = None,
+        is_relevant=None,
         date_from=None,
         date_to=None,
         search: str | None = None,
         limit: int = 500,
+        offset: int = 0,
     ):
-        """Вернуть статьи с фильтрами."""
+        """Вернуть статьи с фильтрами и пагинацией."""
         with get_session(self.db_url) as s:
-            q = s.query(Article)
-            if source_name:
-                q = q.filter(Article.source_name == source_name)
-            if language:
-                q = q.filter(Article.language == language)
-            if is_relevant is not None:
-                q = q.filter(Article.is_relevant == is_relevant)
-            if date_from:
-                q = q.filter(Article.scraped_at >= date_from)
-            if date_to:
-                q = q.filter(Article.scraped_at <= date_to)
-            if search:
-                like = f"%{search}%"
-                from sqlalchemy import or_
-                q = q.filter(or_(Article.title.ilike(like), Article.abstract.ilike(like)))
-            articles = q.order_by(Article.scraped_at.desc()).limit(limit).all()
+            q = self._build_query(s, source_name=source_name, language=language,
+                                  is_relevant=is_relevant, date_from=date_from,
+                                  date_to=date_to, search=search)
+            articles = (q.order_by(Article.scraped_at.desc())
+                         .offset(offset).limit(limit).all())
+            s.expunge_all()
+            return articles
+
+    def count_articles(
+        self,
+        source_name=None, language=None, is_relevant=None,
+        date_from=None, date_to=None, search=None,
+    ) -> int:
+        """Подсчитать число статей по фильтрам (без загрузки данных)."""
+        # is_relevant может быть "all" — тогда не фильтруем
+        rel = None if is_relevant == "all" else is_relevant
+        with get_session(self.db_url) as s:
+            q = self._build_query(s, source_name=source_name, language=language,
+                                  is_relevant=rel, date_from=date_from,
+                                  date_to=date_to, search=search)
+            return q.count()
+
+    def get_articles_by_ids(self, ids: list[int]) -> list:
+        """Загрузить статьи по списку ID — быстро, без полного скана таблицы."""
+        if not ids:
+            return []
+        with get_session(self.db_url) as s:
+            articles = (s.query(Article)
+                         .filter(Article.id.in_(ids))
+                         .all())
             s.expunge_all()
             return articles
 

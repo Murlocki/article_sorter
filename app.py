@@ -25,18 +25,6 @@ class _StreamlitLogHandler(logging.Handler):
         except Exception:
             pass
 
-_root_logger = logging.getLogger()
-_root_logger.setLevel(logging.INFO)
-# Удаляем ВСЕ наши хэндлеры перед добавлением новых
-# (Streamlit переисполняет скрипт при каждом rerun)
-_root_logger.handlers = [
-    h for h in _root_logger.handlers
-    if not isinstance(h, (_StreamlitLogHandler, _ErrorLogHandler))
-]
-_log_handler = _StreamlitLogHandler()
-_log_handler.setFormatter(logging.Formatter("%(levelname)-8s [%(name)s] %(message)s"))
-_root_logger.addHandler(_log_handler)
-
 class _ErrorLogHandler(logging.Handler):
     def emit(self, record):
         try:
@@ -46,6 +34,19 @@ class _ErrorLogHandler(logging.Handler):
                     st.session_state.scraping_errors.append(msg)
         except Exception:
             pass
+
+_root_logger = logging.getLogger()
+_root_logger.setLevel(logging.INFO)
+# Удаляем ВСЕ наши хэндлеры перед добавлением новых
+# (Streamlit переисполняет скрипт при каждом rerun)
+_root_logger.handlers = [
+    h for h in _root_logger.handlers
+    if not isinstance(h, (_StreamlitLogHandler, _ErrorLogHandler))
+]
+
+_log_handler = _StreamlitLogHandler()
+_log_handler.setFormatter(logging.Formatter("%(levelname)-8s [%(name)s] %(message)s"))
+_root_logger.addHandler(_log_handler)
 
 _error_handler = _ErrorLogHandler()
 _error_handler.setFormatter(logging.Formatter("%(levelname)s [%(name)s] %(message)s"))
@@ -100,6 +101,7 @@ for key, default in [
     ("last_stats",       None),
     ("edit_id",          None),
     ("new_article_ids",  []),
+    ("bulk_delete_ids", []),
 ]:
     if key not in st.session_state:
         st.session_state[key] = default
@@ -151,7 +153,7 @@ def render_edit_form(art, form_key: str, show_text: bool = False):
 
 # ── Вкладки ────────────────────────────────────────────────────────────────────
 
-tab_scrape, tab_db, tab_logs = st.tabs(["🚀 Скрапинг", "📚 База данных", "📋 Журнал запусков"])
+tab_scrape, tab_db, tab_clf, tab_logs = st.tabs(["🚀 Скрапинг", "📚 База данных", "🤖 Классификатор", "📋 Журнал запусков"])
 
 
 # ══ Вкладка 1 — Скрапинг ══════════════════════════════════════════════════════
@@ -303,10 +305,9 @@ with tab_scrape:
     new_ids = st.session_state.get("new_article_ids", [])
     if new_ids:
         st.divider()
-        # Получаем актуальные данные из БД
-        all_arts = repo.get_articles(limit=100000)
-        id_to_art = {a.id: a for a in all_arts}
-        new_arts  = [id_to_art[i] for i in new_ids if i in id_to_art]
+        # Загружаем только нужные статьи по ID — не весь датасет
+        new_arts  = repo.get_articles_by_ids(new_ids)
+        id_to_art = {a.id: a for a in new_arts}
 
         show_unlabeled = st.checkbox("Только неразмеченные", value=True, key="new_only_unlabeled")
         if show_unlabeled:
@@ -406,22 +407,59 @@ with tab_db:
         with fd3:
             f_search = st.text_input("Поиск в заголовке / аннотации", placeholder="pdf extraction…")
 
+    # Получаем общее число статей для пагинации
+    total_count = repo.count_articles(
+        source_name = None if f_source == "Все" else f_source,
+        language    = None if f_lang   == "Все" else f_lang,
+        date_from   = datetime.combine(f_date_from, datetime.min.time()) if f_date_from else None,
+        date_to     = datetime.combine(f_date_to,   datetime.max.time()) if f_date_to   else None,
+        search      = f_search or None,
+        is_relevant = True if f_relevant == "Да" else (False if f_relevant == "Нет" else (None if f_relevant == "Не размечено" else "all")),
+    )
+
+    PAGE_SIZE = 500
+    n_pages   = max(1, (total_count + PAGE_SIZE - 1) // PAGE_SIZE)
+
+    if "db_page" not in st.session_state:
+        st.session_state.db_page = 1
+    # Сбрасываем страницу при смене фильтров
+    filter_key = f"{f_source}|{f_lang}|{f_relevant}|{f_search}|{f_date_from}|{f_date_to}"
+    if st.session_state.get("db_filter_key") != filter_key:
+        st.session_state.db_page       = 1
+        st.session_state.db_filter_key = filter_key
+
+    pg_col1, pg_col2, pg_col3 = st.columns([1, 3, 1])
+    with pg_col1:
+        if st.button("◀ Назад", key="db_prev", width="stretch",
+                      disabled=st.session_state.db_page <= 1):
+            st.session_state.db_page -= 1
+            st.rerun()
+    with pg_col2:
+        st.markdown(
+            f"<div style='text-align:center;padding-top:8px'>"
+            f"Страница **{st.session_state.db_page}** из **{n_pages}** "
+            f"(всего ~{total_count} статей)</div>",
+            unsafe_allow_html=True,
+        )
+    with pg_col3:
+        if st.button("Вперёд ▶", key="db_next", width="stretch",
+                      disabled=st.session_state.db_page >= n_pages):
+            st.session_state.db_page += 1
+            st.rerun()
+
+    offset   = (st.session_state.db_page - 1) * PAGE_SIZE
     articles = repo.get_articles(
         source_name = None if f_source == "Все" else f_source,
         language    = None if f_lang   == "Все" else f_lang,
         date_from   = datetime.combine(f_date_from, datetime.min.time()) if f_date_from else None,
         date_to     = datetime.combine(f_date_to,   datetime.max.time()) if f_date_to   else None,
         search      = f_search or None,
-        limit       = 2000,
+        limit       = PAGE_SIZE,
+        offset      = offset,
+        is_relevant = True if f_relevant == "Да" else (False if f_relevant == "Нет" else (None if f_relevant == "Не размечено" else None)),
     )
-    if f_relevant == "Да":
-        articles = [a for a in articles if a.is_relevant is True]
-    elif f_relevant == "Нет":
-        articles = [a for a in articles if a.is_relevant is False]
-    elif f_relevant == "Не размечено":
-        articles = [a for a in articles if a.is_relevant is None]
 
-    st.caption(f"Найдено: **{len(articles)}** статей")
+    st.caption(f"Показано: **{len(articles)}** из **{total_count}** статей (стр. {st.session_state.db_page}/{n_pages})")
 
     if not articles:
         st.info("Нет статей по выбранным фильтрам")
@@ -442,18 +480,62 @@ with tab_db:
         sel_event = st.dataframe(
             pd.DataFrame(rows), width="stretch", hide_index=True,
             on_select="rerun",
-            selection_mode="single-row",
+            selection_mode="multi-row",
             column_config={
                 "URL":       st.column_config.LinkColumn("URL", display_text="🔗"),
                 "Заголовок": st.column_config.TextColumn("Заголовок", width="large"),
                 "Аннотация": st.column_config.TextColumn("Аннотация", width="large"),
             },
         )
-        st.caption("💡 Кликните по строке в таблице чтобы открыть статью")
+        st.caption("💡 Один клик — открыть статью. Несколько строк — массовые действия.")
 
-        # Определяем выбранную статью — из клика по таблице
         selected_rows = sel_event.selection.get("rows", []) if sel_event else []
-        sel_art = articles[selected_rows[0]] if selected_rows else None
+        selected_arts = [articles[i] for i in selected_rows]
+
+        # Массовые действия (2+ строк)
+        if len(selected_arts) > 1:
+            st.subheader(f"Выбрано: {len(selected_arts)} статей")
+            ba1, ba2, ba3 = st.columns(3)
+            with ba1:
+                if st.button(f"✅ Релевантные ({len(selected_arts)})",
+                              width="stretch", key="bulk_rel"):
+                    for a in selected_arts:
+                        repo.update_article(a.id, is_relevant=True,
+                                            label_source="human", relevance_score=1.0)
+                    st.success(f"Отмечено {len(selected_arts)} статей")
+                    st.rerun()
+            with ba2:
+                if st.button(f"❌ Нерелевантные ({len(selected_arts)})",
+                              width="stretch", key="bulk_norel"):
+                    for a in selected_arts:
+                        repo.update_article(a.id, is_relevant=False,
+                                            label_source="human", relevance_score=0.0)
+                    st.success(f"Отмечено {len(selected_arts)} статей")
+                    st.rerun()
+            with ba3:
+                if st.button(f"🗑 Удалить ({len(selected_arts)})",
+                              width="stretch", key="bulk_del"):
+                    st.session_state["bulk_delete_ids"] = [a.id for a in selected_arts]
+                    st.rerun()
+
+            if st.session_state.get("bulk_delete_ids"):
+                ids_to_del = st.session_state["bulk_delete_ids"]
+                st.error(f"⚠️ Удалить **{len(ids_to_del)}** статей? Необратимо.")
+                dc1, dc2 = st.columns(2)
+                with dc1:
+                    if st.button("Да, удалить", key="bulk_del_confirm", width="stretch"):
+                        for art_id in ids_to_del:
+                            repo.delete_article(art_id)
+                        st.success(f"Удалено {len(ids_to_del)} статей")
+                        st.session_state["bulk_delete_ids"] = []
+                        st.rerun()
+                with dc2:
+                    if st.button("Отмена", key="bulk_del_cancel", width="stretch"):
+                        st.session_state["bulk_delete_ids"] = []
+                        st.rerun()
+
+        # Одиночный выбор — открываем статью
+        sel_art = articles[selected_rows[0]] if len(selected_rows) == 1 else None
 
         if sel_art:
 
@@ -506,7 +588,197 @@ with tab_db:
                             mime="text/csv")
 
 
-# ══ Вкладка 3 — Журнал ════════════════════════════════════════════════════════
+# ══ Вкладка 3 — Классификатор ════════════════════════════════════════════════
+
+with tab_clf:
+    st.header("🤖 Классификатор релевантности")
+
+    from classifier import Classifier, SBERT_MODEL
+
+    # ── Статистика разметки ───────────────────────────────────────────────────
+    all_arts   = repo.get_articles(limit=100000)
+    labeled    = [a for a in all_arts if a.is_relevant is not None]
+    n_pos      = sum(1 for a in labeled if a.is_relevant)
+    n_neg      = len(labeled) - n_pos
+    n_unlabeled = len(all_arts) - len(labeled)
+
+    mc1, mc2, mc3, mc4 = st.columns(4)
+    mc1.metric("Всего статей",       len(all_arts))
+    mc2.metric("Размечено",          len(labeled))
+    mc3.metric("✅ Релевантных",      n_pos)
+    mc4.metric("❌ Нерелевантных",    n_neg)
+
+    if len(labeled) < 10:
+        st.warning(
+            f"Для обучения нужно минимум 10 размеченных статей (сейчас {len(labeled)}). "
+            "Разметьте статьи во вкладке Скрапинг или База данных."
+        )
+    elif n_pos == 0 or n_neg == 0:
+        st.warning("Нужны оба класса — и релевантные, и нерелевантные статьи.")
+    else:
+        st.success(f"Готово к обучению: {len(labeled)} статей")
+
+    st.divider()
+
+    # ── Настройки ─────────────────────────────────────────────────────────────
+    st.subheader("Настройки")
+
+    cc1, cc2 = st.columns(2)
+    with cc1:
+        n_neighbors = st.slider("Соседей KNN (k)", min_value=3, max_value=20, value=5,
+                                 help="Больше соседей = стабильнее, но медленнее")
+    with cc2:
+        batch_size = st.slider(
+            "Применять к N статьям",
+            min_value=10, max_value=2000, value=200, step=10,
+            help="Сколько неразмеченных статей классифицировать за раз"
+        )
+
+    st.info(
+        f"📦 Модель: `{SBERT_MODEL}`  \n"
+        "При первом запуске скачается ~120MB. Поддерживает RU+EN.  \n"
+        "Вектор 384dim — одинаковый для любой длины текста."
+    )
+
+    st.divider()
+
+    # ── Кэш ──────────────────────────────────────────────────────────────────
+    from classifier import INDEX_FILE
+    if INDEX_FILE.exists():
+        import os
+        mtime = datetime.fromtimestamp(os.path.getmtime(INDEX_FILE))
+        st.caption(f"💾 Сохранённый индекс: {mtime.strftime('%Y-%m-%d %H:%M')}")
+        if st.button("🗑 Удалить кэш", key="del_cache"):
+            INDEX_FILE.unlink()
+            st.success("Кэш удалён")
+            st.rerun()
+
+    # ── Обучение ──────────────────────────────────────────────────────────────
+    st.subheader("Обучение")
+
+    col_train, col_predict = st.columns(2)
+
+    with col_train:
+        train_btn = st.button(
+            "🏋 Обучить на размеченных статьях",
+            type="primary",
+            width="stretch",
+            disabled=len(labeled) < 2 or n_pos == 0 or n_neg == 0,
+        )
+
+    with col_predict:
+        predict_btn = st.button(
+            f"🔮 Классифицировать {min(n_unlabeled, batch_size)} статей",
+            width="stretch",
+            disabled=n_unlabeled == 0,
+        )
+
+    if train_btn:
+        with st.spinner("Обучение..."):
+            try:
+                clf = Classifier(n_neighbors=n_neighbors)
+                clf.fit(labeled)
+                st.success(
+                    f"✅ Обучено на {clf.n_labeled} статьях  \n"
+                    f"Позитивных: {clf.n_positive}, негативных: {clf.n_negative}"
+                )
+                st.session_state["clf_n_neighbors"] = n_neighbors
+            except Exception as e:
+                st.error(f"Ошибка обучения: {e}")
+
+    if predict_btn:
+        clf = Classifier(n_neighbors=st.session_state.get("clf_n_neighbors", n_neighbors))
+        if not clf.load_cache():
+            st.warning("Сначала обучите классификатор")
+        else:
+            unlabeled = [a for a in all_arts if a.is_relevant is None][:batch_size]
+            with st.spinner(f"Классификация {len(unlabeled)} статей..."):
+                try:
+                    scores = clf.predict(unlabeled)
+                    # Сохраняем knn_score в БД
+                    for art in unlabeled:
+                        score = scores.get(art.id, 0.0)
+                        repo.update_article(
+                            art.id,
+                            knn_score=score,
+                            relevance_score=score,
+                            label_source="knn",
+                        )
+                    st.success(f"✅ Обработано {len(scores)} статей")
+                    st.session_state["clf_scores"] = scores
+                except Exception as e:
+                    st.error(f"Ошибка классификации: {e}")
+
+    # ── Результаты ────────────────────────────────────────────────────────────
+    if st.session_state.get("clf_scores"):
+        scores = st.session_state["clf_scores"]
+        st.divider()
+        st.subheader(f"Результаты классификации ({len(scores)} статей)")
+
+        # Порог для авто-разметки
+        threshold = st.slider(
+            "Порог релевантности", min_value=0.0, max_value=1.0, value=0.5, step=0.05,
+            help="Статьи выше порога считаются релевантными"
+        )
+
+        # Гистограмма распределения score
+        score_vals = list(scores.values())
+        hist_df = pd.DataFrame({"score": score_vals})
+        st.bar_chart(hist_df["score"].value_counts(bins=10, sort=False))
+
+        n_above = sum(1 for s in score_vals if s >= threshold)
+        n_below = len(score_vals) - n_above
+        st.caption(
+            f"Выше порога ({threshold}): **{n_above}** статей  |  "
+            f"Ниже порога: **{n_below}** статей"
+        )
+
+        # Топ статей по score
+        arts_with_scores = [
+            a for a in all_arts if a.id in scores
+        ]
+        arts_with_scores.sort(key=lambda a: scores[a.id], reverse=True)
+
+        st.subheader("Топ статей по relevance score")
+        top_rows = [{
+            "Score":     f"{scores[a.id]:.3f}",
+            "Заголовок": (a.title or "")[:80],
+            "Источник":  SOURCE_LABELS.get(a.source_name, a.source_name),
+            "Размечено": RELEVANCE_ICON[a.is_relevant],
+            "URL":       a.url,
+        } for a in arts_with_scores[:50]]
+
+        st.dataframe(
+            pd.DataFrame(top_rows), width="stretch", hide_index=True,
+            column_config={"URL": st.column_config.LinkColumn("URL", display_text="🔗")}
+        )
+
+        # Авто-разметка по порогу
+        st.divider()
+        st.subheader("Авто-разметка по порогу")
+        st.warning(
+            "Статьи будут помечены автоматически. "
+            "Рекомендуется проверить результаты вручную."
+        )
+        auto_btn = st.button(
+            f"Разметить {n_above} статей как релевантные / {n_below} как нерелевантные",
+            key="auto_label",
+        )
+        if auto_btn:
+            count = 0
+            for art in arts_with_scores:
+                if art.is_relevant is None:   # только неразмеченные
+                    score    = scores[art.id]
+                    is_rel   = score >= threshold
+                    repo.update_article(art.id, is_relevant=is_rel,
+                                        label_source="knn", relevance_score=score)
+                    count += 1
+            st.success(f"Размечено {count} статей")
+            st.session_state["clf_scores"] = {}
+            st.rerun()
+
+
+# ══ Вкладка 4 — Журнал ════════════════════════════════════════════════════════
 
 with tab_logs:
     st.header("Журнал запусков")

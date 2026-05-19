@@ -593,137 +593,260 @@ with tab_db:
 with tab_clf:
     st.header("🤖 Классификатор релевантности")
 
-    from classifier import Classifier, SBERT_MODEL
+    from classifier import (
+        Classifier, NaiveBayesClassifier,
+        SBERT_MODEL, KNN_INDEX_FILE, NB_MODEL_FILE,
+    )
+    import os
 
     # ── Статистика разметки ───────────────────────────────────────────────────
-    all_arts   = repo.get_articles(limit=100000)
-    labeled    = [a for a in all_arts if a.is_relevant is not None]
-    n_pos      = sum(1 for a in labeled if a.is_relevant)
-    n_neg      = len(labeled) - n_pos
+    all_arts    = repo.get_articles(limit=100000)
+    labeled     = [a for a in all_arts if a.is_relevant is not None]
+    n_pos       = sum(1 for a in labeled if a.is_relevant)
+    n_neg       = len(labeled) - n_pos
     n_unlabeled = len(all_arts) - len(labeled)
 
     mc1, mc2, mc3, mc4 = st.columns(4)
-    mc1.metric("Всего статей",       len(all_arts))
-    mc2.metric("Размечено",          len(labeled))
-    mc3.metric("✅ Релевантных",      n_pos)
-    mc4.metric("❌ Нерелевантных",    n_neg)
+    mc1.metric("Всего статей",    len(all_arts))
+    mc2.metric("Размечено",       len(labeled))
+    mc3.metric("✅ Релевантных",   n_pos)
+    mc4.metric("❌ Нерелевантных", n_neg)
 
+    can_train = len(labeled) >= 2 and n_pos > 0 and n_neg > 0
     if len(labeled) < 10:
         st.warning(
             f"Для обучения нужно минимум 10 размеченных статей (сейчас {len(labeled)}). "
             "Разметьте статьи во вкладке Скрапинг или База данных."
         )
-    elif n_pos == 0 or n_neg == 0:
+    elif not can_train:
         st.warning("Нужны оба класса — и релевантные, и нерелевантные статьи.")
     else:
         st.success(f"Готово к обучению: {len(labeled)} статей")
 
     st.divider()
 
-    # ── Настройки ─────────────────────────────────────────────────────────────
-    st.subheader("Настройки")
+    # ── Выбор алгоритма ───────────────────────────────────────────────────────
+    st.subheader("Алгоритм")
 
-    cc1, cc2 = st.columns(2)
-    with cc1:
-        n_neighbors = st.slider("Соседей KNN (k)", min_value=3, max_value=20, value=5,
-                                 help="Больше соседей = стабильнее, но медленнее")
-    with cc2:
-        batch_size = st.slider(
-            "Применять к N статьям",
-            min_value=10, max_value=2000, value=200, step=10,
-            help="Сколько неразмеченных статей классифицировать за раз"
-        )
-
-    st.info(
-        f"📦 Модель: `{SBERT_MODEL}`  \n"
-        "При первом запуске скачается ~120MB. Поддерживает RU+EN.  \n"
-        "Вектор 384dim — одинаковый для любой длины текста."
+    algo = st.radio(
+        "Метод классификации",
+        ["KNN (SBERT)", "Naive Bayes (TF-IDF)"],
+        horizontal=True,
+        help=(
+            "KNN — семантические эмбеддинги, понимает смысл, хорош для RU+EN, ~120MB модель.\n"
+            "Naive Bayes — TF-IDF с лемматизацией и удалением стоп-слов, быстрый и интерпретируемый."
+        ),
     )
+    use_knn = (algo == "KNN (SBERT)")
 
     st.divider()
 
-    # ── Кэш ──────────────────────────────────────────────────────────────────
-    from classifier import INDEX_FILE
-    if INDEX_FILE.exists():
-        import os
-        mtime = datetime.fromtimestamp(os.path.getmtime(INDEX_FILE))
-        st.caption(f"💾 Сохранённый индекс: {mtime.strftime('%Y-%m-%d %H:%M')}")
-        if st.button("🗑 Удалить кэш", key="del_cache"):
-            INDEX_FILE.unlink()
-            st.success("Кэш удалён")
-            st.rerun()
+    # ── Настройки алгоритма ───────────────────────────────────────────────────
+    st.subheader("Настройки")
 
-    # ── Обучение ──────────────────────────────────────────────────────────────
+    if use_knn:
+        cc1, cc2 = st.columns(2)
+        with cc1:
+            n_neighbors = st.slider(
+                "Соседей KNN (k)", min_value=3, max_value=20, value=5,
+                help="Больше соседей = стабильнее, но медленнее на предсказании",
+            )
+        with cc2:
+            batch_size = st.slider(
+                "Применять к N статьям", min_value=10, max_value=2000, value=200, step=10,
+                help="Сколько неразмеченных статей классифицировать за раз",
+            )
+        st.info(
+            f"📦 Модель: `{SBERT_MODEL}`  \n"
+            "При первом запуске скачается ~120MB. Поддерживает RU+EN.  \n"
+            "Предобработка текста **не нужна** — трансформер понимает слова в контексте."
+        )
+    else:
+        nb1, nb2, nb3 = st.columns(3)
+        with nb1:
+            nb_max_features = st.slider(
+                "Размер словаря (max_features)", min_value=1000, max_value=30000,
+                value=10000, step=1000,
+                help="Сколько самых частых токенов оставить в TF-IDF матрице",
+            )
+        with nb2:
+            nb_ngram = st.selectbox(
+                "N-граммы", ["Только слова (1,1)", "Слова + биграммы (1,2)"],
+                index=1,
+                help="Биграммы улавливают словосочетания: 'pdf extraction', 'medical record'",
+            )
+        with nb3:
+            batch_size = st.slider(
+                "Применять к N статьям", min_value=10, max_value=2000, value=200, step=10,
+            )
+        ngram_range = (1, 1) if "1,1" in nb_ngram else (1, 2)
+        st.info(
+            "📝 Предобработка текста:  \n"
+            "• Удаление знаков препинания и цифр  \n"
+            "• Удаление стоп-слов (EN + RU)  \n"
+            "• Лемматизация (EN: WordNet, RU: pymorphy3)  \n"
+            "Именно здесь это даёт реальный эффект — TF-IDF считает токены независимо."
+        )
+
+    st.divider()
+
+    # ── Состояние кэшей ───────────────────────────────────────────────────────
+    st.subheader("Состояние моделей")
+
+    cache_col1, cache_col2 = st.columns(2)
+
+    with cache_col1:
+        st.markdown("**KNN (SBERT)**")
+        if KNN_INDEX_FILE.exists():
+            mtime = datetime.fromtimestamp(os.path.getmtime(KNN_INDEX_FILE))
+            # Загружаем чтобы показать кол-во образцов
+            _knn_info = Classifier()
+            if _knn_info.load_cache():
+                st.caption(
+                    f"💾 Обучен: {mtime.strftime('%Y-%m-%d %H:%M')}  \n"
+                    f"Образцов: {_knn_info.n_labeled} "
+                    f"(+{_knn_info.n_positive} / −{_knn_info.n_negative})"
+                )
+            else:
+                st.caption(f"💾 Кэш найден: {mtime.strftime('%Y-%m-%d %H:%M')}")
+            if st.button("🗑 Сбросить KNN", key="reset_knn"):
+                Classifier.reset_cache()
+                if "clf_scores" in st.session_state:
+                    del st.session_state["clf_scores"]
+                st.success("KNN сброшен")
+                st.rerun()
+        else:
+            st.caption("⬜ Не обучен")
+
+    with cache_col2:
+        st.markdown("**Naive Bayes (TF-IDF)**")
+        if NB_MODEL_FILE.exists():
+            mtime = datetime.fromtimestamp(os.path.getmtime(NB_MODEL_FILE))
+            _nb_info = NaiveBayesClassifier()
+            if _nb_info.load_cache():
+                st.caption(
+                    f"💾 Обучен: {mtime.strftime('%Y-%m-%d %H:%M')}  \n"
+                    f"Образцов: {_nb_info.n_labeled} "
+                    f"(+{_nb_info.n_positive} / −{_nb_info.n_negative})"
+                )
+            else:
+                st.caption(f"💾 Кэш найден: {mtime.strftime('%Y-%m-%d %H:%M')}")
+            if st.button("🗑 Сбросить Naive Bayes", key="reset_nb"):
+                NaiveBayesClassifier.reset_cache()
+                if "clf_scores" in st.session_state:
+                    del st.session_state["clf_scores"]
+                st.success("Naive Bayes сброшен")
+                st.rerun()
+        else:
+            st.caption("⬜ Не обучен")
+
+    st.divider()
+
+    # ── Обучение и предсказание ───────────────────────────────────────────────
     st.subheader("Обучение")
 
     col_train, col_predict = st.columns(2)
 
+    algo_label = "KNN" if use_knn else "Naive Bayes"
+
     with col_train:
         train_btn = st.button(
-            "🏋 Обучить на размеченных статьях",
+            f"🏋 Обучить {algo_label}",
             type="primary",
             width="stretch",
-            disabled=len(labeled) < 2 or n_pos == 0 or n_neg == 0,
+            disabled=not can_train,
         )
 
     with col_predict:
         predict_btn = st.button(
-            f"🔮 Классифицировать {min(n_unlabeled, batch_size)} статей",
+            f"🔮 Классифицировать {min(n_unlabeled, batch_size)} статей [{algo_label}]",
             width="stretch",
             disabled=n_unlabeled == 0,
         )
 
     if train_btn:
-        with st.spinner("Обучение..."):
+        with st.spinner(f"Обучение {algo_label}..."):
             try:
-                clf = Classifier(n_neighbors=n_neighbors)
-                clf.fit(labeled)
+                if use_knn:
+                    clf = Classifier(n_neighbors=n_neighbors)
+                    clf.fit(labeled)
+                    st.session_state["clf_knn_n_neighbors"] = n_neighbors
+                else:
+                    clf = NaiveBayesClassifier(
+                        max_features=nb_max_features,
+                        ngram_range=ngram_range,
+                    )
+                    clf.fit(labeled)
                 st.success(
-                    f"✅ Обучено на {clf.n_labeled} статьях  \n"
+                    f"✅ {algo_label} обучен на {clf.n_labeled} статьях  \n"
                     f"Позитивных: {clf.n_positive}, негативных: {clf.n_negative}"
                 )
-                st.session_state["clf_n_neighbors"] = n_neighbors
+                # Показываем топ слов для NB
+                if not use_knn:
+                    top = clf.top_features(n=10)
+                    if top:
+                        with st.expander("🔍 Топ слов по классам (интерпретация модели)"):
+                            tf1, tf2 = st.columns(2)
+                            with tf1:
+                                st.markdown("**✅ Релевантные**")
+                                for word, score in top.get("relevant", []):
+                                    st.text(f"  {word}")
+                            with tf2:
+                                st.markdown("**❌ Нерелевантные**")
+                                for word, score in top.get("irrelevant", []):
+                                    st.text(f"  {word}")
             except Exception as e:
                 st.error(f"Ошибка обучения: {e}")
 
     if predict_btn:
-        clf = Classifier(n_neighbors=st.session_state.get("clf_n_neighbors", n_neighbors))
-        if not clf.load_cache():
-            st.warning("Сначала обучите классификатор")
+        if use_knn:
+            clf = Classifier(n_neighbors=st.session_state.get("clf_knn_n_neighbors", 5))
+            loaded = clf.load_cache()
+            label_source = "knn"
+            score_field  = "knn_score"
+        else:
+            clf = NaiveBayesClassifier()
+            loaded = clf.load_cache()
+            label_source = "nb"
+            score_field  = "bert_score"  # используем bert_score поле для NB
+
+        if not loaded:
+            st.warning(f"Сначала обучите {algo_label}")
         else:
             unlabeled = [a for a in all_arts if a.is_relevant is None][:batch_size]
-            with st.spinner(f"Классификация {len(unlabeled)} статей..."):
+            with st.spinner(f"Классификация {len(unlabeled)} статей [{algo_label}]..."):
                 try:
                     scores = clf.predict(unlabeled)
-                    # Сохраняем knn_score в БД
                     for art in unlabeled:
                         score = scores.get(art.id, 0.0)
                         repo.update_article(
                             art.id,
-                            knn_score=score,
+                            **{score_field: score},
                             relevance_score=score,
-                            label_source="knn",
+                            label_source=label_source,
                         )
-                    st.success(f"✅ Обработано {len(scores)} статей")
-                    st.session_state["clf_scores"] = scores
+                    st.success(f"✅ Обработано {len(scores)} статей [{algo_label}]")
+                    st.session_state["clf_scores"]      = scores
+                    st.session_state["clf_label_source"] = label_source
                 except Exception as e:
                     st.error(f"Ошибка классификации: {e}")
 
     # ── Результаты ────────────────────────────────────────────────────────────
     if st.session_state.get("clf_scores"):
-        scores = st.session_state["clf_scores"]
-        st.divider()
-        st.subheader(f"Результаты классификации ({len(scores)} статей)")
+        scores       = st.session_state["clf_scores"]
+        used_algo    = st.session_state.get("clf_label_source", "knn")
+        algo_display = "KNN" if used_algo == "knn" else "Naive Bayes"
 
-        # Порог для авто-разметки
+        st.divider()
+        st.subheader(f"Результаты классификации [{algo_display}] — {len(scores)} статей")
+
         threshold = st.slider(
             "Порог релевантности", min_value=0.0, max_value=1.0, value=0.5, step=0.05,
-            help="Статьи выше порога считаются релевантными"
+            help="Статьи выше порога считаются релевантными",
         )
 
-        # Гистограмма распределения score
         score_vals = list(scores.values())
-        hist_df = pd.DataFrame({"score": score_vals})
+        hist_df    = pd.DataFrame({"score": score_vals})
         st.bar_chart(hist_df["score"].value_counts(bins=10, sort=False))
 
         n_above = sum(1 for s in score_vals if s >= threshold)
@@ -733,10 +856,7 @@ with tab_clf:
             f"Ниже порога: **{n_below}** статей"
         )
 
-        # Топ статей по score
-        arts_with_scores = [
-            a for a in all_arts if a.id in scores
-        ]
+        arts_with_scores = [a for a in all_arts if a.id in scores]
         arts_with_scores.sort(key=lambda a: scores[a.id], reverse=True)
 
         st.subheader("Топ статей по relevance score")
@@ -750,10 +870,9 @@ with tab_clf:
 
         st.dataframe(
             pd.DataFrame(top_rows), width="stretch", hide_index=True,
-            column_config={"URL": st.column_config.LinkColumn("URL", display_text="🔗")}
+            column_config={"URL": st.column_config.LinkColumn("URL", display_text="🔗")},
         )
 
-        # Авто-разметка по порогу
         st.divider()
         st.subheader("Авто-разметка по порогу")
         st.warning(
@@ -761,17 +880,17 @@ with tab_clf:
             "Рекомендуется проверить результаты вручную."
         )
         auto_btn = st.button(
-            f"Разметить {n_above} статей как релевантные / {n_below} как нерелевантные",
+            f"Разметить {n_above} как релевантные / {n_below} как нерелевантные",
             key="auto_label",
         )
         if auto_btn:
             count = 0
             for art in arts_with_scores:
-                if art.is_relevant is None:   # только неразмеченные
-                    score    = scores[art.id]
-                    is_rel   = score >= threshold
+                if art.is_relevant is None:
+                    score  = scores[art.id]
+                    is_rel = score >= threshold
                     repo.update_article(art.id, is_relevant=is_rel,
-                                        label_source="knn", relevance_score=score)
+                                        label_source=used_algo, relevance_score=score)
                     count += 1
             st.success(f"Размечено {count} статей")
             st.session_state["clf_scores"] = {}
